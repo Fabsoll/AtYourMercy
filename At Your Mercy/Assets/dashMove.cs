@@ -46,7 +46,7 @@ public class dashMove : MonoBehaviour
                    rb.velocity = Vector2.zero;
                 }
                else{
-                   Physics2D.IgnoreLayerCollision(6, 8, true);
+                   Physics2D.IgnoreLayerCollision(7, 8, true);
                    dashTime -= Time.deltaTime;
                    if(direction == 1){
                        rb.velocity = Vector2.left * dashSpeed;
@@ -77,12 +77,12 @@ public class dashMove : MonoBehaviour
     }
 
     private IEnumerator invulnerable(){
-        Physics2D.IgnoreLayerCollision(6, 8, true);
+        Physics2D.IgnoreLayerCollision(7, 8, true);
         
         //c.a = 0.5f;
         //GetComponent<Renderer>().material.color = c;
         yield return new WaitForSeconds(0.3f);
-        Physics2D.IgnoreLayerCollision(6, 8, false);
+        Physics2D.IgnoreLayerCollision(7, 8, false);
         //c.a = 1f;
         //GetComponent<Renderer>().material.color = c;
     }

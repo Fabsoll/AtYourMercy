@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DamageDeal : MonoBehaviour
 {
-    public PlayerCombatNew player;
+    private PlayerCombatNew player;
     public int damageToPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectOfType<PlayerCombatNew>();
     }
 
     // Update is called once per frame
