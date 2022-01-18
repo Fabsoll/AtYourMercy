@@ -20,10 +20,6 @@ public class RavenMovement : MonoBehaviour
     private bool isDiving = false;
     public float dashDuration;
 
-    private int numberOfDashes;
-    public int maxNumberOfDashes;
-    private bool numberIncreased;
-
     public GameObject icon;
     // Start is called before the first frame update
     void Awake()
@@ -46,20 +42,18 @@ public class RavenMovement : MonoBehaviour
     private void OnEnable() {
         isDashing = true;
         playerAnim.SetBool("isDashingUp", true);
+        numberOfDashes = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if(numberOfDashes < maxNumberOfDashes){
-            moveX = Input.GetAxis("Horizontal") * movementSpeed;
-            if(Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.F)){
-                isDashing = true;
-                //playerAnim.SetBool("isDashingUp", true);
-                numberOfDashes++;
-            }
-            //numberOfDashes++;
-        //}
+        
+        moveX = Input.GetAxis("Horizontal") * movementSpeed;
+        if(Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.F)){
+            isDashing = true;
+            playerAnim.SetBool("isDashingUp", true);
+        }
         if(Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.F)){
             isDiving = true;
             playerAnim.SetBool("isDashingDown", true);
@@ -69,8 +63,7 @@ public class RavenMovement : MonoBehaviour
 
     private void FixedUpdate() {
         controller.Move(moveX * Time.fixedDeltaTime, false, false);
-        if(isDashing && numberOfDashes <= maxNumberOfDashes){
-            playerAnim.SetBool("isDashingUp", true);
+        if(isDashing){
             VerticalDashUp();
             StartCoroutine(DashEnd());
         }
@@ -97,7 +90,6 @@ public class RavenMovement : MonoBehaviour
 
     private IEnumerator DashEnd(){
         yield return new WaitForSeconds(dashDuration);
-        //numberOfDashes++;
         playerAnim.SetBool("isDashingUp", false);
         playerRB.velocity = Vector2.zero;
         isDashing = false;
@@ -111,6 +103,8 @@ public class RavenMovement : MonoBehaviour
             //Debug.Log("awdawdawdawdawd");
         }
     }
+
+    
     //public bool IsGrounded(){
     //    return Physics2D.BoxCast(playerBox.bounds.center, playerBox.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     //}
