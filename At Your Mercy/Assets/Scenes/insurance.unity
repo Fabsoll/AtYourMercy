@@ -2508,7 +2508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1271894538264989279, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507396, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: leftLimit
@@ -2524,7 +2524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507403, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_RootOrder
