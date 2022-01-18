@@ -18,6 +18,7 @@ public class UI : MonoBehaviour
         ResumeGame();
         PauseMenu.SetActive(false);
         Overlay.SetActive(false);
+        
     }
 
     // Update is called once per frame

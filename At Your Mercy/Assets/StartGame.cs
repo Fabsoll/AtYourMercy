@@ -11,4 +11,9 @@ public class StartGame : MonoBehaviour
         
         SceneManager.LoadScene("Main");
     }
+
+    public void QuitGameFR()
+    {
+        Application.Quit();
+    }
 }
