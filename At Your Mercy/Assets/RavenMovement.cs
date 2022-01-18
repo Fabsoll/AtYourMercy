@@ -46,6 +46,7 @@ public class RavenMovement : MonoBehaviour
     private void OnEnable() {
         isDashing = true;
         playerAnim.SetBool("isDashingUp", true);
+        numberOfDashes = 0;
     }
 
     // Update is called once per frame
@@ -111,6 +112,8 @@ public class RavenMovement : MonoBehaviour
             //Debug.Log("awdawdawdawdawd");
         }
     }
+
+    
     //public bool IsGrounded(){
     //    return Physics2D.BoxCast(playerBox.bounds.center, playerBox.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     //}
