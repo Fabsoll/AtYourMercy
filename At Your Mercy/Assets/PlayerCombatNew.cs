@@ -18,18 +18,22 @@ public class PlayerCombatNew : MonoBehaviour
     public SpriteRenderer playerSprite;
 
     public bool isInvulnerable;
+    public bool isAbleToAttack;
+    public float attackCD;
     public float invulnerableTime;
     // Start is called before the first frame update
     void Start()
     {
         isInvulnerable = false;
+        isAbleToAttack = true;
         currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && isAbleToAttack){
+            StartCoroutine(attackCooling());
             Attack();
         }
 
@@ -83,5 +87,11 @@ public class PlayerCombatNew : MonoBehaviour
         isInvulnerable = true;
         yield return new WaitForSeconds(invulnerableTime);
         isInvulnerable = false;
+    }
+
+    IEnumerator attackCooling(){
+        isAbleToAttack = false;
+        yield return new WaitForSeconds(attackCD);
+        isAbleToAttack = true;
     }
 }
