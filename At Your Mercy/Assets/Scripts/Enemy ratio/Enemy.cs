@@ -10,15 +10,12 @@ public class Enemy : MonoBehaviour
     public Color damageColor;
     public SpriteRenderer enemySprite;
 
-    private UI userInterfaceData;
-
 
     public HealthBarBehaviour hpBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        userInterfaceData = FindObjectOfType<UI>();
         currentHealth = maxHealth;
         hpBar.SetHealth(currentHealth, maxHealth);
     }
@@ -43,7 +40,6 @@ public class Enemy : MonoBehaviour
 
     void Die(){
         //Debug.Log("enemy dies");
-        userInterfaceData.deaths ++;
         this.gameObject.SetActive(false);
     }
 
