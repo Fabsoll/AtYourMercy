@@ -18,7 +18,7 @@ public class SkillHandler : MonoBehaviour
     void Start()
     {
         Image = GetComponent<Image>();
-        shapesController = FindObjectOfType<ShapesController>();
+        //shapesController = FindObjectOfType<ShapesController>();
         
     }
 
@@ -40,6 +40,8 @@ public class SkillHandler : MonoBehaviour
         else{
             Image.fillAmount = 1;
         }
+
+        //Debug.Log(shapesController.shapeIndex);
            
     }
 }

@@ -20,7 +20,15 @@ public class RavenMovement : MonoBehaviour
     private bool isDiving = false;
     public float dashDuration;
 
+    private int numberOfDashes;
+    public int maxNumberOFDashes;
+
     public GameObject icon;
+
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask enemylayers;
+    public int attackDamage = 40;
     // Start is called before the first frame update
     void Awake()
     {
@@ -50,8 +58,16 @@ public class RavenMovement : MonoBehaviour
         
         moveX = Input.GetAxis("Horizontal") * movementSpeed;
         if(Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.F)){
-            isDashing = true;
-            playerAnim.SetBool("isDashingUp", true);
+            if(numberOfDashes < maxNumberOFDashes){
+                numberOfDashes++;
+                isDashing = true;
+                playerAnim.SetBool("isDashingUp", true);
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemylayers);
+                foreach(Collider2D enemy in hitEnemies){
+                    enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                }
+            //Debug.Log("aaawdawdawdadwadwawdawd");
+            }
         }
         if(Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.F)){
             isDiving = true;
@@ -60,26 +76,38 @@ public class RavenMovement : MonoBehaviour
         
     }
 
+    private void OnDrawGizmosSelected() {
+        if(attackPos == null){
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
     private void FixedUpdate() {
         controller.Move(moveX * Time.fixedDeltaTime, false, false);
         if(isDashing){
+            //playerAnim.SetBool("isDashingUp", true);
+            //numberOfDashes++;
             VerticalDashUp();
             StartCoroutine(DashEnd());
         }
         else if(isDiving){
+            //numberOfDashes++;
             VerticalDashDown();
         }
     }
 
-    public void OnLanding(){
-        isDiving = false;
-        shapesController.EnableOne(2);
-    }
-    public void OnUpping(){
-        isDashing = false;
-    }
+    // public void OnLanding(){
+    //     isDiving = false;
+    //     shapesController.EnableOne(2);
+    // }
+    // public void OnUpping(){
+    //     isDashing = false;
+    // }
 
     private void VerticalDashUp(){
+        //playerAnim.SetBool("isDashingUp", true);
+        //numberOfDashes++;
         transform.Translate(Vector3.up * pushForce * Time.deltaTime);
     }
 
@@ -88,6 +116,7 @@ public class RavenMovement : MonoBehaviour
     }
 
     private IEnumerator DashEnd(){
+        //numberOfDashes++;
         yield return new WaitForSeconds(dashDuration);
         playerAnim.SetBool("isDashingUp", false);
         playerRB.velocity = Vector2.zero;
