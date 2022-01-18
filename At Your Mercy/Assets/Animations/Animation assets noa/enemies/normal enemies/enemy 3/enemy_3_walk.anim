@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk
+  m_Name: enemy_3_walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,25 +21,25 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 4597748093295196891, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.083333336
+    - time: 0.06666667
       value: {fileID: -392949353817434174, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.16666667
+    - time: 0.13333334
       value: {fileID: -8423976754487873592, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.25
+    - time: 0.2
       value: {fileID: -4153188388364025733, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.33333334
+    - time: 0.26666668
       value: {fileID: -6446325217892514849, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.41666666
+    - time: 0.33333334
       value: {fileID: -4877567661486440108, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.5
+    - time: 0.4
       value: {fileID: 4655017361002686002, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
-    - time: 0.5833333
+    - time: 0.46666667
       value: {fileID: 7128741015104998884, guid: 4b7ca50c1322fda46a9943a073700fc4, type: 3}
     attribute: m_Sprite
-    path: 
+    path: enemy_sprite
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -47,7 +47,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 2973365334
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -67,12 +67,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666666
+    m_StopTime: 0.48333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
