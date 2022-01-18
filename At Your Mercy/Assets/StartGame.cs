@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
    public void StartGameButton()
     {
-        SceneManager.LoadSceneAsync("Main");
+        
+        SceneManager.LoadScene("Main");
     }
 }
