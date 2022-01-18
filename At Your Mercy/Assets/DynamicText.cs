@@ -16,8 +16,8 @@ public class DynamicText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //int hpnum = GameObject.Find("uiscript").GetComponent<UI>().deaths * 5;
-        //int deathcounter = GameObject.Find("uiscript").GetComponent<UI>().deaths;
+        int hpnum = GameObject.Find("uiscript").GetComponent<UI>().deaths * 5;
+        int deathcounter = GameObject.Find("uiscript").GetComponent<UI>().deaths;
 
     }
 

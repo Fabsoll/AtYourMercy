@@ -20,9 +20,6 @@ public class RavenMovement : MonoBehaviour
     private bool isDiving = false;
     public float dashDuration;
 
-    private int numberOfDashes;
-    public int naxNumberOfDashes;
-
     public GameObject icon;
     // Start is called before the first frame update
     void Awake()
@@ -45,7 +42,7 @@ public class RavenMovement : MonoBehaviour
     private void OnEnable() {
         isDashing = true;
         playerAnim.SetBool("isDashingUp", true);
-        //numberOfDashes = 0;
+        numberOfDashes = 0;
     }
 
     // Update is called once per frame
