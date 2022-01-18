@@ -136,7 +136,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2065542169
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5764932014973284501, guid: 7cd85a50eb7b4694898f3ff4cd291225, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -247,6 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 5541768272779595921}
   movementSpeed: 8
-  pushForce: 2
+  pushForce: 10
   dashDuration: 0.6
   icon: {fileID: 8601361171951287290, guid: 785e76ba9ced6a44ead1145462160e7f, type: 3}

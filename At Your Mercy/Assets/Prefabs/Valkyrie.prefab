@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1550207932386914114}
   - component: {fileID: 1711346034}
   - component: {fileID: 1711346033}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Valkyrie
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: 50
-  startDashTime: 0.5
+  startDashTime: 3
   cooldown: 3
 --- !u!70 &1711346034
 CapsuleCollider2D:
@@ -316,11 +316,13 @@ MonoBehaviour:
   attackRange: 0.4
   enemylayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   attackDamage: 10
   maxHealth: 100
   currentHealth: 0
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   playerSprite: {fileID: 2385196965203142507}
   isInvulnerable: 0
+  isAbleToAttack: 0
+  attackCD: 0.5
   invulnerableTime: 1
