@@ -10,6 +10,8 @@ public class HealthController : MonoBehaviour
     private float maxHealth;
     PlayerCombatNew playerCombatNew;
 
+    public UI UIData;
+
     // Start is called before the first frame update
     void Awake()
     {

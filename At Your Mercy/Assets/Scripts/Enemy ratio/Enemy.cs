@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public Color damageColor;
     public SpriteRenderer enemySprite;
 
+    private UI UIData;
 
     public HealthBarBehaviour hpBar;
 
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         hpBar.SetHealth(currentHealth, maxHealth);
+        UIData = FindObjectOfType<UI>();
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Die(){
         //Debug.Log("enemy dies");
+        UIData.deathCounter++;
         this.gameObject.SetActive(false);
     }
 

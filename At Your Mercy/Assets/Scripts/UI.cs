@@ -9,6 +9,9 @@ public class UI : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Overlay;
     public GameObject healthbar;
+
+    public int deathCounter;
+    public int healthCounter;
     
     // Start is called before the first frame update
     void Start()

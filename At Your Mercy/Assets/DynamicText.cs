@@ -9,24 +9,29 @@ public class DynamicText : MonoBehaviour
     public TextMeshProUGUI traits;
     public TextMeshProUGUI deathcount;
     public TextMeshProUGUI hpnumber;
-    int deathcounter;
-    int hpnum;
+    //int deathcounter;
+    //int hpnum;
+
+    //public UI UIData;
+    private PlayerCombatNew player;
+    private GameObject[] enemies;
    
 
     // Start is called before the first frame update
     void Start()
     {
-        //int hpnum = GameObject.Find("uiscript").GetComponent<UI>().deaths * 5;
-        //int deathcounter = GameObject.Find("uiscript").GetComponent<UI>().deaths;
+        player = FindObjectOfType<PlayerCombatNew>();
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //Debug.Log(UIData.deathCounter);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        deathcount.text = deathcounter.ToString();
+        hpnumber.text = player.currentHealth.ToString();
 
-        hpnumber.text = hpnum.ToString();
+        //hpnumber.text = hpnum.ToString();
         
     }
 }
