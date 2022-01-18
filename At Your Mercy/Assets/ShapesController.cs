@@ -59,7 +59,7 @@ public class ShapesController : MonoBehaviour
                      shapeIndex--;
                  }
              }
-             Debug.Log(shapeIndex);
+             //Debug.Log(shapeIndex);
 
              if(!isInCooldown){
                  if(Input.GetKeyDown(KeyCode.LeftAlt)){

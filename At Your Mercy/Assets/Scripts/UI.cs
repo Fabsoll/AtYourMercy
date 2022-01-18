@@ -9,6 +9,8 @@ public class UI : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Overlay;
     public GameObject healthbar;
+
+    public int deaths;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(deaths);
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (paused)
