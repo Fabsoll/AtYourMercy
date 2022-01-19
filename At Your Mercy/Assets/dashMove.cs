@@ -16,10 +16,12 @@ public class dashMove : MonoBehaviour
     private Animator playerAnim;
     Color c;
 
+    CharacterController2D playerController;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = FindObjectOfType<CharacterController2D>();
         c = GetComponent<Renderer>().material.color;
         playerAnim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +33,7 @@ public class dashMove : MonoBehaviour
     {
         if(!inCooldown){
             if(direction == 0){
-                if(Input.GetAxis("dash")> 0){
+                if(Input.GetButtonDown("dash")){
                     direction = 1;
                 }
                 else if(Input.GetKey(KeyCode.D) && (Input.GetKeyDown(KeyCode.F))){
@@ -49,7 +51,13 @@ public class dashMove : MonoBehaviour
                    Physics2D.IgnoreLayerCollision(7, 8, true);
                    dashTime -= Time.deltaTime;
                    if(direction == 1){
-                       rb.velocity = Vector2.left * dashSpeed;
+                       if(playerController.m_FacingRight){
+                            rb.velocity = Vector2.right * dashSpeed;
+                       }
+                       else{
+                           rb.velocity = Vector2.left * dashSpeed;
+                       }
+                       
                        direction = 0;
                        playerAnim.SetTrigger("dash");
                        StartCoroutine(dashCooldown());

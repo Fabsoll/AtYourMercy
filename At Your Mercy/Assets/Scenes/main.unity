@@ -1055,9 +1055,17 @@ PrefabInstance:
       propertyPath: underlay
       value: 
       objectReference: {fileID: 519980509}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1930258554, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345528506351970448, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.754
       objectReference: {fileID: 0}
     - target: {fileID: 1345528506351970455, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Layer
