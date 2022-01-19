@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+<<<<<<< Updated upstream
 using UnityEngine.UI;
 
 
@@ -13,6 +14,14 @@ public class ValhallaChoice : MonoBehaviour
     string name;
     
     List<string> nameList = new List<string>();
+=======
+
+public class ValhallaChoice : MonoBehaviour
+{
+
+    public TextMeshProUGUI slain;
+
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
