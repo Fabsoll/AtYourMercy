@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TraitCalculator : MonoBehaviour
 {
-
+    List<int> usedValues = new List<int>();
     int TraitNumber;
     int rareTraitNumber;
 
@@ -18,6 +18,17 @@ public class TraitCalculator : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void normalTraitNumberGenerator()
+    { 
+        int val = Random.Range(1, 10);
+        while (usedValues.Contains(val))
+        {
+            val = Random.Range(1, 10);
+        }
+        usedValues.Add(val);
+        TraitNumber= val;
     }
 
     void normalTraits()
