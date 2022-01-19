@@ -32,7 +32,7 @@ public class HorseMovement : MonoBehaviour
         moveX = Input.GetAxis("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
-        if(Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetButtonDown("horse head")){
             if(!isHeadDown){
                 StartCoroutine(movingDelay());
             }
