@@ -91,6 +91,8 @@ public class PlayerCombatNew : MonoBehaviour
         underlay.SetActive(true);
 
         StartCoroutine (waitBF());
+        SceneManager.LoadSceneAsync("bossfight");
+        SceneManager.UnloadSceneAsync("main");
         
 
         Debug.Log("Player died");
@@ -99,9 +101,7 @@ public class PlayerCombatNew : MonoBehaviour
     IEnumerator waitBF()
     {
         yield return new WaitForSecondsRealtime(2);
-        SceneManager.LoadSceneAsync("bossfight");
-        SceneManager.UnloadSceneAsync("main");
-        Time.timeScale = 1;
+        
     }
     IEnumerator Invulnerability(){
         isInvulnerable = true;

@@ -31,7 +31,7 @@ public class dashMove : MonoBehaviour
     {
         if(!inCooldown){
             if(direction == 0){
-                if(Input.GetKey(KeyCode.A) && (Input.GetKeyDown(KeyCode.F))){
+                if(Input.GetAxis("dash")> 0){
                     direction = 1;
                 }
                 else if(Input.GetKey(KeyCode.D) && (Input.GetKeyDown(KeyCode.F))){
