@@ -57,7 +57,7 @@ public class RavenMovement : MonoBehaviour
     {
         
         moveX = Input.GetAxis("Horizontal") * movementSpeed;
-        if(Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetButtonDown("raven fly up")){
             if(numberOfDashes < maxNumberOFDashes){
                 numberOfDashes++;
                 isDashing = true;
@@ -69,7 +69,7 @@ public class RavenMovement : MonoBehaviour
             //Debug.Log("aaawdawdawdadwadwawdawd");
             }
         }
-        if(Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetButtonDown("raven dive down")){
             isDiving = true;
             playerAnim.SetBool("isDashingDown", true);
         }

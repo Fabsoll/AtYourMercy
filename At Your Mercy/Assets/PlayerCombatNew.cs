@@ -38,7 +38,7 @@ public class PlayerCombatNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && isAbleToAttack){
+        if(Input.GetButtonDown("attack") && isAbleToAttack){
             StartCoroutine(attackCooling());
             Attack();
         }

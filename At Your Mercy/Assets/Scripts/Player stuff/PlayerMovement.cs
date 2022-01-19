@@ -36,19 +36,36 @@ public class PlayerMovement : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetButtonDown("valkyrie jump")){
             jump = true;
             playerAnim.SetBool("isJumping", true);
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift)){
-            run = true;
-            playerAnim.SetBool("isRunning", true);
-        }
-        else if(Input.GetKeyUp(KeyCode.LeftShift) || playerRB.velocity.x == 0){
+        if (playerRB.velocity.x == 0)
+        {
             run = false;
             playerAnim.SetBool("isRunning", false);
         }
+            if (Input.GetButtonDown("valkyrie running")){
+            if (run == false)
+            {
+                run = true;
+                playerAnim.SetBool("isRunning", true);
+            }
+            else
+            {
+                run = false;
+                playerAnim.SetBool("isRunning", false);
+            }
+           
+
+        if (playerRB.velocity.x == 0)
+            {
+                run = false;
+                playerAnim.SetBool("isRunning", false);
+            }
+        }
+        
     }
 
     public void OnLanding(){
