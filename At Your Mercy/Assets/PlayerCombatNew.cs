@@ -110,13 +110,13 @@ public class PlayerCombatNew : MonoBehaviour
 
     private void Die(){
         Time.timeScale = 0;
-<<<<<<< Updated upstream
-=======
+//<<<<<<< Updated upstream
+//=======
         wotan.SetActive(true);
         underlay.SetActive(true);
 
         StartCoroutine (waitBF());
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
         fadetoblack.SetActive(true);
         wotan.SetActive(true);
@@ -129,14 +129,14 @@ public class PlayerCombatNew : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(4);
 
-<<<<<<< Updated upstream
-        Time.timeScale = 1;
+//<<<<<<< Updated upstream
+/////        Time.timeScale = 1;
 
-=======
+//=======
         SceneManager.LoadSceneAsync("bossfight");
         SceneManager.UnloadSceneAsync("main");
         Time.timeScale = 1;
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
     }
     IEnumerator Invulnerability(){
         isInvulnerable = true;

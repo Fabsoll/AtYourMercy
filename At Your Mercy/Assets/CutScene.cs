@@ -7,11 +7,11 @@ public class CutScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         
-=======
-        CutScene();
->>>>>>> Stashed changes
+//=======
+        CutSceneMethod();
+//>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -21,12 +21,12 @@ public class CutScene : MonoBehaviour
     }
 
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     
-=======
-    void CutScene()
+//=======
+    void CutSceneMethod()
     {
 
     }
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 }
