@@ -29,7 +29,7 @@ public class PlayerCombatNew : MonoBehaviour
     float fadeAmount;
     public bool fade = false;
     Color objectColor;
-   
+    public float fadeSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -50,27 +50,35 @@ public class PlayerCombatNew : MonoBehaviour
             StartCoroutine(attackCooling());
             Attack();
         }
+
         if (fade == true)
         {
-            StartCoroutine(fadein());
+            if (fadetoblack.GetComponent<Image>().color.a < 1)
+            {
+
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                fadetoblack.GetComponent<Image>().color = objectColor;
+
+                Debug.Log("it works");
+
+            }
+            else
+            {
+
+                SceneManager.LoadSceneAsync("bossfight");
+                Time.timeScale = 1;
+                SceneManager.UnloadSceneAsync("main");
+                
+            }
         }
+        
+
         // if(isInvulnerable){
         //     Physics2D.IgnoreLayerCollision(6, 8, true);
         // }
     }
-    public IEnumerator fadein(bool fade = true, float fadeSpeed = 0.1f)
-    {
-        if (fade)
-        {
-            while (fadetoblack.GetComponent<Image>().color.a < 1)
-            {
-                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
-                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                fadetoblack.GetComponent<Image>().color = objectColor;
-                yield return null;
-            }
-        }
-    }
+ 
     void Attack(){
         // PLay attack anim
         animator.SetTrigger("attack");
@@ -113,15 +121,10 @@ public class PlayerCombatNew : MonoBehaviour
 //<<<<<<< Updated upstream
 //=======
         wotan.SetActive(true);
-        underlay.SetActive(true);
-
-        StartCoroutine (waitBF());
 //>>>>>>> Stashed changes
 
         fadetoblack.SetActive(true);
-        wotan.SetActive(true);
         fade = true;
-        fadein();
         Debug.Log("Player died");
     }
 
@@ -133,9 +136,7 @@ public class PlayerCombatNew : MonoBehaviour
 /////        Time.timeScale = 1;
 
 //=======
-        SceneManager.LoadSceneAsync("bossfight");
-        SceneManager.UnloadSceneAsync("main");
-        Time.timeScale = 1;
+        
 //>>>>>>> Stashed changes
     }
     IEnumerator Invulnerability(){
