@@ -35,7 +35,13 @@ public class PlayerMovement : MonoBehaviour
         //Run();
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
-
+        // if (playerRB.velocity.x == 0){
+        //     {
+        //         run = false;
+        //         //Debug.Log("stop");
+        //         playerAnim.SetBool("isRunning", false);
+        //     }
+        // }
         if(Input.GetButtonDown("valkyrie jump")){
             jump = true;
             playerAnim.SetBool("isJumping", true);
@@ -47,25 +53,17 @@ public class PlayerMovement : MonoBehaviour
             playerAnim.SetBool("isRunning", false);
         }
             if (Input.GetButtonDown("valkyrie running")){
-            if (run == false)
-            {
-                run = true;
-                playerAnim.SetBool("isRunning", true);
-            }
-            else
-            {
-                run = false;
-                playerAnim.SetBool("isRunning", false);
-            }
-           
-
-        if (playerRB.velocity.x == 0)
-            {
-                run = false;
-                playerAnim.SetBool("isRunning", false);
-            }
+                if (run == false)
+                {
+                    run = true;
+                    playerAnim.SetBool("isRunning", true);
+                }
+                else
+                {
+                    run = false;
+                    playerAnim.SetBool("isRunning", false);
+                }
         }
-        
     }
 
     public void OnLanding(){
