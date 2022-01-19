@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombatNew : MonoBehaviour
 {
@@ -21,12 +23,14 @@ public class PlayerCombatNew : MonoBehaviour
     public bool isAbleToAttack;
     public float attackCD;
     public float invulnerableTime;
+    public GameObject wotan;
     // Start is called before the first frame update
     void Start()
     {
         isInvulnerable = false;
         isAbleToAttack = true;
         currentHealth = maxHealth;
+        wotan.SetActive(false);
     }
 
     // Update is called once per frame
@@ -80,6 +84,10 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     private void Die(){
+        wotan.SetActive(true);
+        SceneManager.LoadSceneAsync("bossfight");
+        SceneManager.UnloadSceneAsync("main");
+
         Debug.Log("Player died");
     }
 
