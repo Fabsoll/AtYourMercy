@@ -24,6 +24,7 @@ public class PlayerCombatNew : MonoBehaviour
     public float attackCD;
     public float invulnerableTime;
     public GameObject wotan;
+    public GameObject underlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerCombatNew : MonoBehaviour
         isAbleToAttack = true;
         currentHealth = maxHealth;
         wotan.SetActive(false);
+        underlay.SetActive(false);
     }
 
     // Update is called once per frame
@@ -84,13 +86,23 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     private void Die(){
+        Time.timeScale = 0;
         wotan.SetActive(true);
-        SceneManager.LoadSceneAsync("bossfight");
-        SceneManager.UnloadSceneAsync("main");
+        underlay.SetActive(true);
+
+        StartCoroutine (waitBF());
+        
 
         Debug.Log("Player died");
     }
 
+    IEnumerator waitBF()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        SceneManager.LoadSceneAsync("bossfight");
+        SceneManager.UnloadSceneAsync("main");
+        Time.timeScale = 1;
+    }
     IEnumerator Invulnerability(){
         isInvulnerable = true;
         yield return new WaitForSeconds(invulnerableTime);

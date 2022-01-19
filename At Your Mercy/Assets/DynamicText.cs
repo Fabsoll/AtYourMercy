@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class DynamicText : MonoBehaviour
 {
 
     public TextMeshProUGUI traits;
     public TextMeshProUGUI deathcount;
     public TextMeshProUGUI hpnumber;
+    public int deaths;
+    char ch = '1';
     //int deathcounter;
     //int hpnum;
 
@@ -32,6 +35,10 @@ public class DynamicText : MonoBehaviour
         hpnumber.text = player.currentHealth.ToString();
 
         //hpnumber.text = hpnum.ToString();
+
+        //deathcount.text = 
         
     }
+
+ 
 }
