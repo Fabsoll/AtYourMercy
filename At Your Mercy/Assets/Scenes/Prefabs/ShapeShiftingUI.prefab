@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 3510486139453080942}
   - component: {fileID: 3510486139453080940}
   - component: {fileID: 3510486139453080941}
-  - component: {fileID: 3510486139453080947}
+  - component: {fileID: 87365776}
   m_Layer: 5
   m_Name: SkillIcon
   m_TagString: Untagged
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3510486139453080947
+--- !u!114 &87365776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,7 +424,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cf56415c7777ef64e94e6cc5359519d0, type: 3}
   - {fileID: 21300000, guid: 3110871567e841c4aa1d2bbbebfbee82, type: 3}
   - {fileID: 21300000, guid: a5068646d282272458bb77575b681aac, type: 3}
-  activeColor: {r: 1, g: 1, b: 1, a: 0.6117647}
+  activeColor: {r: 1, g: 1, b: 1, a: 1}
   cooldownColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &3510486139796569206
@@ -591,6 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  UIData: {fileID: 0}
 --- !u!1 &7595944497454694749
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +664,8 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillClockwise: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &7321171951063526954
@@ -681,6 +682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapesController: {fileID: 0}
   icons:
+  - {fileID: 21300000, guid: 79480223a53f65541b7e2ebedb460642, type: 3}
+  - {fileID: 21300000, guid: 79480223a53f65541b7e2ebedb460642, type: 3}
   - {fileID: 21300000, guid: 79480223a53f65541b7e2ebedb460642, type: 3}
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   cooldownColor: {r: 1, g: 1, b: 1, a: 1}

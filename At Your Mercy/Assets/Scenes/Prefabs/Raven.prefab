@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &658571566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658571567}
+  m_Layer: 6
+  m_Name: attackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658571567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658571566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5541768272779595924}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5541768271122160065
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5541768271122160064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5541768272701346439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,13 +105,13 @@ GameObject:
   - component: {fileID: 5541768272779595921}
   - component: {fileID: 5541768272779595920}
   - component: {fileID: 5541768272779595935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Raven
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5541768272779595924
 Transform:
   m_ObjectHideFlags: 0
@@ -91,10 +121,11 @@ Transform:
   m_GameObject: {fileID: 5541768272779595926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2524, y: 1.2524, z: 1.2524}
   m_Children:
   - {fileID: 5541768272701346439}
   - {fileID: 5541768271122160064}
+  - {fileID: 658571567}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,9 +166,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2065542169
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1310120275
+  m_SortingLayer: 3
+  m_SortingOrder: 9
   m_Sprite: {fileID: -5764932014973284501, guid: 7cd85a50eb7b4694898f3ff4cd291225, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -162,8 +193,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20748347, y: 0.22430252}
-  m_Size: {x: 1.0691483, y: 0.36258498}
+  m_Offset: {x: -0.2074835, y: -0.18510236}
+  m_Size: {x: 1.1813974, y: 1.1813974}
   m_Direction: 1
 --- !u!50 &5541768272779595923
 Rigidbody2D:
@@ -180,7 +211,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.01
+  m_GravityScale: 0.05
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -208,9 +239,22 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 5541768271122160064}
   m_CeilingCheck: {fileID: 5541768272701346439}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5541768272779595935}
+        m_TargetAssemblyTypeName: RavenMovement, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -246,7 +290,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5541768272779595921}
-  movementSpeed: 8
-  pushForce: 10
-  dashDuration: 0.6
+  movementSpeed: 20
+  pushForce: 20
+  dashDuration: 0.3
+  maxNumberOFDashes: 2
   icon: {fileID: 8601361171951287290, guid: 785e76ba9ced6a44ead1145462160e7f, type: 3}
+  attackPos: {fileID: 658571567}
+  attackRange: 0
+  enemylayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDamage: 40

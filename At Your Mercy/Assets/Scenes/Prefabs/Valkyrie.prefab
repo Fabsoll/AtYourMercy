@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 959974219}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930258555}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345528506351970448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack Position
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345528506351970455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 0.24, z: 0}
+  m_LocalPosition: {x: 0.754, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2385196965203142504}
@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 2385196965203142510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1345528506351970448}
   - {fileID: 959974219}
@@ -147,7 +147,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 1
-  movementSpeed: 20
+  movementSpeed: 30
   icon: {fileID: 3007167539581093914, guid: eec8f517554c16b4b9a924443d7a241b, type: 3}
 --- !u!50 &2385196965203142506
 Rigidbody2D:
@@ -207,9 +207,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2065542169
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1310120275
+  m_SortingLayer: 3
+  m_SortingOrder: 9
   m_Sprite: {fileID: -7025985617440327065, guid: 0be85c79339e4694cb6734a1e0b64414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_JumpForce: 600
   m_CrouchSpeed: 2
-  m_MovementSmoothing: 0.05
+  m_MovementSmoothing: 0.1
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
@@ -262,6 +262,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1930258555}
   m_CeilingCheck: {fileID: 959974219}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -313,12 +314,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2385196965203142511}
   attackPoint: {fileID: 1345528506351970448}
-  attackRange: 0.4
+  attackRange: 1
   enemylayers:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 10
-  maxHealth: 100
+  maxHealth: 4
   currentHealth: 0
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   playerSprite: {fileID: 2385196965203142507}
@@ -326,3 +327,7 @@ MonoBehaviour:
   isAbleToAttack: 0
   attackCD: 0.5
   invulnerableTime: 1
+  wotan: {fileID: 0}
+  underlay: {fileID: 0}
+  fadetoblack: {fileID: 0}
+  fade: 0
