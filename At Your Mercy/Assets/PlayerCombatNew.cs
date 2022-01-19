@@ -25,6 +25,12 @@ public class PlayerCombatNew : MonoBehaviour
     public float invulnerableTime;
     public GameObject wotan;
     public GameObject underlay;
+    public GameObject fadetoblack;
+    float fadeAmount;
+    public bool fade = false;
+    Color objectColor;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +39,8 @@ public class PlayerCombatNew : MonoBehaviour
         currentHealth = maxHealth;
         wotan.SetActive(false);
         underlay.SetActive(false);
+        fadetoblack.SetActive(false);
+        objectColor = fadetoblack.GetComponent<Image>().color;
     }
 
     // Update is called once per frame
@@ -42,12 +50,27 @@ public class PlayerCombatNew : MonoBehaviour
             StartCoroutine(attackCooling());
             Attack();
         }
-
+        if (fade == true)
+        {
+            StartCoroutine(fadein());
+        }
         // if(isInvulnerable){
         //     Physics2D.IgnoreLayerCollision(6, 8, true);
         // }
     }
-
+    public IEnumerator fadein(bool fade = true, float fadeSpeed = 0.1f)
+    {
+        if (fade)
+        {
+            while (fadetoblack.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                fadetoblack.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+    }
     void Attack(){
         // PLay attack anim
         animator.SetTrigger("attack");
@@ -87,21 +110,20 @@ public class PlayerCombatNew : MonoBehaviour
 
     private void Die(){
         Time.timeScale = 0;
+
+        fadetoblack.SetActive(true);
         wotan.SetActive(true);
-        underlay.SetActive(true);
-
-        StartCoroutine (waitBF());
-        SceneManager.LoadSceneAsync("bossfight");
-        SceneManager.UnloadSceneAsync("main");
-        
-
+        fade = true;
+        fadein();
         Debug.Log("Player died");
     }
 
     IEnumerator waitBF()
     {
-        yield return new WaitForSecondsRealtime(2);
-        
+        yield return new WaitForSecondsRealtime(4);
+
+        Time.timeScale = 1;
+
     }
     IEnumerator Invulnerability(){
         isInvulnerable = true;
