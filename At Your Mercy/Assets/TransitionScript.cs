@@ -38,10 +38,11 @@ public class TransitionScript : MonoBehaviour
         objectColor = fadetoscene.GetComponent<Image>().color;
         objectColor2 = wotansign.GetComponent<Image>().color;
         objectColor3 = valhallafadeout.GetComponent<Image>().color;
-        wotantext.text = "Did you think you could hide from me forever?";
+        
 
 
     }
+   
 
     // Update is called once per frame
     void Update()
@@ -117,7 +118,7 @@ public class TransitionScript : MonoBehaviour
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
                 wotanidle.SetActive(true);
-                brunnhildetext.text = "I wasn't hiding from you. You dragged me here.";
+                brunnhildetext.text = "i wasn't hiding from you. you dragged me here.";
                 textcounter += 1;
                 break;
             case 1:
