@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bossfight.unity
     guid: e8ea53e34bdc1ed48aee65dd54cc6ad8
+  - enabled: 1
+    path: Assets/Scenes/transition scene.unity
+    guid: d1abdc7f081fee8419c1f88d5b4f0410
   m_configObjects: {}

@@ -53,6 +53,7 @@ public class PlayerCombatNew : MonoBehaviour
 
         if (fade == true)
         {
+            Time.timeScale = 0.2f;
             if (fadetoblack.GetComponent<Image>().color.a < 1)
             {
 
@@ -60,14 +61,12 @@ public class PlayerCombatNew : MonoBehaviour
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 fadetoblack.GetComponent<Image>().color = objectColor;
 
-                Debug.Log("it works");
 
             }
             else
             {
 
-                SceneManager.LoadSceneAsync("bossfight");
-                Time.timeScale = 1;
+                SceneManager.LoadSceneAsync("transition scene");
                 SceneManager.UnloadSceneAsync("main");
                 
             }
@@ -117,10 +116,9 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     private void Die(){
-        Time.timeScale = 0;
+        
 //<<<<<<< Updated upstream
 //=======
-        wotan.SetActive(true);
 //>>>>>>> Stashed changes
 
         fadetoblack.SetActive(true);
