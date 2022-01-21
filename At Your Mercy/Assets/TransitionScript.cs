@@ -27,10 +27,11 @@ public class TransitionScript : MonoBehaviour
     public Text brunnhildetext;
     public Text wotantext;
     bool wotangone;
+    public AudioSource transitionmusic;
     // Start is called before the first frame update
     void Start()
     {
-        wotandialogue.SetActive(false);
+        wotandialogue.SetActive(true);
         brunnhildedialogue.SetActive(false);
         brunnhildeidle.SetActive(false);
         wotanidle.SetActive(false);
@@ -54,7 +55,8 @@ public class TransitionScript : MonoBehaviour
             objectColor2 = new Color(objectColor2.r, objectColor2.g, objectColor2.b, fadeAmount);
             wotansign.GetComponent<Image>().color = objectColor2;
         }
-        else { wotan = true; }
+        else { 
+            wotan = true; }
 
         if (wotan)
         {
@@ -101,11 +103,20 @@ public class TransitionScript : MonoBehaviour
 
     void donevoid()
     {
-        wotandialogue.SetActive(true);
-        done = false;
+        if (wotansign.GetComponent<Image>().color.a > 0)
+        {
+            fadeAmount = objectColor3.a - (fadeSpeed2 * Time.deltaTime);
+            objectColor3 = new Color(objectColor3.r, objectColor3.g, objectColor3.b, fadeAmount);
+            wotansign.GetComponent<Image>().color = objectColor3;
+
+        }
+        else
+        {
+            done = false;
+        }
     }
     
-    int textcounter = 0;
+    int textcounter = -1;
     bool text1;
     void wotantalk1()
     {
@@ -113,7 +124,10 @@ public class TransitionScript : MonoBehaviour
 
         switch (textcounter)
         {
-            
+            case -1:
+                wotantext.text = "Did you think you could hide from me forever?";
+                textcounter += 1;
+                break;
             case 0:
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
