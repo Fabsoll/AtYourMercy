@@ -17,6 +17,7 @@ public class Enemy_behaviour : MonoBehaviour
     [HideInInspector] public bool inRange;
     public GameObject hotZone;
     public GameObject triggerArea;
+    public AudioSource attack;
     #endregion
 
     #region Private Variables
@@ -81,7 +82,7 @@ public class Enemy_behaviour : MonoBehaviour
     void Attack(){
         timer = intTimer;
         attackMode = true;
-
+        attack.Play();
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
     }

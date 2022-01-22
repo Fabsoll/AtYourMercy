@@ -18,7 +18,8 @@ public class PlayerCombatNew : MonoBehaviour
     public LayerMask enemylayers;
     public AudioSource getHit;
     public int attackDamage = 2;
-
+    public AudioSource enemyDmg1;
+    public AudioSource enemyDmg2;
     public int maxHealth = 100;
     public int currentHealth;
     public Color damageColor;
@@ -111,10 +112,12 @@ public class PlayerCombatNew : MonoBehaviour
             {
                 case 1:
                     hitOne.Play();
+                    enemyDmg1.Play();
                     hitCount++;
                     break;
                 case 2:
                     hitTwo.Play();
+                    enemyDmg2.Play();
                     hitCount--;
                     break;
             }
