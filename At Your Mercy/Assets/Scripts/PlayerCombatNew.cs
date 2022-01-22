@@ -28,8 +28,6 @@ public class PlayerCombatNew : MonoBehaviour
     public bool isAbleToAttack;
     public float attackCD;
     public float invulnerableTime;
-    public GameObject wotan;
-    public GameObject underlay;
     public GameObject fadetoblack;
     float fadeAmount;
     public bool fade = false;
@@ -43,8 +41,6 @@ public class PlayerCombatNew : MonoBehaviour
         isInvulnerable = false;
         isAbleToAttack = true;
         currentHealth = maxHealth;
-        wotan.SetActive(false);
-        underlay.SetActive(false);
         fadetoblack.SetActive(false);
         objectColor = fadetoblack.GetComponent<Image>().color;
         hitCount = 1;
