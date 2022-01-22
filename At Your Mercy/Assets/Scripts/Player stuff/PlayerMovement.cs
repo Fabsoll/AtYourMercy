@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
-        if (playerRB.velocity.x != 0)
+        if (playerRB.velocity.x != 0 && jump != true)
         {
 
             walk.volume = 1;
