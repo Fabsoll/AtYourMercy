@@ -7,11 +7,16 @@ using UnityEngine.SceneManagement;
 public class PlayerCombatNew : MonoBehaviour
 {
     public Animator animator;
-
+    public AudioSource heavyBreath;
+    public AudioSource hitOne;
+    public AudioSource hitTwo;
+    public AudioSource missOne;
+    public AudioSource missTwo;
+    public AudioSource death;
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemylayers;
-
+    public AudioSource getHit;
     public int attackDamage = 2;
 
     public int maxHealth = 100;
@@ -30,7 +35,8 @@ public class PlayerCombatNew : MonoBehaviour
     public bool fade = false;
     Color objectColor;
     public float fadeSpeed;
-
+    int hitCount;
+    int missCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +47,11 @@ public class PlayerCombatNew : MonoBehaviour
         underlay.SetActive(false);
         fadetoblack.SetActive(false);
         objectColor = fadetoblack.GetComponent<Image>().color;
+        hitCount = 1;
+        missCount = 1;
+        heavyBreath.playOnAwake = true;
+        heavyBreath.loop = true;
+        heavyBreath.volume = 0;
     }
 
     // Update is called once per frame
@@ -81,29 +92,61 @@ public class PlayerCombatNew : MonoBehaviour
     void Attack(){
         // PLay attack anim
         animator.SetTrigger("attack");
+        switch (missCount)
+        {
+            case 1:
+                missOne.Play();
+                missCount++;
+                break;
+            case 2:
+                missTwo.Play();
+                missCount--;
+                break;
+
+
+
+        }
         // Detect enemies
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
         foreach(Collider2D enemy in hitEnemies){
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            
+            switch (hitCount)
+            {
+                case 1:
+                    hitOne.Play();
+                    hitCount++;
+                    break;
+                case 2:
+                    hitTwo.Play();
+                    hitCount--;
+                    break;
+            }
         }
         // deal damage
     }
 
     private void OnDrawGizmosSelected() {
         if(attackPoint == null){
+            
+
             return;
+            
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     public void TakeDamage(int damage){
         currentHealth -= damage;
-        
+        getHit.Play();
         //Debug.Log("isInv");
         StartCoroutine(Invulnerability());
         StartCoroutine(ApplyDamageColor());
 
-
+        if (currentHealth <= 10)
+        {
+            heavyBreath.volume = 1;
+        }
         if(currentHealth <= 0){
             Die();
         }
@@ -123,6 +166,8 @@ public class PlayerCombatNew : MonoBehaviour
 
         fadetoblack.SetActive(true);
         fade = true;
+        heavyBreath.Stop();
+        death.Play();
         Debug.Log("Player died");
     }
 
