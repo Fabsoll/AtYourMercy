@@ -149,6 +149,8 @@ MonoBehaviour:
     m_Bits: 1
   movementSpeed: 30
   icon: {fileID: 3007167539581093914, guid: eec8f517554c16b4b9a924443d7a241b, type: 3}
+  walk: {fileID: 0}
+  walkVolume: 0
 --- !u!50 &2385196965203142506
 Rigidbody2D:
   serializedVersion: 4
@@ -281,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac8e23e6754dbc4ea25022805092f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 50
+  dashSpeed: 10000
   startDashTime: 3
   cooldown: 3
 --- !u!70 &1711346034
@@ -313,21 +315,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2385196965203142511}
+  heavyBreath: {fileID: 0}
+  hitOne: {fileID: 0}
+  hitTwo: {fileID: 0}
+  missOne: {fileID: 0}
+  missTwo: {fileID: 0}
+  death: {fileID: 0}
   attackPoint: {fileID: 1345528506351970448}
   attackRange: 1
   enemylayers:
     serializedVersion: 2
     m_Bits: 64
+  getHit: {fileID: 0}
   attackDamage: 10
+  enemyDmg1: {fileID: 0}
+  enemyDmg2: {fileID: 0}
   maxHealth: 4
   currentHealth: 0
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   playerSprite: {fileID: 2385196965203142507}
+  Overlay: {fileID: 0}
   isInvulnerable: 0
   isAbleToAttack: 0
   attackCD: 0.5
   invulnerableTime: 1
-  wotan: {fileID: 0}
-  underlay: {fileID: 0}
   fadetoblack: {fileID: 0}
   fade: 0
+  fadeSpeed: 0

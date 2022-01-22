@@ -1064,6 +1064,10 @@ PrefabInstance:
       propertyPath: heavyBreath
       value: 
       objectReference: {fileID: 202423945}
+    - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: dashSpeed
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_RootOrder
       value: 6

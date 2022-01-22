@@ -52,10 +52,10 @@ public class dashMove : MonoBehaviour
                    dashTime -= Time.deltaTime;
                    if(direction == 1){
                        if(playerController.m_FacingRight){
-                            rb.velocity = Vector2.right * dashSpeed;
+                            rb.AddForce(Vector2.right * dashSpeed);
                        }
                        else{
-                           rb.velocity = Vector2.left * dashSpeed;
+                           rb.AddForce(Vector2.left * dashSpeed);
                        }
                        
                        direction = 0;
