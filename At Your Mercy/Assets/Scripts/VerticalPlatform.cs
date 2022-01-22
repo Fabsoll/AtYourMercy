@@ -15,11 +15,12 @@ public class VerticalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("passable platform")==0){
+        if(Input.GetKeyUp(KeyCode.S)){
             waitTime = 0.5f;
         }
 
-        if(Input.GetAxis("passable platform")<0){
+        if(Input.GetKey(KeyCode.S))
+        {
             if(waitTime <= 0){
                 effector.rotationalOffset = 180f;
                 waitTime = 0.5f;

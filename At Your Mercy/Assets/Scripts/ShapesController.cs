@@ -41,7 +41,7 @@ public class ShapesController : MonoBehaviour
         }
         transform.position = currentShape.transform.position;
          if(!isOnActive){
-            if (Input.GetAxis("change horse")> 0f) 
+            if (Input.GetAxis("change horse")> 0f || Input.mouseScrollDelta.y >0f)
              { 
                  if(shapeIndex == 1){
                          shapeIndex = 1;
@@ -50,7 +50,7 @@ public class ShapesController : MonoBehaviour
                      shapeIndex++; 
                  }
              } 
-             else if (Input.GetAxis("change horse") < 0f)  
+             else if (Input.GetAxis("change horse") < 0f || Input.mouseScrollDelta.y <0f)  
              { 
                  if(shapeIndex == 0){
                      shapeIndex = 0;
@@ -62,7 +62,7 @@ public class ShapesController : MonoBehaviour
              //Debug.Log(shapeIndex);
 
              if(!isInCooldown){
-                 if(Input.GetAxis("transform")>0){
+                 if(Input.GetAxis("transform")>0 || Input.GetKeyDown(KeyCode.LeftAlt)){
                      EnableOne(shapeIndex);
                      StartCoroutine("ResetActive");
                      StartCoroutine("GoCooldown");

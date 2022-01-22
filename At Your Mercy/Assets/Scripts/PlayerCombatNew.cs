@@ -42,7 +42,6 @@ public class PlayerCombatNew : MonoBehaviour
         isAbleToAttack = true;
         currentHealth = maxHealth;
         fadetoblack.SetActive(false);
-        Overlay.SetActive(false);
         objectColor = fadetoblack.GetComponent<Image>().color;
         hitCount = 1;
         missCount = 1;
