@@ -158,11 +158,10 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     private void Die(){
-        
-//<<<<<<< Updated upstream
-//=======
-//>>>>>>> Stashed changes
 
+        //<<<<<<< Updated upstream
+        //=======
+        //>>>>>>> Stashed changes
         fadetoblack.SetActive(true);
         fade = true;
         heavyBreath.Stop();

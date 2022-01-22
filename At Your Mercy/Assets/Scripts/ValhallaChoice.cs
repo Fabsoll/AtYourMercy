@@ -18,6 +18,7 @@ public class ValhallaChoice : MonoBehaviour
     public GameObject shapeControllerUI;
     public GameObject underlay;
     public TextMeshProUGUI killCount;
+    public AudioSource boom;
     List<string> nameList = new List<string>();
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,10 @@ public class ValhallaChoice : MonoBehaviour
 
     private void OnEnable()
     {
+        AudioListener.volume = 0.4f;
         underlay.SetActive(true);
-
+        boom.volume = 1f;
+        boom.Play();
         shapeControllerUI.SetActive(false);
         nameList.Add("Odger");
         nameList.Add("Arne");

@@ -154,74 +154,67 @@ public class Enemy : MonoBehaviour
 
     void strongTraits()
     {
-        thisTrait.text = "This person was exceptionally ";
+       
         switch (rareTraitNumber)
         {
             case 11:
                 //+3 speed (exceptionally strong)
-                thisTrait.text = "strong";
+                trait = "strong";
                 break;
 
             case 10:
                 //+3 speed (exceptionally swift) 
-
-                thisTrait.text = "swift";
+                trait = "swift";
                 break;
 
             case 9:
                 //invulnerable for 3 hits (exceptionally bold) 
-
-                thisTrait.text = "bold";
+                trait = "bold";
                 break;
 
             case 8:
                 //+1 strength for every soul in valhalla (exceptionally caring) 
-
-                thisTrait.text = "caring";
+                trait = "caring";
                 break;
 
             case 7:
                 //+3 crit rate -2 defense (exceptionally reckless)
-
-                thisTrait.text = "reckless";
+                trait = "reckless";
                 break;
 
             case 6:
                 //deal 25% damage back (exceptionally vengeful) 
-
-                thisTrait.text = "vengeful";
+                trait = "vengeful";
                 break;
 
             case 5:
                 //+1 strength for every soul not in valhalla (exceptionally independent)
-
-                thisTrait.text = "independent";
+                trait = "independent";
                 break;
 
             case 4:
                 //+3 crit rate -2 speed (exceptionally intelligent)
-
-                thisTrait.text = "intelligent";
+                trait = "intelligent";
                 break;
 
             case 3:
                 //+3 random -3 random (exceptionally weird)
-
-                thisTrait.text = "weird";
+                trait = "weird";
                 break;
 
             case 2:
                 // +10% evasion (exceptionally lucky)
-
-                thisTrait.text = "lucky";
+                trait = "lucky";
                 break;
 
             case 1:
                 //+4HP for every soul, - 2 speed (exceptionally lazy)
-
-                thisTrait.text = "lazy";
+                trait = "lazy";
                 break;
+
         }
+        thisTrait.text = "This person was exceptionally " + trait;
+        TraitCalc.newTrait = "exceptionally " + trait + "\n";
     }
 
 

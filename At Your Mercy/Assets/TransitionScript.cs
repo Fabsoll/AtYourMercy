@@ -28,14 +28,17 @@ public class TransitionScript : MonoBehaviour
     public Text wotantext;
     bool wotangone;
     public AudioSource transitionmusic;
+    public AudioSource wotansound;
     // Start is called before the first frame update
     void Start()
     {
+
         wotandialogue.SetActive(true);
         brunnhildedialogue.SetActive(false);
         brunnhildeidle.SetActive(false);
         wotanidle.SetActive(false);
         Time.timeScale = 1;
+
         objectColor = fadetoscene.GetComponent<Image>().color;
         objectColor2 = wotansign.GetComponent<Image>().color;
         objectColor3 = valhallafadeout.GetComponent<Image>().color;
