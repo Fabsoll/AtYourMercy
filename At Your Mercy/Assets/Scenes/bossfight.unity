@@ -798,11 +798,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595925, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1403567969
+      value: 1310120275
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Name
       value: Raven
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: attackRange
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
@@ -1279,7 +1283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571517446221617716, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1403567969
+      value: 1310120275
       objectReference: {fileID: 0}
     - target: {fileID: 4571517446221617717, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
       propertyPath: m_RootOrder
