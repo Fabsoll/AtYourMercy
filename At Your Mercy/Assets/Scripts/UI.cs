@@ -19,7 +19,7 @@ public class UI : MonoBehaviour
         ResumeGame();
         PauseMenu.SetActive(false);
         Overlay.SetActive(false);
-        
+        paused = false;
     }
 
     // Update is called once per frame

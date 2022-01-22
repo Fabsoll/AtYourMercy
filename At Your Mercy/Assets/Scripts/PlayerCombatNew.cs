@@ -23,7 +23,7 @@ public class PlayerCombatNew : MonoBehaviour
     public int currentHealth;
     public Color damageColor;
     public SpriteRenderer playerSprite;
-
+    public GameObject Overlay;
     public bool isInvulnerable;
     public bool isAbleToAttack;
     public float attackCD;
@@ -42,6 +42,7 @@ public class PlayerCombatNew : MonoBehaviour
         isAbleToAttack = true;
         currentHealth = maxHealth;
         fadetoblack.SetActive(false);
+        Overlay.SetActive(false);
         objectColor = fadetoblack.GetComponent<Image>().color;
         hitCount = 1;
         missCount = 1;
