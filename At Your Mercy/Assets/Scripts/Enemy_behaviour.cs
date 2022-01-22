@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy_behaviour : MonoBehaviour
 {
+
+
+    public Enemy testscript;
+
+
     #region Public Variables
     //public Transform rayCast;
     //public LayerMask raycastMask;
@@ -52,7 +57,7 @@ public class Enemy_behaviour : MonoBehaviour
         if(inRange){
             EnemyLogic();
         }
-        
+
     }
 
     void EnemyLogic(){
