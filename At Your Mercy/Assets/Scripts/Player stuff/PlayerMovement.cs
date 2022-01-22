@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private bool run = false;
 
     public GameObject icon;
+    public AudioSource walk;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
         playerBox = GetComponent<CircleCollider2D>();
         playerRB = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        walk.Play();
+        walk.loop = true;
+        walk.volume = 0;
         //playerAnim.keepAnimatorControllerStateOnDisable = false;
     }
 
@@ -35,6 +40,14 @@ public class PlayerMovement : MonoBehaviour
         //Run();
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
+
+        if (playerRB.velocity.x != 0)
+        {
+
+            walk.volume = 1;
+            Debug.Log(playerRB.velocity.x);
+        }
+        
         // if (playerRB.velocity.x == 0){
         //     {
         //         run = false;
@@ -42,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         //         playerAnim.SetBool("isRunning", false);
         //     }
         // }
-        if(Input.GetButtonDown("valkyrie jump")){
+        if (Input.GetButtonDown("valkyrie jump")){
             jump = true;
             playerAnim.SetBool("isJumping", true);
         }
@@ -51,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         {
             run = false;
             playerAnim.SetBool("isRunning", false);
+            walk.volume = 0;
         }
             if (Input.GetButtonDown("valkyrie running")){
                 if (run == false)
