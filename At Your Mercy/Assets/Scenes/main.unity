@@ -1100,6 +1100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 529761383, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_JumpForce
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: death
       value: 
@@ -1200,6 +1204,10 @@ PrefabInstance:
       propertyPath: walk
       value: 
       objectReference: {fileID: 76251429}
+    - target: {fileID: 2385196965203142506, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142510, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Name
       value: Valkyrie

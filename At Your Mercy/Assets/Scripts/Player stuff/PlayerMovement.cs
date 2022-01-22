@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject icon;
     public AudioSource walk;
 
-    private bool isMoving = false;
+    private bool onAir = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,18 +38,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isMoving){
-            playerRB.velocity = Vector2.zero;
-            Debug.Log("wadawd");
-        }
+        //if(!isMoving){
+        //    playerRB.velocity = Vector2.zero;
+        //    Debug.Log("wadawd");
+        //}
         //Run();
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
-        if (playerRB.velocity.x != 0 && jump != true)
+        if (playerRB.velocity.y > -1 && playerRB.velocity.y < 1 && !onAir)
         {
-
             walk.volume = 1;
+            Debug.Log("sound");
+        }
+        else{
+            walk.volume = 0;
+            Debug.Log("no sound");
         }
         
 
@@ -61,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         //     }
         // }
         if (Input.GetButtonDown("valkyrie jump")){
+            onAir = true;
             jump = true;
             playerAnim.SetBool("isJumping", true);
         }
@@ -73,7 +78,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
             if (Input.GetButtonDown("valkyrie running")){
-                isMoving = true;
                 if (run == false)
                 {
                     run = true;
@@ -138,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Ground")){
             playerAnim.SetBool("isJumping", false);
+            onAir = false;
         }
         
     }
