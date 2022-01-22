@@ -180,7 +180,8 @@ MonoBehaviour:
   traits: {fileID: 8337528521764246446}
   deathcount: {fileID: 7447625903951195444}
   hpnumber: {fileID: 4050872424659393113}
-  deaths: 4
+  deathcounttotal: {fileID: 5381416912090936853}
+  traitCalc: {fileID: 4502099813049984630}
 --- !u!1 &3227974502599805668
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +491,7 @@ RectTransform:
   - {fileID: 1444243341155791569}
   - {fileID: 2225112195101496474}
   - {fileID: 6001771992826545438}
+  - {fileID: 4212517434549654900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -663,6 +665,57 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!1 &5885066660036184124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4212517434549654900}
+  - component: {fileID: 4502099813049984630}
+  m_Layer: 5
+  m_Name: traitcalc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4212517434549654900
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5885066660036184124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4411649459843426478}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4502099813049984630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5885066660036184124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4dad08a4552484483d89110c7951f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valhallaHP: 0
+  Deathcount: 0
+  valhallaCount: 0
 --- !u!1 &9162615269584158634
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +728,7 @@ GameObject:
   - component: {fileID: 1834917269042191459}
   - component: {fileID: 5381416912090936853}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: deathcount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

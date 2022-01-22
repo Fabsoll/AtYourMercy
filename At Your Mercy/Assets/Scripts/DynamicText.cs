@@ -10,8 +10,8 @@ public class DynamicText : MonoBehaviour
     public TextMeshProUGUI traits;
     public TextMeshProUGUI deathcount;
     public TextMeshProUGUI hpnumber;
-    public int deaths;
-    char ch = '1';
+    public TextMeshProUGUI deathcounttotal;
+    public TraitCalculator traitCalc;
     //int deathcounter;
     //int hpnum;
 
@@ -32,13 +32,24 @@ public class DynamicText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpnumber.text = player.currentHealth.ToString();
 
+        hpnumber.text = traitCalc.valhallaHP.ToString();
+        
+        deathcounttotal.text = traitCalc.Deathcount.ToString();
         //hpnumber.text = hpnum.ToString();
 
         //deathcount.text = 
-        
+
+    }
+    private void OnEnable()
+    {
+        int i = 0;
+        while (i < traitCalc.valhallaCount)
+        {
+            deathcount.text += "1";
+            i++;
+        }
+
     }
 
- 
 }

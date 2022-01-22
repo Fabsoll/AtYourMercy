@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log("enemy dies");
         UIData.deathCounter++;
         Time.timeScale = 0;
-
+        TraitCalc.Deathcount += 1;
         if (strong == true)
         {
             strongTraitNumberGenerator();
@@ -70,7 +70,6 @@ public class Enemy : MonoBehaviour
             normalTraits();
         }
         valhallaChoice.SetActive(true);
-
 
     }
 
@@ -233,7 +232,16 @@ public class Enemy : MonoBehaviour
         {
             TraitCalc.valhallaHP += 5;
         }
-        
+
+        TraitCalc.valhallaCount += 1;
+        valhallaChoice.SetActive(false);
+        Time.timeScale = 1;
+        this.gameObject.SetActive(false);
+    }
+
+    public void Banish()
+    {
+        Debug.Log("trait stored");
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
         this.gameObject.SetActive(false);
