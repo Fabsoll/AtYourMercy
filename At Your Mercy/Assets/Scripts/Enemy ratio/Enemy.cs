@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Color damageColor;
     public SpriteRenderer enemySprite;
     private UI UIData;
-
+    string trait;
     List<int> usedValues = new List<int>();
     int TraitNumber;
     int rareTraitNumber;
@@ -95,56 +95,61 @@ public class Enemy : MonoBehaviour
            
             case 10:
                 //-1 crit rate + 2 strength (kind of thoughtful)
-                thisTrait.text += "thoughtful";
+                trait = "thoughtful";
                 break;
 
             case 9:
                 //+1 strength (kind of strong)
-                thisTrait.text += "strong";
 
+                trait = "strong";
                 break;
 
             case 8:
                 //+1 speed (kind of swift)
-                thisTrait.text += "swift";
+
+                trait = "swift";
                 break;
 
             case 7:
                 //invulnerable for 1 hit (kind of bold)
-                thisTrait.text += "bold";
+                trait = "bold";
                 break;
 
             case 6:
                 //+1 crit rate, -2 defense (kind of reckless)
-                thisTrait.text += "reckless";
+                trait = "reckless";
                 break;
 
             case 5:
                 //deal 10% damage back (kind of vengeful
-                thisTrait.text += "vengeful";
+                trait = "vengeful";
                 break;
 
             case 4:
                 //+1 crit rate, -2 speed (kind of intelligent)
-                thisTrait.text += "intelligent";
+                trait = "intelligent";
                 break;
 
             case 3:
                 // +1 random, -1 random (kind of weird)
-                thisTrait.text += "weird";
+                trait = "weird";
                 break;
 
             case 2:
                 //+5% evasion (kind of lucky)
-                thisTrait.text += "lucky";
+                trait = "lucky";
                 break;
 
             case 1:
                 //+2hp for every soul, -2 speed (kind of lazy)
-                thisTrait.text += "lazy";
+               
+                trait = "lazy";
                 break;
 
         }
+
+        thisTrait.text += trait;
+        TraitCalc.newTrait = "kind of " + trait + "\n";
     }
 
     void strongTraits()
@@ -241,6 +246,8 @@ public class Enemy : MonoBehaviour
 
     public void Banish()
     {
+
+        TraitCalc.oldTraits = TraitCalc.oldTraits + TraitCalc.newTrait;
         Debug.Log("trait stored");
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;

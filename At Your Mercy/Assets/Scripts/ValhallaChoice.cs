@@ -14,6 +14,7 @@ public class ValhallaChoice : MonoBehaviour
     string name;
     public TraitCalculator TraitCalc;
     public TextMeshProUGUI valhallaCount;
+    public TextMeshProUGUI traitlist;
     public GameObject shapeControllerUI;
     public GameObject underlay;
     public TextMeshProUGUI killCount;
@@ -58,7 +59,7 @@ public class ValhallaChoice : MonoBehaviour
             i++;
         }
         killCount.text = TraitCalc.Deathcount.ToString();
-
+        traitlist.text = TraitCalc.oldTraits;
 
     }
     private void OnDisable()

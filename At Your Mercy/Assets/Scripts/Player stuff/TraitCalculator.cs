@@ -8,7 +8,8 @@ public class TraitCalculator : MonoBehaviour
     public int valhallaHP;
     public int Deathcount;
     public int valhallaCount;
-
+    public string newTrait;
+    public string oldTraits;
     // Start is called before the first frame update
     void Start()
     {

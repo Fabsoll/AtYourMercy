@@ -49,7 +49,7 @@ public class DynamicText : MonoBehaviour
             deathcount.text += "1";
             i++;
         }
-
+        traits.text = traitCalc.oldTraits;
     }
 
 }
