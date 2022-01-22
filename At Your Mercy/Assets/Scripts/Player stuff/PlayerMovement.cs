@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject icon;
     public AudioSource walk;
 
+    private bool isMoving = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,17 +38,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isMoving){
+            playerRB.velocity = Vector2.zero;
+            Debug.Log("wadawd");
+        }
         //Run();
         moveX = Input.GetAxisRaw("Horizontal") * movementSpeed;
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
-        if (playerRB.velocity.x != 0)
+        if (playerRB.velocity.x != 0 && !jump)
         {
 
             walk.volume = 1;
-            Debug.Log(playerRB.velocity.x);
         }
         
+
         // if (playerRB.velocity.x == 0){
         //     {
         //         run = false;
@@ -65,12 +70,15 @@ public class PlayerMovement : MonoBehaviour
             run = false;
             playerAnim.SetBool("isRunning", false);
             walk.volume = 0;
+            
         }
             if (Input.GetButtonDown("valkyrie running")){
+                isMoving = true;
                 if (run == false)
                 {
                     run = true;
                     playerAnim.SetBool("isRunning", true);
+                    
                 }
                 else
                 {
