@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject icon;
     public AudioSource walk;
-
+    public float walkVolume;
     private bool onAir = false;
 
     // Start is called before the first frame update
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerRB.velocity.y > -1 && playerRB.velocity.y < 1 && !onAir)
         {
-            walk.volume = 1;
+            walk.volume = walkVolume;
             Debug.Log("sound");
         }
         else{
