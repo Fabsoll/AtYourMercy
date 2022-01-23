@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 331330630}
   - component: {fileID: 331330629}
   - component: {fileID: 331330633}
+  - component: {fileID: 331330634}
   m_Layer: 0
   m_Name: wotan
   m_TagString: Untagged
@@ -569,7 +570,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &331330630
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -670,6 +671,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &331330634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331330628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bea09cdd23de44ba2020444a4b8b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlipped: 1
+  player: {fileID: 768046947}
 --- !u!1 &458058853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1063,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 529761383, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_JumpForce
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: death
       value: 
@@ -1098,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.57
+      value: -6.98
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1157,6 +1176,11 @@ PrefabInstance:
 --- !u!1 &768046938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2385196965203142510, guid: 9020349a659edad4da45ced70780391d, type: 3}
+  m_PrefabInstance: {fileID: 768046937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &768046947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
   m_PrefabInstance: {fileID: 768046937}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &890727425
