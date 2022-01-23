@@ -62,7 +62,12 @@ public class ValhallaChoice : MonoBehaviour
             i++;
         }
         killCount.text = TraitCalc.Deathcount.ToString();
-        traitlist.text = TraitCalc.oldTraits;
+
+        if (TraitCalc.oldTraits != "")
+        {
+            traitlist.text = TraitCalc.oldTraits;
+        }
+        
 
     }
     private void OnDisable()
