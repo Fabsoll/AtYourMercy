@@ -833,6 +833,8 @@ MonoBehaviour:
   inRange: 0
   hotZone: {fileID: 92874634458256974}
   triggerArea: {fileID: 92874634377282159}
+  attack: {fileID: 0}
+  isWolf: 0
 --- !u!114 &92874634721037483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,4 +850,8 @@ MonoBehaviour:
   maxHealth: 100
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 92874633450563579}
+  strongenemy: 0
+  valhallaChoice: {fileID: 0}
+  thisTrait: {fileID: 0}
+  TraitCalc: {fileID: 0}
   hpBar: {fileID: 92874633792193921}
