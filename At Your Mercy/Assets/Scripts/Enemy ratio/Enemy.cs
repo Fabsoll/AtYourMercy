@@ -15,15 +15,15 @@ public class Enemy : MonoBehaviour
     List<int> usedValues = new List<int>();
     int TraitNumber;
     int rareTraitNumber;
-    public bool strong;
-
-
-
+    public bool strongenemy;
+    PlayerCombatNew BrunnTrait;
+    PlayerMovement BrunnMove;
     //valhalla choice system ui stuff vvvvvvv
     public GameObject valhallaChoice;
     public Text thisTrait;
     public TraitCalculator TraitCalc;
-
+    int weirdDown;
+    int weirdUp;
     public HealthBarBehaviour hpBar;
 
     // Start is called before the first frame update
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         UIData.deathCounter++;
         Time.timeScale = 0;
         TraitCalc.Deathcount += 1;
-        if (strong == true)
+        if (strongenemy == true)
         {
             strongTraitNumberGenerator();
             strongTraits();
@@ -222,7 +222,7 @@ public class Enemy : MonoBehaviour
 
     public void Valhalla()
     {
-        if (strong == true)
+        if (strongenemy == true)
         {
             TraitCalc.valhallaHP += 15;
         }
@@ -242,11 +242,147 @@ public class Enemy : MonoBehaviour
 
         TraitCalc.oldTraits = TraitCalc.oldTraits + TraitCalc.newTrait;
         Debug.Log("trait stored");
+
+        if (strongenemy == true)
+        {
+            switch (trait)
+            {
+                case "strong":
+                    BrunnTrait.attackDamage += 3;
+                    break;
+                case "swift":
+                    BrunnMove.movementSpeed += 3;
+                    break;
+                case "bold":
+                    //invulnerable for 3 hits
+                    break;
+                case "caring":
+                    TraitCalc.caringTrait = true;
+                    break;
+                case "reckless":
+                    //+15% crit rate, -2 defense
+                    break;
+                case "vengeful":
+                    //deal 25% damage back
+                    break;
+                case "independent":
+                    TraitCalc.independentTrait = true;
+                    break;
+                case "intelligent":
+                    //+15% crit rate -2 speed
+                    break;
+                case "weird":
+                    //+3 random -3 random
+                    break;
+                case "lucky":
+                    //+10% evasion
+                    break;
+                case "lazy":
+                    TraitCalc.valhallaHP += 4 * TraitCalc.valhallaCount;
+                    BrunnMove.movementSpeed -= 2;
+                    break;
+
+
+            }
+        }
+        else
+        {
+            switch (trait)
+            {
+                case "strong":
+                    BrunnTrait.attackDamage += 1;
+                    break;
+                case "swift":
+                    BrunnMove.movementSpeed += 1;
+                    break;
+                case "bold":
+                    //invulnerable for 1 hit
+                    break;
+                case "reckless":
+                    //+5% crit rate, -1 defense
+                    break;
+                case "vengeful":
+                    //deal 10% damage back
+                    break;
+                case "intelligent":
+                    //+5% crit rate -2 speed
+                    break;
+                case "weird":
+                    //+1 random -1 random
+                    weirdTraitGenerator();
+
+                    break;
+                case "lucky":
+                    //+5% evasion
+                    break;
+                case "lazy":
+                    TraitCalc.valhallaHP += 2 * TraitCalc.valhallaCount;
+                    BrunnMove.movementSpeed -= 2;
+                    break;
+            }
+            }
+
+        TraitCalc.traitCount += 1;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
         this.gameObject.SetActive(false);
     }
 
+    void weirdTraitGenerator()
+    {
+        weirdUp = Random.Range(1, 3);
+        switch (weirdUp)
+        {
+            case 1:
+                if (strongenemy)
+                {
+                    BrunnTrait.attackDamage += 3;
+
+                }
+                else
+                {
+                    BrunnTrait.attackDamage += 1;
+                }
+                break;
+            case 2:
+                //defense up
+                break;
+            case 3:
+                //speed up
+                break;
+
+
+        }
+        getRandomDown();
+        
+        
+            }
+
+    
+    void getRandomDown()
+    {
+        weirdDown = Random.Range(1, 3);
+        if (weirdDown != weirdUp)
+        {
+            switch (weirdDown)
+            {
+                case 1:
+                    //strength down
+                    break;
+                case 2:
+                    //defense up
+                    break;
+                case 3:
+                    //speed up
+                    break;
+            }
+        }
+        else
+        {
+            getRandomDown();
+        }
+
+    }
     void GetTrait()
     {
 

@@ -8,8 +8,12 @@ public class TraitCalculator : MonoBehaviour
     public int valhallaHP;
     public int Deathcount;
     public int valhallaCount;
+    public int traitCount;
     public string newTrait;
     public string oldTraits;
+    PlayerCombatNew brunnTrait;
+    public bool caringTrait;
+    public bool independentTrait;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,16 @@ public class TraitCalculator : MonoBehaviour
     void Update()
     {
         Debug.Log(valhallaHP);
+        if (caringTrait)
+        {
+            brunnTrait.attackDamage += 1 * valhallaCount;
+
+        }
+        if (independentTrait)
+        {
+            brunnTrait.attackDamage += 1 * traitCount;
+
+        }
     }
 
 
