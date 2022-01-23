@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 7db564546c037074c9a8b2f09d45d154
+guid: 92dd7fa8e7120924bb64d90c3a55b64d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -749024654251515319
-    second: spritesheet (3)_0
+      213: -6521603942097139696
+    second: flipped 4_0
   - first:
-      213: -1025294881627752460
-    second: spritesheet (3)_1
+      213: 7074936127576255405
+    second: flipped 4_1
   - first:
-      213: 5676210040115815652
-    second: spritesheet (3)_2
+      213: -6628344681140742788
+    second: flipped 4_2
   - first:
-      213: -3336086821669477768
-    second: spritesheet (3)_3
+      213: 4771689388920478450
+    second: flipped 4_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet (3)_0
+      name: flipped 4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9422453ab0eea95f0800000000000000
-      internalID: -749024654251515319
+      spriteID: 018438184cb9e75a0800000000000000
+      internalID: -6521603942097139696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (3)_1
+      name: flipped 4_1
       rect:
         serializedVersion: 2
         x: 782
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f73d86ccbb65c1f0800000000000000
-      internalID: -1025294881627752460
+      spriteID: daba2c46ce83f2260800000000000000
+      internalID: 7074936127576255405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (3)_2
+      name: flipped 4_2
       rect:
         serializedVersion: 2
         x: 1564
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e4eb9725f2f5ce40800000000000000
-      internalID: 5676210040115815652
+      spriteID: c7591c781a36304a0800000000000000
+      internalID: -6628344681140742788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (3)_3
+      name: flipped 4_3
       rect:
         serializedVersion: 2
         x: 2346
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 872678606b6d3b1d0800000000000000
-      internalID: -3336086821669477768
+      spriteID: 2fa1b1db732783240800000000000000
+      internalID: 4771689388920478450
       vertices: []
       indices: 
       edges: []

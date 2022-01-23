@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 21bf75c9248457c40b8b208c76bfea59
+guid: bbee7f3829c040b4e84774b796d1921b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2902247422746666468
-    second: spritesheet (1)_0
+      213: -3283740792907041425
+    second: flipped 2_0
   - first:
-      213: 8598634611415830664
-    second: spritesheet (1)_1
+      213: -4541240398358254414
+    second: flipped 2_1
   - first:
-      213: -9082291248603447866
-    second: spritesheet (1)_2
+      213: 5546551855339849509
+    second: flipped 2_2
   - first:
-      213: -7538735397198048313
-    second: spritesheet (1)_3
+      213: 5517847914768778583
+    second: flipped 2_3
   - first:
-      213: 6868685725679776305
-    second: spritesheet (1)_4
+      213: 5391581438549005768
+    second: flipped 2_4
   - first:
-      213: -822257751243665455
-    second: spritesheet (1)_5
+      213: 5867114829847968591
+    second: flipped 2_5
   - first:
-      213: -7499830104114247071
-    second: spritesheet (1)_6
+      213: -6928895377058791589
+    second: flipped 2_6
   - first:
-      213: -8225385953719469307
-    second: spritesheet (1)_7
+      213: 760219646148982203
+    second: flipped 2_7
   - first:
-      213: 2256397638032506274
-    second: spritesheet (1)_8
+      213: -3280570886092046858
+    second: flipped 2_8
   - first:
-      213: -5391527602426915064
-    second: spritesheet (1)_9
+      213: -7612702370367116796
+    second: flipped 2_9
   - first:
-      213: -5005915026814050071
-    second: spritesheet (1)_10
+      213: -2423413188006638408
+    second: flipped 2_10
   - first:
-      213: 5801996715052244003
-    second: spritesheet (1)_11
+      213: -7160689749022377665
+    second: flipped 2_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet (1)_0
+      name: flipped 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a54e4885529b7d0800000000000000
-      internalID: -2902247422746666468
+      spriteID: f65f058952fcd62d0800000000000000
+      internalID: -3283740792907041425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_1
+      name: flipped 2_1
       rect:
         serializedVersion: 2
         x: 782
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880d1de1f9c745770800000000000000
-      internalID: 8598634611415830664
+      spriteID: 2bce3301be54af0c0800000000000000
+      internalID: -4541240398358254414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_2
+      name: flipped 2_2
       rect:
         serializedVersion: 2
         x: 1564
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd3a5cba3835f180800000000000000
-      internalID: -9082291248603447866
+      spriteID: 527c0d9868f49fc40800000000000000
+      internalID: 5546551855339849509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_3
+      name: flipped 2_3
       rect:
         serializedVersion: 2
         x: 2346
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3d8522918016790800000000000000
-      internalID: -7538735397198048313
+      spriteID: 7554c649175539c40800000000000000
+      internalID: 5517847914768778583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_4
+      name: flipped 2_4
       rect:
         serializedVersion: 2
         x: 3128
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13270f09649725f50800000000000000
-      internalID: 6868685725679776305
+      spriteID: 8c59d46a0ceb2da40800000000000000
+      internalID: 5391581438549005768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_5
+      name: flipped 2_5
       rect:
         serializedVersion: 2
         x: 3910
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1df4f478ee0c694f0800000000000000
-      internalID: -822257751243665455
+      spriteID: f4bb3893add2c6150800000000000000
+      internalID: 5867114829847968591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_6
+      name: flipped 2_6
       rect:
         serializedVersion: 2
         x: 4692
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16a4d7091404be790800000000000000
-      internalID: -7499830104114247071
+      spriteID: b5f709c8d5e97df90800000000000000
+      internalID: -6928895377058791589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_7
+      name: flipped 2_7
       rect:
         serializedVersion: 2
         x: 5474
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50b30181e0f89dd80800000000000000
-      internalID: -8225385953719469307
+      spriteID: bb5bbf78db7dc8a00800000000000000
+      internalID: 760219646148982203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_8
+      name: flipped 2_8
       rect:
         serializedVersion: 2
         x: 6256
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ad35f662b5505f10800000000000000
-      internalID: 2256397638032506274
+      spriteID: 6fdbef909221972d0800000000000000
+      internalID: -3280570886092046858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_9
+      name: flipped 2_9
       rect:
         serializedVersion: 2
         x: 7038
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80751ac06327d25b0800000000000000
-      internalID: -5391527602426915064
+      spriteID: 40a6e79278f3a5690800000000000000
+      internalID: -7612702370367116796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_10
+      name: flipped 2_10
       rect:
         serializedVersion: 2
         x: 7820
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e065fa3eca678ab0800000000000000
-      internalID: -5005915026814050071
+      spriteID: 8bc0ed89b8e4e5ed0800000000000000
+      internalID: -2423413188006638408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet (1)_11
+      name: flipped 2_11
       rect:
         serializedVersion: 2
         x: 8602
@@ -384,8 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c1ca4a545d48050800000000000000
-      internalID: 5801996715052244003
+      spriteID: f397dbabc9e10ac90800000000000000
+      internalID: -7160689749022377665
       vertices: []
       indices: 
       edges: []

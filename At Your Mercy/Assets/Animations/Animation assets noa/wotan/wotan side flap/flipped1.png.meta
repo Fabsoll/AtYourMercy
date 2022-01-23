@@ -1,43 +1,25 @@
 fileFormatVersion: 2
-guid: e6a49c6280279604cbf626e1b8df0318
+guid: 5bf0128c03cf80d48bc36ea0ad191a42
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8020143640844766479
-    second: spritesheet_0
+      213: 5199100269235658320
+    second: flipped1_0
   - first:
-      213: -6251682230944352461
-    second: spritesheet_1
+      213: 2638110738637045379
+    second: flipped1_1
   - first:
-      213: -1259408508766424310
-    second: spritesheet_2
+      213: 8892732459693741370
+    second: flipped1_2
   - first:
-      213: -5962389079421231736
-    second: spritesheet_3
+      213: -6920751729276703050
+    second: flipped1_3
   - first:
-      213: 2788568348960109317
-    second: spritesheet_4
+      213: 9112698402665155123
+    second: flipped1_4
   - first:
-      213: 226702753830753226
-    second: spritesheet_5
-  - first:
-      213: -7921052967969465774
-    second: spritesheet_6
-  - first:
-      213: -1370661682523340017
-    second: spritesheet_7
-  - first:
-      213: -8276262488406422588
-    second: spritesheet_8
-  - first:
-      213: -5906973516983679737
-    second: spritesheet_9
-  - first:
-      213: 5777552420452043588
-    second: spritesheet_10
-  - first:
-      213: 1269540525142108225
-    second: spritesheet_11
+      213: -4768895445611774580
+    second: flipped1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_0
+      name: flipped1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0d092816264d4f60800000000000000
-      internalID: 8020143640844766479
+      spriteID: 05edd6b162ae62840800000000000000
+      internalID: 5199100269235658320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_1
+      name: flipped1_1
       rect:
         serializedVersion: 2
-        x: 782
+        x: 1575
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337b0ff32209d39a0800000000000000
-      internalID: -6251682230944352461
+      spriteID: 38eba9e4db37c9420800000000000000
+      internalID: 2638110738637045379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_2
+      name: flipped1_2
       rect:
         serializedVersion: 2
-        x: 1564
+        x: 3150
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a037fd742aea58ee0800000000000000
-      internalID: -1259408508766424310
+      spriteID: a3591ae6e05596b70800000000000000
+      internalID: 8892732459693741370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_3
+      name: flipped1_3
       rect:
         serializedVersion: 2
-        x: 2346
+        x: 4725
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ddd6ce8b6514da0800000000000000
-      internalID: -5962389079421231736
+      spriteID: 6beaacd48fc84ff90800000000000000
+      internalID: -6920751729276703050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4
+      name: flipped1_4
       rect:
         serializedVersion: 2
-        x: 3128
+        x: 6300
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5033aaf832cf2b620800000000000000
-      internalID: 2788568348960109317
+      spriteID: 33a40248aeec67e70800000000000000
+      internalID: 9112698402665155123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_5
+      name: flipped1_5
       rect:
         serializedVersion: 2
-        x: 3910
+        x: 7875
         y: 0
-        width: 782
-        height: 1101
+        width: 1575.1666
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,134 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac35fa714f8652300800000000000000
-      internalID: 226702753830753226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 4692
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25a502d0b44c21290800000000000000
-      internalID: -7921052967969465774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 5474
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0305f9367e6afce0800000000000000
-      internalID: -1370661682523340017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 6256
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cb05a6cd1fc42d80800000000000000
-      internalID: -8276262488406422588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 7038
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7054c8ef1e6360ea0800000000000000
-      internalID: -5906973516983679737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 7820
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44b0e3cc05dfd2050800000000000000
-      internalID: 5777552420452043588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 8602
-        y: 0
-        width: 782
-        height: 1101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 148ee0d91605e9110800000000000000
-      internalID: 1269540525142108225
+      spriteID: c8df451ebda71ddb0800000000000000
+      internalID: -4768895445611774580
       vertices: []
       indices: 
       edges: []
