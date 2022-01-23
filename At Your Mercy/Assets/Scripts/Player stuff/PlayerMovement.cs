@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
     private bool onAir = false;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Start()
     {
         playerBox = GetComponent<CircleCollider2D>();
