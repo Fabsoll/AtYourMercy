@@ -5,10 +5,6 @@ using UnityEngine;
 public class Enemy_behaviour : MonoBehaviour
 {
 
-
-    public Enemy testscript;
-
-
     #region Public Variables
     //public Transform rayCast;
     //public LayerMask raycastMask;
@@ -23,6 +19,7 @@ public class Enemy_behaviour : MonoBehaviour
     public GameObject hotZone;
     public GameObject triggerArea;
     public AudioSource attack;
+    public bool isWolf;
     #endregion
 
     #region Private Variables
@@ -37,9 +34,10 @@ public class Enemy_behaviour : MonoBehaviour
     #endregion
 
     private void Awake() {
-        SelectTarget();
+
         intTimer = timer;
         anim = GetComponent<Animator>();
+        SelectTarget();
     }
     
 
@@ -124,11 +122,15 @@ public class Enemy_behaviour : MonoBehaviour
         else{
             target = rightLimit;
         }
+        
         Flip();
+        
+        
     }
 
     public void Flip(){
         Vector3 rotation = transform.eulerAngles;
+
         if(transform.position.x > target.position.x){
             rotation.y = 180f;
         }
