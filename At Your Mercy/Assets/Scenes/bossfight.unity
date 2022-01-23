@@ -562,7 +562,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 40
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -584,8 +584,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2736104, y: -0.26196644}
-  m_Size: {x: 1.1672633, y: 2.529126}
+  m_Offset: {x: -0.2736104, y: -0.26734293}
+  m_Size: {x: 1.1672633, y: 2.5398788}
   m_Direction: 0
 --- !u!212 &331330631
 SpriteRenderer:
@@ -646,7 +646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331330628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.01, y: -6.01, z: 0}
+  m_LocalPosition: {x: 8.01, y: -5.62, z: 0}
   m_LocalScale: {x: 1.6170719, y: 1.6170719, z: 1.6170719}
   m_Children: []
   m_Father: {fileID: 0}
@@ -685,6 +685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFlipped: 1
   player: {fileID: 768046947}
+  bossAnimatorController: {fileID: 331330633}
+  attackPatternBehaviour: {fileID: 484670559}
 --- !u!1 &458058853
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightningAttack: {fileID: 8043688818702754892, guid: 53e6479e5f5b4134991fc5d9b3e270bf, type: 3}
   delay: 0.5
-  gapBetweenLighting: 0
+  gapBetweenLighting: 6
+  castLightning: 0
 --- !u!4 &484670560
 Transform:
   m_ObjectHideFlags: 0
