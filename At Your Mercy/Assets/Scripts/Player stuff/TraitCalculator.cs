@@ -17,6 +17,7 @@ public class TraitCalculator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        brunnTrait = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
     }
 
     private void Awake()
@@ -29,12 +30,12 @@ public class TraitCalculator : MonoBehaviour
         Debug.Log(valhallaHP);
         if (caringTrait)
         {
-            brunnTrait.attackDamage += 1 * valhallaCount;
+            brunnTrait.baseAttack += 1 * valhallaCount;
 
         }
         if (independentTrait)
         {
-            brunnTrait.attackDamage += 1 * traitCount;
+            brunnTrait.baseAttack += 1 * traitCount;
 
         }
     }

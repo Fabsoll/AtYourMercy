@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BrunnMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        BrunnTrait = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
         currentHealth = maxHealth;
         hpBar.SetHealth(currentHealth, maxHealth);
         UIData = FindObjectOfType<UI>();
@@ -76,13 +78,13 @@ public class Enemy : MonoBehaviour
 
     void normalTraitNumberGenerator()
     {
-        int val = Random.Range(1, 10);
+        int val = Random.Range(1, 11);
        
         TraitNumber = val;
     }
     void strongTraitNumberGenerator()
     {
-        int val = Random.Range(1, 11);
+        int val = Random.Range(1, 12);
         
         rareTraitNumber = val;
     }
@@ -92,9 +94,12 @@ public class Enemy : MonoBehaviour
         thisTrait.text = "This person was kind of ";
         switch (TraitNumber)
         {
-           
+
+            case 11:
+                trait = "careful";
+                break;
             case 10:
-                //-1 crit rate + 2 strength (kind of thoughtful)
+                //-5% crit rate + 1strength (kind of thoughtful)
                 trait = "thoughtful";
                 break;
 
@@ -116,7 +121,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case 6:
-                //+1 crit rate, -2 defense (kind of reckless)
+                //+5% crit rate, -2 defense (kind of reckless)
                 trait = "reckless";
                 break;
 
@@ -126,7 +131,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case 4:
-                //+1 crit rate, -2 speed (kind of intelligent)
+                //+5% crit rate, -2 speed (kind of intelligent)
                 trait = "intelligent";
                 break;
 
@@ -157,6 +162,9 @@ public class Enemy : MonoBehaviour
        
         switch (rareTraitNumber)
         {
+            case 12:
+                trait = "careful";
+                break;
             case 11:
                 //+3 speed (exceptionally strong)
                 trait = "strong";
@@ -248,8 +256,11 @@ public class Enemy : MonoBehaviour
         {
             switch (trait)
             {
+                case "careful":
+                    BrunnTrait.defense += 3;
+                    break;
                 case "strong":
-                    BrunnTrait.attackDamage += 3;
+                    BrunnTrait.baseAttack += 3;
                     break;
                 case "swift":
                     BrunnMove.movementSpeed += 3f;
@@ -262,6 +273,8 @@ public class Enemy : MonoBehaviour
                     break;
                 case "reckless":
                     //+15% crit rate, -2 defense
+                    BrunnTrait.critNumber += 3;
+                    BrunnTrait.defense -= 2;
                     break;
                 case "vengeful":
                     //deal 25% damage back
@@ -270,13 +283,17 @@ public class Enemy : MonoBehaviour
                     TraitCalc.independentTrait = true;
                     break;
                 case "intelligent":
-                    //+15% crit rate -2 speed
+                    //crit +15% speed -2
+                    BrunnTrait.critNumber += 3;
+                    BrunnMove.movementSpeed -= 2;
                     break;
                 case "weird":
+                    //+3random -3random
                     weirdTraitGenerator();
                     break;
                 case "lucky":
                     //+10% evasion
+                    BrunnTrait.evadeNumber += 2;
                     break;
                 case "lazy":
                     TraitCalc.valhallaHP += 4 * TraitCalc.valhallaCount;
@@ -290,8 +307,11 @@ public class Enemy : MonoBehaviour
         {
             switch (trait)
             {
+                case "careful":
+                    BrunnTrait.defense += 1;
+                    break;
                 case "strong":
-                    BrunnTrait.attackDamage += 1;
+                    BrunnTrait.baseAttack += 1;
                     break;
                 case "swift":
                     BrunnMove.movementSpeed += 1;
@@ -301,12 +321,16 @@ public class Enemy : MonoBehaviour
                     break;
                 case "reckless":
                     //+5% crit rate, -1 defense
+                    BrunnTrait.critNumber += 1;
+                    BrunnTrait.defense -= 1;
                     break;
                 case "vengeful":
                     //deal 10% damage back
                     break;
                 case "intelligent":
                     //+5% crit rate -2 speed
+                    BrunnTrait.critNumber += 1;
+                    BrunnMove.movementSpeed -= 2;
                     break;
                 case "weird":
                     //+1 random -1 random
@@ -315,6 +339,7 @@ public class Enemy : MonoBehaviour
                     break;
                 case "lucky":
                     //+5% evasion
+                    BrunnTrait.evadeNumber += 1;
                     break;
                 case "lazy":
                     TraitCalc.valhallaHP += 2 * TraitCalc.valhallaCount;
@@ -337,12 +362,12 @@ public class Enemy : MonoBehaviour
             case 1:
                 if (strongenemy)
                 {
-                    BrunnTrait.attackDamage += 3;
+                    BrunnTrait.baseAttack += 3;
 
                 }
                 else
                 {
-                    BrunnTrait.attackDamage += 1;
+                    BrunnTrait.baseAttack += 1;
                 }
                 break;
             case 2:
@@ -388,12 +413,12 @@ public class Enemy : MonoBehaviour
                     //strength down
                     if (strongenemy)
                     {
-                        BrunnTrait.attackDamage -= 3;
+                        BrunnTrait.baseAttack -= 3;
 
                     }
                     else
                     {
-                        BrunnTrait.attackDamage -= 1;
+                        BrunnTrait.baseAttack -= 1;
                     }
                     break;
                 case 2:

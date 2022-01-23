@@ -17,7 +17,10 @@ public class PlayerCombatNew : MonoBehaviour
     public float attackRange;
     public LayerMask enemylayers;
     public AudioSource getHit;
-    public int attackDamage = 2;
+    int attackDamage;
+    public int baseAttack;
+    int critDamage;
+    public int defense = 2;
     public AudioSource enemyDmg1;
     public AudioSource enemyDmg2;
     public int maxHealth = 100;
@@ -36,7 +39,12 @@ public class PlayerCombatNew : MonoBehaviour
     public float fadeSpeed;
     int hitCount;
     int missCount;
-
+    int doesItCrit;
+    int critRate;
+    public int critNumber;
+    int doesItEvade;
+    public int evadeNumber;
+    int evadeChance;
     public GameObject shapeUI;
     // Start is called before the first frame update
     void Start()
@@ -56,7 +64,8 @@ public class PlayerCombatNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("attack") && isAbleToAttack){
+
+        if (Input.GetButtonDown("attack") && isAbleToAttack){
             StartCoroutine(attackCooling());
             Attack();
         }
@@ -105,6 +114,47 @@ public class PlayerCombatNew : MonoBehaviour
 
 
         }
+        if (critNumber >= 6)
+        {
+            critNumber = 6;
+        }
+        //calculate critrate
+        switch (critNumber)
+        {
+            case 0:
+                critRate = 10000000;
+                break;
+            case 1:
+                critRate = 20;
+                break;
+            case 2:
+                critRate = 10;
+                break;
+            case 3:
+                critRate = 7;
+                break;
+            case 4:
+                critRate = 5;
+                break;
+            case 5:
+                critRate = 4;
+                break;
+            case 6:
+                critRate = 2;
+                break;
+        
+        }
+        //calculate if it crits
+        doesItCrit = Random.Range(1, critRate);
+        if (doesItCrit == 1)
+        {
+            attackDamage = 2 * baseAttack;
+            Debug.Log("crit lol");
+        }
+        else
+        {
+            attackDamage = baseAttack;
+        }
         // Detect enemies
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
         foreach(Collider2D enemy in hitEnemies){
@@ -123,6 +173,7 @@ public class PlayerCombatNew : MonoBehaviour
                     hitCount--;
                     break;
             }
+
         }
         // deal damage
     }
@@ -138,11 +189,49 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
-        currentHealth -= damage;
-        getHit.Play();
-        //Debug.Log("isInv");
-        StartCoroutine(Invulnerability());
-        StartCoroutine(ApplyDamageColor());
+        if (evadeNumber >= 6)
+        {
+            evadeNumber = 6;
+        }
+        switch (evadeNumber)
+        {
+            case 0:
+                evadeChance = 10000000;
+                break;
+            case 1:
+                evadeChance = 20;
+                break;
+            case 2:
+                evadeChance = 10;
+                break;
+            case 3:
+                evadeChance = 7;
+                break;
+            case 4:
+                evadeChance = 5;
+                break;
+            case 5:
+                evadeChance = 4;
+                break;
+            case 6:
+                evadeChance = 3;
+                break;
+        }
+
+        doesItEvade = Random.Range(1, evadeChance);
+        if (doesItEvade != 1)
+        {
+            currentHealth -= (damage - defense);
+            getHit.Play();
+            //Debug.Log("isInv");
+            StartCoroutine(Invulnerability());
+            StartCoroutine(ApplyDamageColor());
+        }
+        else
+        {
+            Debug.Log("evaded!!");
+        }
+       
 
         if (currentHealth <= 10)
         {
