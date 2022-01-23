@@ -73,7 +73,7 @@ public class PlayerCombatNew : MonoBehaviour
             }
             else
             {
-
+                fade = false;
                 SceneManager.LoadSceneAsync("transition scene");
                 SceneManager.UnloadSceneAsync("main");
                 
