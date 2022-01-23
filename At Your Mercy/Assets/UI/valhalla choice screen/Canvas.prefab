@@ -679,6 +679,7 @@ MonoBehaviour:
   underlay: {fileID: 0}
   killCount: {fileID: 0}
   boom: {fileID: 0}
+  walk: {fileID: 0}
 --- !u!1 &3187722018752670840
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,8 +913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6647, y: 268.24982}
-  m_SizeDelta: {x: 887.9728, y: 61.4989}
+  m_AnchoredPosition: {x: -11.525005, y: 265.5938}
+  m_SizeDelta: {x: 940.31, y: 66.811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3187722019047194041
 CanvasRenderer:

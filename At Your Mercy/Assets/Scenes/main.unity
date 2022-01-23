@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.467066, y: 5.197325, z: -10}
+  m_LocalPosition: {x: 10.462936, y: -1.6326765, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1251,11 +1251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.600002
+      value: 10.33
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3000016
+      value: -2.53
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1668,6 +1668,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1164901507}
     - target: {fileID: 3187722018133640222, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
+      propertyPath: walk
+      value: 
+      objectReference: {fileID: 76251429}
+    - target: {fileID: 3187722018133640222, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: underlay
       value: 
       objectReference: {fileID: 519980509}
@@ -1778,7 +1782,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 840106611}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6104,7 +6108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.467066, y: 5.197325, z: -10}
+  m_LocalPosition: {x: 10.462936, y: -1.6326765, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -8783,8 +8787,11 @@ MonoBehaviour:
   valhallaHP: 0
   Deathcount: 0
   valhallaCount: 0
+  traitCount: 0
   newTrait: 
   oldTraits: 
+  caringTrait: 0
+  independentTrait: 0
 --- !u!1 &1865312819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,7 +9538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411649460355613607, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4504831292371206004, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: Overlay
@@ -9543,7 +9550,7 @@ PrefabInstance:
       objectReference: {fileID: 2142937064}
     - target: {fileID: 4937766385210657399, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4937766385210657400, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -9575,7 +9582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937766386363509238, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4937766386363509239, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_Name
@@ -9724,9 +9731,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: maxHealth
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: thisTrait
       value: 
       objectReference: {fileID: 115492186}
+    - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: strongenemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: valhallaChoice
       value: 

@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
     {
         int val = Random.Range(1, 11);
         
-        TraitNumber = val;
+        rareTraitNumber = val;
     }
 
     void normalTraits()
@@ -215,6 +215,7 @@ public class Enemy : MonoBehaviour
         }
         thisTrait.text = "This person was exceptionally " + trait;
         TraitCalc.newTrait = "exceptionally " + trait + "\n";
+        Debug.Log(rareTraitNumber);
     }
 
 
@@ -251,7 +252,7 @@ public class Enemy : MonoBehaviour
                     BrunnTrait.attackDamage += 3;
                     break;
                 case "swift":
-                    BrunnMove.movementSpeed += 3;
+                    BrunnMove.movementSpeed += 3f;
                     break;
                 case "bold":
                     //invulnerable for 3 hits
@@ -272,7 +273,7 @@ public class Enemy : MonoBehaviour
                     //+15% crit rate -2 speed
                     break;
                 case "weird":
-                    //+3 random -3 random
+                    weirdTraitGenerator();
                     break;
                 case "lucky":
                     //+10% evasion
@@ -345,10 +346,27 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case 2:
-                //defense up
+                if (strongenemy)
+                {
+                    //def +3
+                    
+                }
+                else
+                {
+                    //def +1
+                }
                 break;
             case 3:
                 //speed up
+                if (strongenemy)
+                {
+                    BrunnMove.movementSpeed += 3;
+
+                }
+                else
+                {
+                    BrunnMove.movementSpeed += 1;
+                }
                 break;
 
 
@@ -368,12 +386,37 @@ public class Enemy : MonoBehaviour
             {
                 case 1:
                     //strength down
+                    if (strongenemy)
+                    {
+                        BrunnTrait.attackDamage -= 3;
+
+                    }
+                    else
+                    {
+                        BrunnTrait.attackDamage -= 1;
+                    }
                     break;
                 case 2:
                     //defense up
+                    if (strongenemy)
+                    {
+                        //def -3
+                    }
+                    else
+                    {
+                        //def-1
+                    }
                     break;
                 case 3:
                     //speed up
+                    if (strongenemy)
+                    {
+                        BrunnMove.movementSpeed -= 3;
+                    }
+                    else
+                    {
+                        BrunnMove.movementSpeed -= 1;
+                    }
                     break;
             }
         }
