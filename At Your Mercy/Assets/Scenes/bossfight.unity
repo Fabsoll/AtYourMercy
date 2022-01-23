@@ -772,6 +772,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 48768700319255178, guid: b6bc5613be3c1734993f9ef6480945d9, type: 3}
   m_PrefabInstance: {fileID: 1971383744}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &484670558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 484670560}
+  - component: {fileID: 484670559}
+  m_Layer: 0
+  m_Name: AttackManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &484670559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484670558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f8f271de89385469fa481a6a4bcf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightningAttack: {fileID: 8043688818702754892, guid: 53e6479e5f5b4134991fc5d9b3e270bf, type: 3}
+  delay: 0.5
+  gapBetweenLighting: 0
+--- !u!4 &484670560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484670558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.6551404, y: -5.2011285, z: -0.44811442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489402325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -952,7 +998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1310120275
   m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: b421e43886bb5c04daf4487969eebb22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1095,6 +1141,14 @@ PrefabInstance:
       propertyPath: missTwo
       value: 
       objectReference: {fileID: 1888316958}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: shapeUI
+      value: 
+      objectReference: {fileID: 1243757386}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: fadetoblack
       value: 
@@ -1489,6 +1543,11 @@ PrefabInstance:
       objectReference: {fileID: 1971383745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cb7e5297e0888544a9e761023ee76f1, type: 3}
+--- !u!1 &1243757386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3510486139385602773, guid: 8cb7e5297e0888544a9e761023ee76f1, type: 3}
+  m_PrefabInstance: {fileID: 1243757385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286923596
 GameObject:
   m_ObjectHideFlags: 0

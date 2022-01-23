@@ -10,13 +10,12 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("NumberEverySecond", 1f, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void LookAtPlayer(){
@@ -33,5 +32,14 @@ public class Boss : MonoBehaviour
             transform.Rotate(0, 180f, 0);
             isFlipped = true;
         }
+    }
+
+    public int NumberEverySecond(){
+        int min = 0;
+        int max = 10;
+
+        int result = Random.Range(min, max);
+        Debug.Log(result);
+        return result;
     }
 }
