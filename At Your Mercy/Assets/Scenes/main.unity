@@ -1198,6 +1198,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1580935776}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: shapeUI
+      value: 
+      objectReference: {fileID: 1700867680}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: underlay
       value: 
       objectReference: {fileID: 0}

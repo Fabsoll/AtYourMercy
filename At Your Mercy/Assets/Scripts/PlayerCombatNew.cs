@@ -36,6 +36,8 @@ public class PlayerCombatNew : MonoBehaviour
     public float fadeSpeed;
     int hitCount;
     int missCount;
+
+    public GameObject shapeUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -164,6 +166,8 @@ public class PlayerCombatNew : MonoBehaviour
         //>>>>>>> Stashed changes
         fadetoblack.SetActive(true);
         fade = true;
+        shapeUI.SetActive(false);
+
         heavyBreath.Stop();
         death.Play();
         Debug.Log("Player died");
