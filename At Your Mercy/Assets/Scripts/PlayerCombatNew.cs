@@ -7,22 +7,27 @@ using UnityEngine.SceneManagement;
 public class PlayerCombatNew : MonoBehaviour
 {
     public Animator animator;
+
+    #region audio
     public AudioSource heavyBreath;
     public AudioSource hitOne;
     public AudioSource hitTwo;
     public AudioSource missOne;
     public AudioSource missTwo;
     public AudioSource death;
+    public AudioSource enemyDmg1;
+    public AudioSource enemyDmg2;
+    public AudioSource getHit;
+    #endregion
+
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemylayers;
-    public AudioSource getHit;
+
     int attackDamage;
     public int baseAttack;
     int critDamage;
     public int defense = 2;
-    public AudioSource enemyDmg1;
-    public AudioSource enemyDmg2;
     public int maxHealth = 100;
     public int currentHealth;
     public Color damageColor;
@@ -46,6 +51,9 @@ public class PlayerCombatNew : MonoBehaviour
     public int evadeNumber;
     int evadeChance;
     public GameObject shapeUI;
+
+
+    public GameObject lastEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -159,7 +167,6 @@ public class PlayerCombatNew : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
         foreach(Collider2D enemy in hitEnemies){
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-            
             switch (hitCount)
             {
                 case 1:
