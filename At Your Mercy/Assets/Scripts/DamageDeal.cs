@@ -14,16 +14,16 @@ public class DamageDeal : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerCombatNew>();
-        destroyTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
+    //    destroyTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(DestroyIfPassed());
-        if(isDestroyable){
-            Destroy(gameObject);
-        }
+        //StartCoroutine(DestroyIfPassed());
+        //if(isDestroyable){
+        //    Destroy(gameObject);
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
