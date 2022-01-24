@@ -31,6 +31,10 @@ public class Boss : MonoBehaviour
                 attackPatternBehaviour.castLightning = true;
                 //attackPatternBehaviour.castLightning = false;
             }
+            if(NumberEverySecond() == 2){
+                bossAnimatorController.SetTrigger("WindAttack");
+                //attackPatternBehaviour.castLightning = false;
+            }
             //attackPatternBehaviour.castLightning = false;
         
         }
@@ -53,8 +57,8 @@ public class Boss : MonoBehaviour
     }
 
     public int NumberEverySecond(){
-        int min = 0;
-        int max = 10;
+        int min = 1;
+        int max = 5;
 
         int result = Random.Range(min, max);
         Debug.Log(result);

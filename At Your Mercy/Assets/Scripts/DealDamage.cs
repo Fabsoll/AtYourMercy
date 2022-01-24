@@ -18,7 +18,17 @@ public class DealDamage : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Rigidbody2D otherRB = other.gameObject.GetComponent<Rigidbody2D>();
-        otherRB.AddForce((other.transform.position - this.transform.position).normalized * pushForce);
+        if(other.gameObject.tag == "Player"){
+            Rigidbody2D otherRB = other.gameObject.GetComponent<Rigidbody2D>();
+            //otherRB.AddForce((Vector2.up) * pushForce);
+            Vector3 direction =  new Vector3(Mathf.Cos(90 - transform.eulerAngles.z * Mathf.Deg2Rad), 0 ,Mathf.Sin(90 - transform.eulerAngles.y * Mathf.Deg2Rad) * -1);
+            otherRB.AddForce(direction * pushForce);
+            //StartCoroutine(StopDash(otherRB));
+        }
+    }
+
+    private IEnumerator StopDash(Rigidbody2D otherRB){
+        yield return new WaitForSeconds(0.3f);
+        otherRB.velocity = Vector2.zero;
     }
 }
