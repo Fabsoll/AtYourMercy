@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public bool isDead = false;
     PlayerCombatNew getEnemy;
     public HealthBarBehaviour hpBar;
+    public GameObject thisEnemy;
+
     //valhalla choice system ui stuff vvvvvvv
 
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         hpBar.SetHealth(currentHealth, maxHealth);
         StartCoroutine(ApplyDamageColor());
-        getEnemy2.lastEnemy = this.gameObject;
+        getEnemy2.lastEnemy = thisEnemy;
         if (currentHealth <= 0){
             Die();
         }

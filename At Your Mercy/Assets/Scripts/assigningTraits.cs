@@ -60,6 +60,7 @@ public class assigningTraits : MonoBehaviour
             normalTraits();
         }
         valhallaChoice.SetActive(true);
+        lastEnemy = enemyInfo.thisEnemy;
     }
 
 
