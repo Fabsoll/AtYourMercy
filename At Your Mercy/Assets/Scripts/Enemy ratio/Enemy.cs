@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public GameObject valhallaChoice;
     public Text thisTrait;
     public TraitCalculator TraitCalc;
+    public GameObject thisEnemy;
     int weirdDown;
     int weirdUp;
     public HealthBarBehaviour hpBar;
@@ -243,7 +244,7 @@ public class Enemy : MonoBehaviour
         TraitCalc.valhallaCount += 1;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void Banish()
@@ -351,7 +352,7 @@ public class Enemy : MonoBehaviour
         TraitCalc.traitCount += 1;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     void weirdTraitGenerator()
