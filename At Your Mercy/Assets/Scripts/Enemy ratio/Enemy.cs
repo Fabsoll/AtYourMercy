@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-
+    public bool isWolf;
     public int maxHealth = 100;
     int currentHealth;
     public Color damageColor;
@@ -42,12 +42,25 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         hpBar.SetHealth(currentHealth, maxHealth);
         StartCoroutine(ApplyDamageColor());
-        getEnemy2.lastEnemy = thisEnemy; 
+
+        if (isWolf == false)
+        {
+            getEnemy2.lastEnemy = thisEnemy;
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+        else
+        {
+            if (currentHealth <= 0)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
 
         Debug.Log(currentHealth);
-        if (currentHealth <= 0){
-            Die();
-        }
+        
     }
     private void OnDisable()
     {

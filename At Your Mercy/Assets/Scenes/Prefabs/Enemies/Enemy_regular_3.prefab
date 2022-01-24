@@ -234,7 +234,7 @@ MonoBehaviour:
   slider: {fileID: 7323398360221744981}
   Low: {r: 1, g: 0, b: 0, a: 1}
   High: {r: 0, g: 1, b: 0.098634005, a: 1}
-  Offset: {x: 0, y: 1.15, z: 0}
+  Offset: {x: -0.16, y: 1.74, z: 0}
 --- !u!1 &7323398358869957344
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +336,8 @@ MonoBehaviour:
   inRange: 0
   hotZone: {fileID: 7323398359147413512}
   triggerArea: {fileID: 7323398359331214377}
+  attack: {fileID: 0}
+  isWolf: 0
 --- !u!114 &7323398358869957357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,10 +350,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b6bd1b5c709bf45b195dfae2300b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWolf: 0
   maxHealth: 100
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 7323398360283050429}
+  getEnemy2: {fileID: 0}
+  strongenemy: 0
+  isDead: 0
   hpBar: {fileID: 7323398358750090183}
+  thisEnemy: {fileID: 0}
 --- !u!1 &7323398359050419452
 GameObject:
   m_ObjectHideFlags: 0

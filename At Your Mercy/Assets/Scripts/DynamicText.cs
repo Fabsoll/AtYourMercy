@@ -47,9 +47,9 @@ public class DynamicText : MonoBehaviour
         //for (int i = 0; i < traitCalc.valhallaCount; i++)
         //{
         //    deathcount.text = "1";
-           
-        //}
-        //traits.text = traitCalc.oldTraits;
+
+    //}
+    traits.text = traitCalc.oldTraits;
     }
 
 }

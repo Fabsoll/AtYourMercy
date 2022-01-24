@@ -115,15 +115,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b6bd1b5c709bf45b195dfae2300b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWolf: 0
   maxHealth: 78
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 1943744621553142941}
+  getEnemy2: {fileID: 0}
   strongenemy: 0
-  valhallaChoice: {fileID: 0}
-  thisTrait: {fileID: 0}
-  TraitCalc: {fileID: 0}
-  thisEnemy: {fileID: 1943744620140062656}
+  isDead: 0
   hpBar: {fileID: 1943744621077294823}
+  thisEnemy: {fileID: 1943744620140062656}
 --- !u!1 &1943744620307005916
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
   slider: {fileID: 1943744621476102773}
   Low: {r: 1, g: 0, b: 0, a: 1}
   High: {r: 0, g: 1, b: 0.098634005, a: 1}
-  Offset: {x: 0, y: 1.15, z: 0}
+  Offset: {x: -0.16, y: 1.74, z: 0}
 --- !u!1 &1943744621360950160
 GameObject:
   m_ObjectHideFlags: 0

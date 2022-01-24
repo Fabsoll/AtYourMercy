@@ -377,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.714569, y: 38.528343, z: -10}
+  m_LocalPosition: {x: 42.724567, y: 36.918346, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -904,6 +904,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -1224,6 +1236,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -1334,6 +1358,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -1817,11 +1853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.54
+      value: 42.55
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.35
+      value: 35.74
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2814,6 +2850,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -3606,6 +3654,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -4061,6 +4121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -5673,6 +5745,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -6198,6 +6282,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6303,6 +6399,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -8590,6 +8698,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -9699,6 +9819,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -10682,6 +10814,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -10845,7 +10989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.714569, y: 38.528343, z: -10}
+  m_LocalPosition: {x: 42.724567, y: 36.918346, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -10934,7 +11078,7 @@ PrefabInstance:
     - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: thisEnemy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1766167170}
     - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: thisTrait
       value: 
@@ -10943,6 +11087,10 @@ PrefabInstance:
       propertyPath: valhallaChoice
       value: 
       objectReference: {fileID: 1120778073}
+    - target: {fileID: 1943744621077294823, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+      propertyPath: Offset.y
+      value: 2.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1943744622166917783, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12211,6 +12359,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -12321,6 +12481,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -14209,6 +14381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741c6115427b1f342ba8b386efa1fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1766167170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1943744620140062656, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+  m_PrefabInstance: {fileID: 1350514171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768083685
 GameObject:
   m_ObjectHideFlags: 0
@@ -14953,6 +15130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -15815,6 +16004,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -15920,6 +16121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -16435,6 +16648,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -16826,6 +17051,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 777583986}
     m_Modifications:
+    - target: {fileID: 388194885479374805, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: isWolf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 8549642211163258639, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
       value: Enemy
