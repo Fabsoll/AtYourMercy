@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8549642211163258624}
   - component: {fileID: 8549642211163258625}
   - component: {fileID: 8549642211163258626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8549642212481632209}
   - component: {fileID: 8549642212481632210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
