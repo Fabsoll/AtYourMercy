@@ -63,7 +63,7 @@ public class ValhallaChoice : MonoBehaviour
         RandomNameGenerator();
         slain.text = name + " slain.";
         valhallaHP.text = TraitCalc.valhallaHP.ToString();
-        int i = 0;
+        int i = 1;
         while (i < TraitCalc.valhallaCount)
         {
             valhallaCount.text +="1";

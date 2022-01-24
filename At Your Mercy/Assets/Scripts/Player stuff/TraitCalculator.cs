@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TraitCalculator : MonoBehaviour
 {
-
+    public float valhallaTextCount;
     public int valhallaHP;
     public int Deathcount;
     public int valhallaCount;

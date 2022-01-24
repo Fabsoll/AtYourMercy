@@ -53,7 +53,6 @@ public class PlayerCombatNew : MonoBehaviour
     public GameObject shapeUI;
 
 
-    public GameObject lastEnemy;
     // Start is called before the first frame update
     void Start()
     {

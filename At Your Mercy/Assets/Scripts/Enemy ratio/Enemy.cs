@@ -42,13 +42,17 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         hpBar.SetHealth(currentHealth, maxHealth);
         StartCoroutine(ApplyDamageColor());
-        getEnemy2.lastEnemy = thisEnemy;
+        getEnemy2.lastEnemy = thisEnemy; 
+
         Debug.Log(currentHealth);
         if (currentHealth <= 0){
             Die();
         }
     }
-
+    private void OnDisable()
+    {
+        isDead = false;
+    }
     void Die(){
         //Debug.Log("enemy dies");
         UIData.deathCounter++;

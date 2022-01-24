@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 
 public class DynamicText : MonoBehaviour
@@ -27,6 +28,7 @@ public class DynamicText : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         //Debug.Log(UIData.deathCounter);
 
+
     }
 
     // Update is called once per frame
@@ -37,19 +39,17 @@ public class DynamicText : MonoBehaviour
         
         deathcounttotal.text = traitCalc.Deathcount.ToString();
         //hpnumber.text = hpnum.ToString();
-
-        //deathcount.text = 
-
+        string result = new string('1', traitCalc.valhallaCount) ;
+        deathcount.text = result;
     }
     private void OnEnable()
     {
-        int i = 0;
-        while (i < traitCalc.valhallaCount)
-        {
-            deathcount.text += "1";
-            i++;
-        }
-        traits.text = traitCalc.oldTraits;
+        //for (int i = 0; i < traitCalc.valhallaCount; i++)
+        //{
+        //    deathcount.text = "1";
+           
+        //}
+        //traits.text = traitCalc.oldTraits;
     }
 
 }

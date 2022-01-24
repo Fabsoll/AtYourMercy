@@ -24,7 +24,7 @@ public class assigningTraits : MonoBehaviour
     PlayerMovement BrunnMove;
     bool isEnemyDead;
     public GameObject lastEnemy;
-
+    bool isEnemyStrong;
     void Start()
     {
         enemyInfo = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
@@ -38,22 +38,27 @@ public class assigningTraits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isEnemyDead = lastEnemy.GetComponent<Enemy>().isDead;
+        if (lastEnemy != null) { isEnemyDead = lastEnemy.GetComponent<Enemy>().isDead; }
+        if (lastEnemy != null)
+        {
+            isEnemyStrong = lastEnemy.GetComponent<Enemy>().strongenemy;
+        }
         if (isEnemyDead == true)
         {
             Die();
 
-            lastEnemy.SetActive(false);
-            isEnemyDead = false;
+            
         }
     }
 
 
     void Die()
     {
+
+        
         Time.timeScale = 0;
         TraitCalc.Deathcount += 1;
-        if (enemyInfo.strongenemy== true)
+        if (isEnemyStrong== true)
         {
             strongTraitNumberGenerator();
             strongTraits();
@@ -65,6 +70,8 @@ public class assigningTraits : MonoBehaviour
             normalTraits();
         }
         valhallaChoice.SetActive(true);
+        lastEnemy.SetActive(false);
+        isEnemyDead = false;
     }
 
 
@@ -223,7 +230,7 @@ public class assigningTraits : MonoBehaviour
 
     public void Valhalla()
     {
-        if (enemyInfo.strongenemy == true)
+        if (isEnemyStrong == true)
         {
             TraitCalc.valhallaHP += 15;
         }
@@ -232,10 +239,10 @@ public class assigningTraits : MonoBehaviour
             TraitCalc.valhallaHP += 5;
         }
 
-        TraitCalc.valhallaCount += 1;
+        TraitCalc.valhallaCount ++;
+        TraitCalc.valhallaTextCount += 0.5f;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
-        lastEnemy.SetActive(false);
     }
 
     public void Banish()
@@ -244,7 +251,7 @@ public class assigningTraits : MonoBehaviour
         TraitCalc.oldTraits = TraitCalc.oldTraits + TraitCalc.newTrait;
         Debug.Log("trait stored");
 
-        if (enemyInfo.strongenemy == true)
+        if (isEnemyStrong == true)
         {
             switch (trait)
             {
@@ -343,7 +350,6 @@ public class assigningTraits : MonoBehaviour
         TraitCalc.traitCount += 1;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
-        lastEnemy.SetActive(false);
     }
 
     void weirdTraitGenerator()
@@ -352,7 +358,7 @@ public class assigningTraits : MonoBehaviour
         switch (weirdUp)
         {
             case 1:
-                if (enemyInfo.strongenemy)
+                if (isEnemyStrong)
                 {
                     BrunnTrait.baseAttack += 3;
 
@@ -363,19 +369,20 @@ public class assigningTraits : MonoBehaviour
                 }
                 break;
             case 2:
-                if (enemyInfo.strongenemy)
+                if (isEnemyStrong)
                 {
                     //def +3
-
+                    BrunnTrait.defense += 3;
                 }
                 else
                 {
                     //def +1
+                    BrunnTrait.defense += 1;
                 }
                 break;
             case 3:
                 //speed up
-                if (enemyInfo.strongenemy)
+                if (isEnemyStrong)
                 {
                     BrunnMove.movementSpeed += 3;
 
@@ -403,7 +410,7 @@ public class assigningTraits : MonoBehaviour
             {
                 case 1:
                     //strength down
-                    if (enemyInfo.strongenemy)
+                    if (isEnemyStrong)
                     {
                         BrunnTrait.baseAttack -= 3;
 
@@ -415,18 +422,19 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case 2:
                     //defense up
-                    if (enemyInfo.strongenemy)
+                    if (isEnemyStrong)
                     {
-                        //def -3
+                        BrunnTrait.defense -= 3;
                     }
                     else
                     {
                         //def-1
+                        BrunnTrait.defense -= 1;
                     }
                     break;
                 case 3:
                     //speed up
-                    if (enemyInfo.strongenemy)
+                    if (isEnemyStrong)
                     {
                         BrunnMove.movementSpeed -= 3;
                     }
