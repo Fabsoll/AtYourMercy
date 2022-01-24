@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWolf: 0
-  maxHealth: 200
+  maxHealth: 100
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 1271894539029626965}
   getEnemy2: {fileID: 0}

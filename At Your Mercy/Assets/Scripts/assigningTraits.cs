@@ -295,7 +295,7 @@ public class assigningTraits : MonoBehaviour
                     BrunnTrait.evadeNumber += 2;
                     break;
                 case "lazy":
-                    TraitCalc.valhallaHP += 4 * TraitCalc.valhallaCount;
+                    TraitCalc.lazyTrait = true;
                     BrunnMove.movementSpeed -= 2;
                     break;
 

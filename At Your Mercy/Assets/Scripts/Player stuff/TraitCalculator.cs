@@ -5,6 +5,7 @@ using UnityEngine;
 public class TraitCalculator : MonoBehaviour
 {
     public float valhallaTextCount;
+    public bool lazyTrait;
     public int valhallaHP;
     public int Deathcount;
     public int valhallaCount;
@@ -37,6 +38,10 @@ public class TraitCalculator : MonoBehaviour
         {
             brunnTrait.baseAttack += 1 * traitCount;
 
+        }
+        if (lazyTrait)
+        {
+            valhallaHP += (4 * valhallaCount);
         }
     }
 
