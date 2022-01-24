@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1943744620140062669}
   m_Layer: 0
   m_Name: Enemy_regular_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1943744620140062656}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 7, y: -2.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1943744621076407148}
   - {fileID: 1943744621553142940}
@@ -101,6 +101,8 @@ MonoBehaviour:
   inRange: 0
   hotZone: {fileID: 1943744620402851112}
   triggerArea: {fileID: 1943744620584544521}
+  attack: {fileID: 0}
+  isWolf: 0
 --- !u!114 &1943744620140062669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,9 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b6bd1b5c709bf45b195dfae2300b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 78
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 1943744621553142941}
+  strongenemy: 0
+  valhallaChoice: {fileID: 0}
+  thisTrait: {fileID: 0}
+  TraitCalc: {fileID: 0}
+  thisEnemy: {fileID: 1943744620140062656}
   hpBar: {fileID: 1943744621077294823}
 --- !u!1 &1943744620307005916
 GameObject:
@@ -760,9 +767,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1310120275
+  m_SortingLayer: 3
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: af1dc12199997de4c9eeec01716dad2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
