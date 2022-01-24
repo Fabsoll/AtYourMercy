@@ -22,7 +22,7 @@ public class assigningTraits : MonoBehaviour
     int rareTraitNumber;
     PlayerCombatNew BrunnTrait;
     PlayerMovement BrunnMove;
-
+    bool isEnemyDead;
     public GameObject lastEnemy;
 
     void Start()
@@ -32,14 +32,19 @@ public class assigningTraits : MonoBehaviour
         BrunnMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         BrunnTrait = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
         valhallaChoice.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemyInfo.isDead == true)
+        isEnemyDead = lastEnemy.GetComponent<Enemy>().isDead;
+        if (isEnemyDead == true)
         {
             Die();
+
+            lastEnemy.SetActive(false);
+            isEnemyDead = false;
         }
     }
 
@@ -60,7 +65,6 @@ public class assigningTraits : MonoBehaviour
             normalTraits();
         }
         valhallaChoice.SetActive(true);
-        lastEnemy = enemyInfo.thisEnemy;
     }
 
 

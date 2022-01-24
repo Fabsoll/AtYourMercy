@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     private UI UIData;
     public assigningTraits getEnemy2;
     public bool strongenemy;
-    public bool isDead = false;
+    public bool isDead;
     PlayerCombatNew getEnemy;
     public HealthBarBehaviour hpBar;
     public GameObject thisEnemy;
@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
         hpBar.SetHealth(currentHealth, maxHealth);
         StartCoroutine(ApplyDamageColor());
         getEnemy2.lastEnemy = thisEnemy;
+        Debug.Log(currentHealth);
         if (currentHealth <= 0){
             Die();
         }

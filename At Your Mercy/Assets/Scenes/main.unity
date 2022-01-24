@@ -377,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9445696, y: 16.718346, z: -10}
+  m_LocalPosition: {x: 34.974567, y: -3.0216537, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1939,11 +1939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.77
+      value: 34.8
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.54
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2654,6 +2654,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: maxHealth
       value: 78
       objectReference: {fileID: 0}
@@ -2815,7 +2819,7 @@ PrefabInstance:
     - target: {fileID: 3187722017322367165, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2028604281}
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 3187722017322367165, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2826,7 +2830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187722017322367165, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Enemy, Assembly-CSharp
+      value: assigningTraits, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3187722017322367165, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2887,7 +2891,7 @@ PrefabInstance:
     - target: {fileID: 3187722018752670846, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2028604281}
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 3187722018752670846, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2898,7 +2902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187722018752670846, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Enemy, Assembly-CSharp
+      value: assigningTraits, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3187722018752670846, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3372,6 +3376,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 200
@@ -4386,6 +4394,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: maxHealth
       value: 78
@@ -5503,6 +5515,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: maxHealth
       value: 78
@@ -8271,6 +8287,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: maxHealth
       value: 78
       objectReference: {fileID: 0}
@@ -8441,6 +8461,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: maxHealth
       value: 78
@@ -10117,6 +10141,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: maxHealth
       value: 78
       objectReference: {fileID: 0}
@@ -10525,6 +10553,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 200
@@ -11182,7 +11214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9445696, y: 16.718346, z: -10}
+  m_LocalPosition: {x: 34.974567, y: -3.0216537, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -11276,6 +11308,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1943744620140062669, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: maxHealth
       value: 78
@@ -13035,6 +13071,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 28
       objectReference: {fileID: 0}
@@ -14478,6 +14518,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: maxHealth
       value: 78
       objectReference: {fileID: 0}
@@ -14652,6 +14696,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 200
@@ -14870,6 +14918,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 200
@@ -16790,6 +16842,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847504413}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
+    - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: maxHealth
       value: 78
       objectReference: {fileID: 0}
@@ -17749,6 +17805,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: maxHealth
       value: 78
