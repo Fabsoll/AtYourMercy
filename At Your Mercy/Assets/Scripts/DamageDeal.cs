@@ -30,6 +30,9 @@ public class DamageDeal : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && !player.isInvulnerable){
             player.TakeDamage(damageToPlayer);
         }
+        //if(other.gameObject.CompareTag("Raven")){
+            //other.gameObject.TakeDamage(damageToPlayer);
+        //}
         
     }
 

@@ -165,19 +165,25 @@ public class PlayerCombatNew : MonoBehaviour
         // Detect enemies
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-            switch (hitCount)
-            {
-                case 1:
-                    hitOne.Play();
-                    enemyDmg1.Play();
-                    hitCount++;
-                    break;
-                case 2:
-                    hitTwo.Play();
-                    enemyDmg2.Play();
-                    hitCount--;
-                    break;
+            if(enemy.gameObject.CompareTag("Enemy")){
+                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                switch (hitCount)
+                {
+                    case 1:
+                        hitOne.Play();
+                        enemyDmg1.Play();
+                        hitCount++;
+                        break;
+                    case 2:
+                        hitTwo.Play();
+                        enemyDmg2.Play();
+                        hitCount--;
+                        break;
+                }
+            }
+            else if(enemy.gameObject.CompareTag("Boss")){
+                //Debug.Log("damage?");
+                enemy.GetComponent<Boss>().TakeDamage(attackDamage);
             }
 
         }

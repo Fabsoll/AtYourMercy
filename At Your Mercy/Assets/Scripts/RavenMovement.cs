@@ -49,6 +49,7 @@ public class RavenMovement : MonoBehaviour
 
     private void OnEnable() {
         isDashing = true;
+        attackPos.gameObject.SetActive(false);
         playerAnim.SetBool("isDashingUp", true);
     }
 
@@ -62,10 +63,16 @@ public class RavenMovement : MonoBehaviour
                 numberOfDashes++;
                 isDashing = true;
                 playerAnim.SetBool("isDashingUp", true);
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemylayers);
-                foreach(Collider2D enemy in hitEnemies){
-                    enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                }
+                //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemylayers);
+                //foreach(Collider2D enemy in hitEnemies){
+                //    if(enemy.gameObject.CompareTag("Enemy")){
+                //        enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                //    }
+                //    else if(enemy.gameObject.CompareTag("Boss")){
+                //        //Debug.Log("damage?");
+                //        enemy.GetComponent<Boss>().TakeDamage(attackDamage);
+                //    }
+                //}
             //Debug.Log("aaawdawdawdadwadwawdawd");
             }
         }
@@ -93,6 +100,7 @@ public class RavenMovement : MonoBehaviour
         }
         else if(isDiving){
             //numberOfDashes++;
+            
             VerticalDashDown();
         }
     }
@@ -112,8 +120,11 @@ public class RavenMovement : MonoBehaviour
     }
 
     private void VerticalDashDown(){
+        attackPos.gameObject.SetActive(true);
         transform.Translate(Vector2.down * pushForce * Time.deltaTime);
     }
+
+    //public 
 
     private IEnumerator DashEnd(){
         //numberOfDashes++;
@@ -126,6 +137,7 @@ public class RavenMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Ground"){
             isDiving = false;
+            attackPos.gameObject.SetActive(false);
             shapesController.EnableOne(2);
 
             //Debug.Log("awdawdawdawdawd");

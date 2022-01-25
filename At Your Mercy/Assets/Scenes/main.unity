@@ -1747,18 +1747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 529761383, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_JumpForce
-      value: 600
-      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: death
       value: 
       objectReference: {fileID: 1916328682}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: wotan
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: getHit
       value: 
@@ -1788,10 +1780,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700867680}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: underlay
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: enemyDmg1
       value: 
       objectReference: {fileID: 188016178}
@@ -1800,18 +1788,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595273694}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: fadeSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: baseAttack
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: fadetoblack
       value: 
       objectReference: {fileID: 914562618}
@@ -1819,37 +1795,9 @@ PrefabInstance:
       propertyPath: heavyBreath
       value: 
       objectReference: {fileID: 1871115160}
-    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: invulnerableTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711346034, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: dashSpeed
-      value: 7000
-      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_RootOrder
       value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.1966
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.1966
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0983
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1895,21 +1843,9 @@ PrefabInstance:
       propertyPath: walk
       value: 
       objectReference: {fileID: 76251429}
-    - target: {fileID: 2385196965203142505, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: walkVolume
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385196965203142506, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142510, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Name
       value: Valkyrie
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385196965203142510, guid: 9020349a659edad4da45ced70780391d, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9020349a659edad4da45ced70780391d, type: 3}
