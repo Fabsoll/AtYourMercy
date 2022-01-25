@@ -883,34 +883,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Size.x
-      value: 1.3607926
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.32502243
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.18144892
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.19101344
-      objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595924, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -955,37 +927,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595925, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595925, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595925, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1310120275
-      objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Name
       value: Raven
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: attackRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-      propertyPath: enemylayers.m_Bits
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
@@ -2407,40 +2355,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1566821878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
-  m_PrefabInstance: {fileID: 489402325}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1566821880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566821878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ffdd78a721f5a4b8bcffeb544b9a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 400
---- !u!58 &1566821881
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566821878}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07233055}
-  serializedVersion: 2
-  m_Radius: 0.57233024
 --- !u!1 &1574786261
 GameObject:
   m_ObjectHideFlags: 0
