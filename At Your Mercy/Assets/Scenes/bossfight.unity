@@ -1200,6 +1200,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: traitCalc
+      value: 
+      objectReference: {fileID: 3607593607014525975, guid: a1c5abf59f88d634183aecb79f98accc, type: 3}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttack
       value: 100
       objectReference: {fileID: 0}

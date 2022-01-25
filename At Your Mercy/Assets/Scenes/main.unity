@@ -560,6 +560,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_Size.x
+      value: 2.236217
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3047131
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.18144892
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3199316
+      objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595924, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -611,6 +627,10 @@ PrefabInstance:
     - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595926, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: maxNumberOFDashes
@@ -2051,6 +2071,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: traitCalc
+      value: 
+      objectReference: {fileID: 1847504413}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttack
       value: 10
