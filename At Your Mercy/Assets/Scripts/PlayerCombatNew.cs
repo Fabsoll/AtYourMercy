@@ -55,9 +55,11 @@ public class PlayerCombatNew : MonoBehaviour
     public Enemy dmgEnemy;
     int vengefulTraitNumberConverted;
     public assigningTraits thisEnemy;
+    int currentHit;
     // Start is called before the first frame update
     void Start()
     {
+        currentHit = 0;
         isInvulnerable = false;
         isAbleToAttack = true;
         currentHealth = maxHealth;
@@ -229,45 +231,54 @@ public class PlayerCombatNew : MonoBehaviour
         doesItEvade = Random.Range(1, evadeChance);
         if (doesItEvade != 1)
         {
-            currentHealth -= (damage - defense);
-            if (traitCalc.vengefulTrait == true)
+            if (currentHit <= traitCalc.invulnerabilityCount)
             {
-                if (traitCalc.vengefulTraitNumber >= 7)
-                {
-                    traitCalc.vengefulTraitNumber = 7;
-                }
-                switch (traitCalc.vengefulTraitNumber)
-                {
-                    case 1:
-                        vengefulTraitNumberConverted = 20;
-                        break;
-                    case 2:
-                        vengefulTraitNumberConverted = 10;
-                        break;
-                    case 3:
-                        vengefulTraitNumberConverted = 7;
-                        break;
-                    case 4:
-                        vengefulTraitNumberConverted = 5;
-                        break;
-                    case 5:
-                        vengefulTraitNumberConverted = 4;
-                        break;
-                    case 6:
-                        vengefulTraitNumberConverted = 3;
-                        break;
-                    case 7:
-                        vengefulTraitNumberConverted = 2;
-                        break;
-
-                }
-
-                thisEnemy.lastEnemy.GetComponent<Enemy>().currentHealth -= ( damage/vengefulTraitNumberConverted);
+                traitCalc.invulnerabilityCount -= 1;
+                currentHit += 1;
             }
-            getHit.Play();
-            //Debug.Log("isInv");
-            StartCoroutine(Invulnerability());
-            StartCoroutine(ApplyDamageColor());
+            else
+            {
+                currentHealth -= (damage - defense);
+                if (traitCalc.vengefulTrait == true)
+                {
+                    if (traitCalc.vengefulTraitNumber >= 7)
+                    {
+                        traitCalc.vengefulTraitNumber = 7;
+                    }
+                    switch (traitCalc.vengefulTraitNumber)
+                    {
+                        case 1:
+                            vengefulTraitNumberConverted = 20;
+                            break;
+                        case 2:
+                            vengefulTraitNumberConverted = 10;
+                            break;
+                        case 3:
+                            vengefulTraitNumberConverted = 7;
+                            break;
+                        case 4:
+                            vengefulTraitNumberConverted = 5;
+                            break;
+                        case 5:
+                            vengefulTraitNumberConverted = 4;
+                            break;
+                        case 6:
+                            vengefulTraitNumberConverted = 3;
+                            break;
+                        case 7:
+                            vengefulTraitNumberConverted = 2;
+                            break;
+
+                    }
+
+                    thisEnemy.lastEnemy.GetComponent<Enemy>().currentHealth -= (damage / vengefulTraitNumberConverted);
+                }
+                getHit.Play();
+                //Debug.Log("isInv");
+                StartCoroutine(Invulnerability());
+                StartCoroutine(ApplyDamageColor());
+            }
+            
 
         }
         else

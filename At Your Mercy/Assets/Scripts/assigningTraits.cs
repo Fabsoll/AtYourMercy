@@ -266,6 +266,7 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "bold":
                     //invulnerable for 3 hits
+                    TraitCalc.invulnerabilityCount += 3;
                     break;
                 case "caring":
                     TraitCalc.caringTrait = true;
@@ -319,6 +320,7 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "bold":
                     //invulnerable for 1 hit
+                    TraitCalc.invulnerabilityCount += 1;
                     break;
                 case "reckless":
                     //+5% crit rate, -1 defense
@@ -327,6 +329,8 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "vengeful":
                     //deal 10% damage back
+                    TraitCalc.vengefulTrait = true;
+                    TraitCalc.vengefulTraitNumber += 2;
                     break;
                 case "intelligent":
                     //+5% crit rate -2 speed
