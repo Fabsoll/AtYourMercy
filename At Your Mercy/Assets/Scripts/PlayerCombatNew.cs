@@ -55,6 +55,7 @@ public class PlayerCombatNew : MonoBehaviour
     int vengefulTraitNumberConverted;
     public assigningTraits thisEnemy;
     int currentHit;
+    bool BrunnhildeDied;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,13 +101,16 @@ public class PlayerCombatNew : MonoBehaviour
                 
             }
         }
-        
+        if (traitCalc.Deathcount >= traitCalc.killingThreshold)
+        {
+            Die();
+        }
 
         // if(isInvulnerable){
         //     Physics2D.IgnoreLayerCollision(6, 8, true);
         // }
     }
- 
+    
     void Attack(){
         // PLay attack anim
         animator.SetTrigger("attack");
@@ -297,6 +301,7 @@ public class PlayerCombatNew : MonoBehaviour
             heavyBreath.volume = 1;
         }
         if(currentHealth <= 0){
+            BrunnhildeDied = true;
             Die();
         }
     }
@@ -315,10 +320,12 @@ public class PlayerCombatNew : MonoBehaviour
         fadetoblack.SetActive(true);
         fade = true;
         shapeUI.SetActive(false);
-
-        heavyBreath.Stop();
-        death.Play();
-        Debug.Log("Player died");
+        if (BrunnhildeDied)
+        {
+            heavyBreath.Stop();
+            death.Play();
+            Debug.Log("Player died");
+        }
     }
 
     IEnumerator waitBF()

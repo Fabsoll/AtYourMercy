@@ -18,6 +18,7 @@ public class TraitCalculator : MonoBehaviour
     public bool vengefulTrait;
     public int vengefulTraitNumber;
     public int invulnerabilityCount;
+    public int killingThreshold;
     // Start is called before the first frame update
     void Start()
     {
