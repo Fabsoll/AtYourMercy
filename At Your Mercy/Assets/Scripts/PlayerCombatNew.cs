@@ -52,7 +52,6 @@ public class PlayerCombatNew : MonoBehaviour
     int evadeChance;
     public GameObject shapeUI;
     public TraitCalculator traitCalc;
-    public Enemy dmgEnemy;
     int vengefulTraitNumberConverted;
     public assigningTraits thisEnemy;
     int currentHit;
