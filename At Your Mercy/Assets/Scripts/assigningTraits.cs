@@ -277,6 +277,8 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "vengeful":
                     //deal 25% damage back
+                    TraitCalc.vengefulTrait = true;
+                    TraitCalc.vengefulTraitNumber += 5;
                     break;
                 case "independent":
                     TraitCalc.independentTrait = true;

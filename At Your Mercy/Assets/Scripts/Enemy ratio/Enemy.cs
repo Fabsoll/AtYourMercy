@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public bool isWolf;
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
     public Color damageColor;
     public SpriteRenderer enemySprite;
     private UI UIData;

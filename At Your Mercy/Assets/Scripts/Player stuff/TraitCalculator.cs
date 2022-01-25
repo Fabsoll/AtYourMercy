@@ -15,6 +15,8 @@ public class TraitCalculator : MonoBehaviour
     PlayerCombatNew brunnTrait;
     public bool caringTrait;
     public bool independentTrait;
+    public bool vengefulTrait;
+    public int vengefulTraitNumber;
     // Start is called before the first frame update
     void Start()
     {
