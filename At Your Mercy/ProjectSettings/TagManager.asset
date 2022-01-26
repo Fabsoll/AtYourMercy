@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Boss
   - RavenMissle
+  - PlatformGroun
   layers:
   - Default
   - TransparentFX
