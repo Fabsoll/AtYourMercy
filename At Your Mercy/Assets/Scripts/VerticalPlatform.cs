@@ -16,20 +16,20 @@ public class VerticalPlatform : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.S)){
-            waitTime = 0.5f;
+            waitTime = 0f;
         }
 
         if(Input.GetKey(KeyCode.S))
         {
             if(waitTime <= 0){
                 effector.rotationalOffset = 180f;
-                waitTime = 0.5f;
+                waitTime = 0f;
             }
             else{
                 waitTime -= Time.deltaTime;
             }
         }
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump")||Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.LeftAlt)){
             effector.rotationalOffset = 0f;
         }
     }
