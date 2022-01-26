@@ -46,10 +46,19 @@ public class Boss : MonoBehaviour
         }
         
         if(numberOfLighning >= 2 && !isCasting){
-            Debug.Log("kneel");
-            bossAnimatorController.SetTrigger("kneeling");
-            StartCoroutine(StartDelaying(10f));
-            numberOfLighning = 0;
+            if(currentStage == 1){
+                Debug.Log("kneel");
+                bossAnimatorController.SetTrigger("kneeling");
+                StartCoroutine(StartDelaying(10f));
+                numberOfLighning = 0;
+            }
+            else if(currentStage == 2){
+                Debug.Log("kneel 2nd stage");
+                StartCoroutine(StartDelaying(10f));
+                bossAnimatorController.SetBool("isDiving", true);
+                //StartCoroutine(StartDelaying(10f));
+                numberOfLighning = 0;
+            }
         }
         //if(numberOfLighning == 2){
         //    numberOfLighning = 0;
@@ -110,7 +119,9 @@ public class Boss : MonoBehaviour
     {
         isCasting = true;
         yield return new WaitForSeconds(time);
+        bossAnimatorController.SetBool("isDiving", false);
         isCasting = false;
+        
     }
     IEnumerator LightningDelaying(float time)
     {
@@ -138,7 +149,7 @@ public class Boss : MonoBehaviour
 
     public int NumberEverySecond(){
         int min = 1;
-        int max = 5;
+        int max = 10;
 
         int result = Random.Range(min, max);
         //Debug.Log(result);
