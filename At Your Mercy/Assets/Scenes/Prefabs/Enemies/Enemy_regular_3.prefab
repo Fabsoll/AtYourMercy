@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7323398358412713853}
   - component: {fileID: 7323398358412713854}
   - component: {fileID: 7323398358412713855}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: hitBox
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7323398358747110989}
   m_Layer: 6
   m_Name: enemy_collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,9 +248,9 @@ GameObject:
   - component: {fileID: 7323398358869957345}
   - component: {fileID: 7323398358869957356}
   - component: {fileID: 7323398358869957357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_regular_3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

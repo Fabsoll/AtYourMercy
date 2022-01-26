@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class RavenMovement : MonoBehaviour
 {
@@ -22,13 +23,13 @@ public class RavenMovement : MonoBehaviour
 
     private int numberOfDashes;
     public int maxNumberOFDashes;
-
     public GameObject icon;
 
     public Transform attackPos;
     public float attackRange;
     public LayerMask enemylayers;
     public int attackDamage = 40;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,6 +52,8 @@ public class RavenMovement : MonoBehaviour
         isDashing = true;
         attackPos.gameObject.SetActive(false);
         playerAnim.SetBool("isDashingUp", true);
+        numberOfDashes = 0;
+        
     }
 
     // Update is called once per frame
@@ -73,7 +76,7 @@ public class RavenMovement : MonoBehaviour
                 //        enemy.GetComponent<Boss>().TakeDamage(attackDamage);
                 //    }
                 //}
-            //Debug.Log("aaawdawdawdadwadwawdawd");
+                //Debug.Log("aaawdawdawdadwadwawdawd");
             }
         }
         if(Input.GetButtonDown("raven dive down")){
@@ -143,6 +146,7 @@ public class RavenMovement : MonoBehaviour
             //Debug.Log("awdawdawdawdawd");
         }
     }
+
     //public bool IsGrounded(){
     //    return Physics2D.BoxCast(playerBox.bounds.center, playerBox.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     //}

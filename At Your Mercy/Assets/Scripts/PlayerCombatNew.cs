@@ -96,6 +96,7 @@ public class PlayerCombatNew : MonoBehaviour
             else
             {
                 fade = false;
+                Time.timeScale = 1;
                 SceneManager.LoadSceneAsync("transition scene");
                 SceneManager.UnloadSceneAsync("main");
                 

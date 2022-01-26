@@ -51,7 +51,7 @@ public class TransitionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Time.timeScale = 1;
         if (wotansign.GetComponent<Image>().color.a < 1)
         {
             fadeAmount = objectColor2.a + (fadeSpeed * Time.deltaTime);

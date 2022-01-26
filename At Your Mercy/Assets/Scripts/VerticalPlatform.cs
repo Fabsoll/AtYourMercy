@@ -15,10 +15,16 @@ public class VerticalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.S)){
-            waitTime = 0f;
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            StartCoroutine(resetPlatform());
         }
+        IEnumerator resetPlatform()
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
 
+            effector.rotationalOffset = 0;
+        }
         if(Input.GetKey(KeyCode.S))
         {
             if(waitTime <= 0){
