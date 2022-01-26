@@ -211,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1310120275
   m_SortingLayer: 3
-  m_SortingOrder: 9
+  m_SortingOrder: 22
   m_Sprite: {fileID: -7025985617440327065, guid: 0be85c79339e4694cb6734a1e0b64414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -346,3 +346,5 @@ MonoBehaviour:
   critNumber: 0
   evadeNumber: 0
   shapeUI: {fileID: 0}
+  traitCalc: {fileID: 0}
+  thisEnemy: {fileID: 0}
