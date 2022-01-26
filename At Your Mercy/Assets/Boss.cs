@@ -33,6 +33,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetHealth(health, maxHealth);
         if(!isCasting){
             time = time + 1f * Time.deltaTime;
             if(time >= timeDelay)
@@ -47,8 +48,14 @@ public class Boss : MonoBehaviour
         
         if(numberOfLighning >= 2 && !isCasting){
             Debug.Log("kneel");
-            bossAnimatorController.SetTrigger("kneeling");
-            StartCoroutine(StartDelaying(10f));
+            if(currentStage == 1){
+                bossAnimatorController.SetTrigger("kneeling");
+            }
+            
+            else if(currentStage == 2){
+                bossAnimatorController.SetTrigger("diving");
+            }
+            StartCoroutine(StartDelaying(8f));
             numberOfLighning = 0;
         }
         //if(numberOfLighning == 2){

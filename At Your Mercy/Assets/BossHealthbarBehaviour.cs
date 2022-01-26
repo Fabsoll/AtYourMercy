@@ -11,7 +11,7 @@ public class BossHealthbarBehaviour : MonoBehaviour
     //public Vector3 Offset;
 
     public void SetHealth(float health, float maxHealth){
-        slider.gameObject.SetActive(health < maxHealth);
+        //slider.gameObject.SetActive(health < maxHealth);
         slider.value = health;
         slider.maxValue = maxHealth;
 
