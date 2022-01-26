@@ -536,13 +536,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566821880, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5541768271122160065, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272701346552, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595922, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: m_Size.x
@@ -11816,7 +11824,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1310120275
   m_SortingLayer: 3
-  m_SortingOrder: 11
+  m_SortingOrder: 110
   m_Sprite: {fileID: 21300000, guid: 3294dfff238f21a47b45cd230d3e8a9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16919,8 +16927,6 @@ MonoBehaviour:
   thisTrait: {fileID: 115492186}
   TraitCalc: {fileID: 1847504413}
   lastEnemy: {fileID: 0}
-  banish: {fileID: 1675293599}
-  valhalla: {fileID: 999423945}
 --- !u!224 &1772836676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20636,7 +20642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122550, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122550, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_TagString
