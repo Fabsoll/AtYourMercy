@@ -18,9 +18,12 @@ public class Boss : MonoBehaviour
     public Animator bossAnimatorController;
     public AttackPatternBehaviour attackPatternBehaviour;
 
+    public int currentStage;
+
     // Start is called before the first frame update
     void Start()
     {
+        currentStage = 1;
         health = maxHealth;
         time = 0f;
         timeDelay = 1f;
@@ -32,25 +35,13 @@ public class Boss : MonoBehaviour
     {
         if(!isCasting){
             time = time + 1f * Time.deltaTime;
-            if(time >= timeDelay){
+            if(time >= timeDelay)
+            {
                 time = 0;
-                if(NumberEverySecond() == 1){
-                    bossAnimatorController.SetTrigger("LightningAttack");
-                    StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
-                    StartCoroutine(LightningDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
-                    attackPatternBehaviour.castLightning = true;
-                    //numberOfLighning++;
-                    //attackPatternBehaviour.castLightning = false;
-                }
-                if(NumberEverySecond() == 2){
-                    bossAnimatorController.SetTrigger("WindAttack");
-                    StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
-                    //attackPatternBehaviour.castLightning = false;
-                }
+                int decision = NumberEverySecond();
+                ProcessDecision(decision, currentStage);
                 //attackPatternBehaviour.castLightning = false;
                 //Debug.Log(numberOfLighning);
-                
-
             }
         }
         
@@ -63,10 +54,58 @@ public class Boss : MonoBehaviour
         //if(numberOfLighning == 2){
         //    numberOfLighning = 0;
         //}
+
+        if(health <= maxHealth / 2){
+            currentStage = 2;
+            bossAnimatorController.SetTrigger("flapping");
+        }
         
         
     }
-    
+
+    private void ProcessDecision(int decision, int stage)
+    {
+        switch(stage){
+            case 1:
+            if (decision == 1)
+            {
+                bossAnimatorController.SetTrigger("LightningAttack");
+                StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                StartCoroutine(LightningDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                attackPatternBehaviour.castLightning = true;
+                //numberOfLighning++;
+                //attackPatternBehaviour.castLightning = false;
+            }
+            if (decision == 2)
+            {
+                bossAnimatorController.SetTrigger("WindAttack");
+                StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                //attackPatternBehaviour.castLightning = false;
+            }   
+            break;
+
+            case 2:
+            if (decision == 1)
+            {
+                bossAnimatorController.SetTrigger("flyingLighning");
+                StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                StartCoroutine(LightningDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                attackPatternBehaviour.castLightning = true;
+                //numberOfLighning++;
+                //attackPatternBehaviour.castLightning = false;
+            }
+            if (decision == 2)
+            {
+                bossAnimatorController.SetTrigger("flyingSpin");
+                StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
+                attackPatternBehaviour.castRavens = true;
+            }
+            break;
+        }
+
+            
+    }
+
     IEnumerator StartDelaying(float time)
     {
         isCasting = true;
@@ -99,7 +138,7 @@ public class Boss : MonoBehaviour
 
     public int NumberEverySecond(){
         int min = 1;
-        int max = 10;
+        int max = 5;
 
         int result = Random.Range(min, max);
         //Debug.Log(result);

@@ -706,6 +706,7 @@ MonoBehaviour:
   player: {fileID: 768046947}
   bossAnimatorController: {fileID: 331330633}
   attackPatternBehaviour: {fileID: 484670559}
+  currentStage: 0
 --- !u!1 &458058853
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,9 +860,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightningAttack: {fileID: 8043688818702754892, guid: 53e6479e5f5b4134991fc5d9b3e270bf, type: 3}
+  RavenAttack: {fileID: 176982553514311008, guid: cdc7b7b641925c441a08640e7645a1e0, type: 3}
   delay: 0.5
   gapBetweenLighting: 6
   castLightning: 0
+  castRavens: 0
 --- !u!4 &484670560
 Transform:
   m_ObjectHideFlags: 0
@@ -1217,7 +1220,7 @@ PrefabInstance:
       objectReference: {fileID: 202423945}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: enemylayers.m_Bits
-      value: 64
+      value: 576
       objectReference: {fileID: 0}
     - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: dashSpeed

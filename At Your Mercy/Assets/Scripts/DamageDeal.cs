@@ -35,6 +35,7 @@ public class DamageDeal : MonoBehaviour
         //}
         
     }
+    
 
     private IEnumerator DestroyIfPassed(){
         yield return new WaitForSeconds(destroyTime);

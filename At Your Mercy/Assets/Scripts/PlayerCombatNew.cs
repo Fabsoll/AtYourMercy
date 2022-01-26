@@ -188,6 +188,10 @@ public class PlayerCombatNew : MonoBehaviour
                 //Debug.Log("damage?");
                 enemy.GetComponent<Boss>().TakeDamage(attackDamage);
             }
+            else if(enemy.gameObject.CompareTag("RavenMissle")){
+                //Debug.Log("damage?");
+                Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
+            }
 
         }
         // deal damage
