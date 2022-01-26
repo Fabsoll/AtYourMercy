@@ -61,3 +61,4 @@ MonoBehaviour:
   vengefulTrait: 0
   vengefulTraitNumber: 0
   invulnerabilityCount: 0
+  killingThreshold: 10
