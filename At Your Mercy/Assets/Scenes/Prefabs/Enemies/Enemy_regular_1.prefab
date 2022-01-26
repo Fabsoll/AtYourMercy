@@ -615,7 +615,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1310120275
   m_SortingLayer: 3
-  m_SortingOrder: 8
+  m_SortingOrder: 17
   m_Sprite: {fileID: -4241181552412809570, guid: 7129b5c7d5c9d9746b38ea90f623d72f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1233,6 +1233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWolf: 0
   maxHealth: 78
+  currentHealth: 0
   damageColor: {r: 1, g: 0, b: 0, a: 0.7882353}
   enemySprite: {fileID: 92874633450563579}
   getEnemy2: {fileID: 0}
