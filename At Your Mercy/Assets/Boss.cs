@@ -41,8 +41,6 @@ public class Boss : MonoBehaviour
                 time = 0;
                 int decision = NumberEverySecond();
                 ProcessDecision(decision, currentStage);
-                //attackPatternBehaviour.castLightning = false;
-                //Debug.Log(numberOfLighning);
             }
         }
         
