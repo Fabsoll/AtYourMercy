@@ -1158,6 +1158,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 529761383, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_JumpForce
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: fade
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: death
       value: 
@@ -1175,6 +1183,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 890727427}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: Overlay
+      value: 
+      objectReference: {fileID: 3472055007567672879, guid: ac328797924431d409cd1ba5bcb895d4, type: 3}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: missOne
       value: 
       objectReference: {fileID: 1318170991}
@@ -1187,9 +1199,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1243757386}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: maxHealth
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: traitCalc
+      value: 
+      objectReference: {fileID: 3607593607014525975, guid: a1c5abf59f88d634183aecb79f98accc, type: 3}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: baseAttack
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: fadetoblack
+      value: 
+      objectReference: {fileID: 7531484336343184238, guid: 0120656ea722fbd418bd1f7ec763de34, type: 3}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: heavyBreath
       value: 
       objectReference: {fileID: 202423945}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: enemylayers.m_Bits
+      value: 576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: dashSpeed
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1238,6 +1274,22 @@ PrefabInstance:
       propertyPath: walk
       value: 
       objectReference: {fileID: 1919826713}
+    - target: {fileID: 2385196965203142506, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385196965203142507, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385196965203142507, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385196965203142507, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1310120275
+      objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142510, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Name
       value: Valkyrie
@@ -1391,10 +1443,6 @@ PrefabInstance:
     - target: {fileID: 4571517446221617712, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
       propertyPath: m_Name
       value: Horse
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571517446221617712, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571517446221617716, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
       propertyPath: m_SortingLayer
