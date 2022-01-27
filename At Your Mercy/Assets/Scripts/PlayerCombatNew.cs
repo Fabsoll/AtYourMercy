@@ -54,7 +54,7 @@ public class PlayerCombatNew : MonoBehaviour
     public TraitCalculator traitCalc;
     int vengefulTraitNumberConverted;
     public assigningTraits thisEnemy;
-    int currentHit;
+    public int currentHit;
     bool BrunnhildeDied;
     // Start is called before the first frame update
     void Start()
@@ -245,9 +245,8 @@ public class PlayerCombatNew : MonoBehaviour
         doesItEvade = Random.Range(1, evadeChance);
         if (doesItEvade != 1)
         {
-            if (currentHit <= traitCalc.invulnerabilityCount)
+            if (currentHit < traitCalc.invulnerabilityCount)
             {
-                traitCalc.invulnerabilityCount -= 1;
                 currentHit += 1;
             }
             else
