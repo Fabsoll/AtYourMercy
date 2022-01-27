@@ -255,37 +255,41 @@ public class PlayerCombatNew : MonoBehaviour
                 currentHealth -= (damage - defense);
                 if (traitCalc.vengefulTrait == true)
                 {
-                    if (traitCalc.vengefulTraitNumber >= 7)
+                    if (traitCalc.vengefulTraitNumber >= 5)
                     {
-                        traitCalc.vengefulTraitNumber = 7;
+                        traitCalc.vengefulTraitNumber = 5;
                     }
                     switch (traitCalc.vengefulTraitNumber)
                     {
                         case 1:
-                            vengefulTraitNumberConverted = 20;
-                            break;
-                        case 2:
-                            vengefulTraitNumberConverted = 10;
-                            break;
-                        case 3:
-                            vengefulTraitNumberConverted = 7;
-                            break;
-                        case 4:
                             vengefulTraitNumberConverted = 5;
                             break;
-                        case 5:
+                        case 2:
                             vengefulTraitNumberConverted = 4;
                             break;
-                        case 6:
+                        case 3:
                             vengefulTraitNumberConverted = 3;
                             break;
-                        case 7:
+                        case 4:
                             vengefulTraitNumberConverted = 2;
+                            break;
+                        case 5:
+                            vengefulTraitNumberConverted = 1;
                             break;
 
                     }
+                    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
+                    foreach (Collider2D enemy in hitEnemies)
+                    {
+                        if (enemy.gameObject.CompareTag("Enemy"))
+                        {
 
-                    thisEnemy.lastEnemy.GetComponent<Enemy>().currentHealth -= (damage / vengefulTraitNumberConverted);
+
+
+                            enemy.GetComponentInParent<Enemy>().TakeDamage(damage / vengefulTraitNumberConverted);
+                            Debug.Log("dealt damage back");
+                        }
+                    }
                 }
                 getHit.Play();
                 //Debug.Log("isInv");

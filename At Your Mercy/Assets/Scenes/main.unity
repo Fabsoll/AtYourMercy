@@ -17752,8 +17752,8 @@ MonoBehaviour:
   oldTraits: 
   caringTrait: 0
   independentTrait: 0
-  vengefulTrait: 0
-  vengefulTraitNumber: 0
+  vengefulTrait: 1
+  vengefulTraitNumber: 4
   invulnerabilityCount: 0
   killingThreshold: 10
 --- !u!1 &1865312819
