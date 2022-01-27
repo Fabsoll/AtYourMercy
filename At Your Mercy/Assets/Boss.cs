@@ -7,7 +7,7 @@ public class Boss : MonoBehaviour
     public float health;
     public float maxHealth;
     public bool isFlipped = true;
-    public Transform player;
+    private Transform player;
     private BossHealthbarBehaviour healthBar;
     public bool isCasting;
     private int numberOfLighning = 0;
@@ -23,6 +23,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         currentStage = 1;
         health = maxHealth;
         time = 0f;
