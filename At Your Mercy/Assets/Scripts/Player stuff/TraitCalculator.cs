@@ -51,6 +51,10 @@ public class TraitCalculator : MonoBehaviour
         {
             valhallaHP = valhallaBaseHP + (lazyNumber * valhallaCount);
         }
+        else
+        {
+            valhallaHP = valhallaBaseHP;
+        }
         //if (caringTrait)
         //{
         //    brunnTrait.baseAttack2 = (brunnTrait.baseAttack + caringDamage);
