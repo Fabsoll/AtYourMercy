@@ -9,7 +9,7 @@ public class Boss : MonoBehaviour
     public bool isFlipped = true;
     public Transform player;
     private BossHealthbarBehaviour healthBar;
-    private bool isCasting;
+    public bool isCasting;
     private int numberOfLighning = 0;
 
     float time;
@@ -114,13 +114,13 @@ public class Boss : MonoBehaviour
     IEnumerator StartDelaying(float time)
     {
         isCasting = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time + 2f);
         isCasting = false;
     }
     IEnumerator LightningDelaying(float time)
     {
         isCasting = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time + 2f);
         numberOfLighning++;
         isCasting = false;
     }
