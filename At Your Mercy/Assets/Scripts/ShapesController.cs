@@ -13,7 +13,7 @@ public class ShapesController : MonoBehaviour
 
     public float cooldown;
     public float duration;
-
+    bool transformed;
     public bool isOnActive = false;
     public bool isInCooldown = false;
     public bool isInitialSpawned = false;
@@ -64,6 +64,7 @@ public class ShapesController : MonoBehaviour
              if(!isInCooldown){
                  if(Input.GetAxis("transform")>0 || Input.GetKeyDown(KeyCode.LeftAlt)){
                      EnableOne(shapeIndex);
+                     transformed = true;
                      StartCoroutine("ResetActive");
                      StartCoroutine("GoCooldown");
                  }

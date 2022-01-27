@@ -2313,6 +2313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1871115160}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: baseAttackStart
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: invulnerableTime
       value: 0.5
       objectReference: {fileID: 0}
@@ -3538,7 +3542,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 840106611}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4672,6 +4676,18 @@ PrefabInstance:
     - target: {fileID: 4571517446221617722, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
       propertyPath: m_Mass
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571517446221617723, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
+      propertyPath: movementSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571517446221617723, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
+      propertyPath: movementSpeedNormal
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571517446221617723, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
+      propertyPath: movementSpeedHeadDown
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
@@ -14449,8 +14465,8 @@ EdgeCollider2D:
   - {x: -83.61002, y: 16.406029}
   - {x: -83.74258, y: 18.566605}
   - {x: -83.90154, y: 23.68689}
-  - {x: -83.54464, y: 24.345577}
-  - {x: -82.47379, y: 24.176264}
+  - {x: -83.56525, y: 24.011383}
+  - {x: -82.36214, y: 23.911757}
   - {x: -82.47521, y: 22.757803}
   - {x: -82.46933, y: 21.454166}
   - {x: -81.982544, y: 14.096931}
@@ -18817,6 +18833,7 @@ MonoBehaviour:
   vengefulTraitNumber: 4
   invulnerabilityCount: 0
   killingThreshold: 10
+  caringDamage: 0
 --- !u!1 &1865312819
 GameObject:
   m_ObjectHideFlags: 0
@@ -19917,7 +19934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411649460355613607, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4504831292371206004, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
       propertyPath: Overlay

@@ -8,7 +8,9 @@ public class HorseMovement : MonoBehaviour
 
     private Rigidbody2D playerRB;
     //Refenrences
-    public float movementSpeed = 20f;
+    public float movementSpeedNormal;
+    public float movementSpeedHeadDown;
+    public float movementSpeed;
     private float moveX;
     private Animator playerAnim;
     
@@ -43,7 +45,7 @@ public class HorseMovement : MonoBehaviour
 
         if(isHeadDown){
             playerAnim.SetBool("isHeadDown", true);
-            movementSpeed = 10f;
+            movementSpeed = movementSpeedHeadDown;
             playerRB.mass = 200;
             Physics2D.IgnoreLayerCollision(8, 9, false);
             
@@ -53,7 +55,7 @@ public class HorseMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(8, 9, true);
             playerAnim.SetBool("isHeadDown", false);
             playerRB.mass = 1;
-            movementSpeed = 20f;
+            movementSpeed = movementSpeedNormal;
         }
 
     }

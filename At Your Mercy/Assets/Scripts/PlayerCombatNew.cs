@@ -23,7 +23,7 @@ public class PlayerCombatNew : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemylayers;
-
+    public int baseAttackStart;
     int attackDamage;
     public int baseAttack;
     int critDamage;
@@ -76,6 +76,7 @@ public class PlayerCombatNew : MonoBehaviour
     void Update()
     {
 
+        baseAttack = baseAttackStart + traitCalc.caringDamage + traitCalc.independentDamage;
         if (Input.GetButtonDown("attack") && isAbleToAttack){
             StartCoroutine(attackCooling());
             Attack();

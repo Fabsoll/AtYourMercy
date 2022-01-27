@@ -148,6 +148,7 @@ public class assigningTraits : MonoBehaviour
                 //+2hp for every soul, -2 speed (kind of lazy)
 
                 trait = "lazy";
+
                 break;
 
         }
@@ -232,11 +233,11 @@ public class assigningTraits : MonoBehaviour
     {
         if (isEnemyStrong == true)
         {
-            TraitCalc.valhallaHP += 15;
+            TraitCalc.valhallaBaseHP += 15;
         }
         else
         {
-            TraitCalc.valhallaHP += 5;
+            TraitCalc.valhallaBaseHP += 5;
         }
 
         TraitCalc.valhallaCount ++;
@@ -256,24 +257,24 @@ public class assigningTraits : MonoBehaviour
             switch (trait)
             {
                 case "careful":
-                    BrunnTrait.defense += 3;
+                    BrunnTrait.defense += 4;
                     break;
                 case "strong":
-                    BrunnTrait.baseAttack += 3;
+                    BrunnTrait.baseAttackStart += 10;
                     break;
                 case "swift":
-                    BrunnMove.movementSpeed += 3f;
+                    BrunnMove.movementSpeed += 25;
                     break;
                 case "bold":
                     //invulnerable for 3 hits
-                    TraitCalc.invulnerabilityCount += 3;
+                    TraitCalc.invulnerabilityCount += 6;
                     break;
                 case "caring":
                     TraitCalc.caringTrait = true;
                     break;
                 case "reckless":
                     //+15% crit rate, -2 defense
-                    BrunnTrait.critNumber += 3;
+                    BrunnTrait.critNumber += 4;
                     BrunnTrait.defense -= 2;
                     break;
                 case "vengeful":
@@ -286,20 +287,22 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "intelligent":
                     //crit +15% speed -2
-                    BrunnTrait.critNumber += 3;
-                    BrunnMove.movementSpeed -= 2;
+                    BrunnTrait.critNumber += 4;
+                    BrunnMove.movementSpeed -= 10;
                     break;
                 case "weird":
                     //+3random -3random
                     weirdTraitGenerator();
                     break;
                 case "lucky":
-                    //+10% evasion
-                    BrunnTrait.evadeNumber += 2;
+                    //+20% evasion
+                    BrunnTrait.evadeNumber += 4;
                     break;
                 case "lazy":
+
+                    BrunnMove.movementSpeed -= 10;
+                    TraitCalc.lazyNumber += 10;
                     TraitCalc.lazyTrait = true;
-                    BrunnMove.movementSpeed -= 2;
                     break;
 
 
@@ -310,22 +313,22 @@ public class assigningTraits : MonoBehaviour
             switch (trait)
             {
                 case "careful":
-                    BrunnTrait.defense += 1;
+                    BrunnTrait.defense += 2;
                     break;
                 case "strong":
-                    BrunnTrait.baseAttack += 1;
+                    BrunnTrait.baseAttackStart += 5;
                     break;
                 case "swift":
-                    BrunnMove.movementSpeed += 1;
+                    BrunnMove.movementSpeed += 10;
                     break;
                 case "bold":
                     //invulnerable for 1 hit
-                    TraitCalc.invulnerabilityCount += 1;
+                    TraitCalc.invulnerabilityCount += 3;
                     break;
                 case "reckless":
                     //+5% crit rate, -1 defense
-                    BrunnTrait.critNumber += 1;
-                    BrunnTrait.defense -= 1;
+                    BrunnTrait.critNumber += 2;
+                    BrunnTrait.defense -= 2;
                     break;
                 case "vengeful":
                     //deal 10% damage back
@@ -334,8 +337,8 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "intelligent":
                     //+5% crit rate -2 speed
-                    BrunnTrait.critNumber += 1;
-                    BrunnMove.movementSpeed -= 2;
+                    BrunnTrait.critNumber += 2;
+                    BrunnMove.movementSpeed -= 10;
                     break;
                 case "weird":
                     //+1 random -1 random
@@ -344,11 +347,12 @@ public class assigningTraits : MonoBehaviour
                     break;
                 case "lucky":
                     //+5% evasion
-                    BrunnTrait.evadeNumber += 1;
+                    BrunnTrait.evadeNumber += 2;
                     break;
                 case "lazy":
-                    TraitCalc.valhallaHP += 2 * TraitCalc.valhallaCount;
-                    BrunnMove.movementSpeed -= 2;
+                    TraitCalc.lazyNumber += 5;
+                    TraitCalc.lazyTrait = true;
+                    BrunnMove.movementSpeed -= 10;
                     break;
             }
         }
@@ -366,36 +370,36 @@ public class assigningTraits : MonoBehaviour
             case 1:
                 if (isEnemyStrong)
                 {
-                    BrunnTrait.baseAttack += 3;
+                    BrunnTrait.baseAttackStart += 10;
 
                 }
                 else
                 {
-                    BrunnTrait.baseAttack += 1;
+                    BrunnTrait.baseAttackStart += 5;
                 }
                 break;
             case 2:
                 if (isEnemyStrong)
                 {
                     //def +3
-                    BrunnTrait.defense += 3;
+                    BrunnTrait.defense += 4;
                 }
                 else
                 {
                     //def +1
-                    BrunnTrait.defense += 1;
+                    BrunnTrait.defense += 2;
                 }
                 break;
             case 3:
                 //speed up
                 if (isEnemyStrong)
                 {
-                    BrunnMove.movementSpeed += 3;
+                    BrunnMove.movementSpeed += 25;
 
                 }
                 else
                 {
-                    BrunnMove.movementSpeed += 1;
+                    BrunnMove.movementSpeed += 10;
                 }
                 break;
 
@@ -418,35 +422,35 @@ public class assigningTraits : MonoBehaviour
                     //strength down
                     if (isEnemyStrong)
                     {
-                        BrunnTrait.baseAttack -= 3;
+                        BrunnTrait.baseAttackStart -= 10;
 
                     }
                     else
                     {
-                        BrunnTrait.baseAttack -= 1;
+                        BrunnTrait.baseAttackStart -= 5;
                     }
                     break;
                 case 2:
                     //defense up
                     if (isEnemyStrong)
                     {
-                        BrunnTrait.defense -= 3;
+                        BrunnTrait.defense -= 4;
                     }
                     else
                     {
                         //def-1
-                        BrunnTrait.defense -= 1;
+                        BrunnTrait.defense -= 2;
                     }
                     break;
                 case 3:
                     //speed up
                     if (isEnemyStrong)
                     {
-                        BrunnMove.movementSpeed -= 3;
+                        BrunnMove.movementSpeed -= 25;
                     }
                     else
                     {
-                        BrunnMove.movementSpeed -= 1;
+                        BrunnMove.movementSpeed -= 10;
                     }
                     break;
             }
