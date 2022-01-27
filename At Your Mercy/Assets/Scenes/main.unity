@@ -17788,7 +17788,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18800,7 +18800,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18822,6 +18822,7 @@ MonoBehaviour:
   valhallaTextCount: 0
   lazyTrait: 0
   valhallaHP: 0
+  valhallaBaseHP: 0
   Deathcount: 0
   valhallaCount: 0
   traitCount: 0
@@ -18834,6 +18835,8 @@ MonoBehaviour:
   invulnerabilityCount: 0
   killingThreshold: 10
   caringDamage: 0
+  independentDamage: 0
+  lazyNumber: 0
 --- !u!1 &1865312819
 GameObject:
   m_ObjectHideFlags: 0
