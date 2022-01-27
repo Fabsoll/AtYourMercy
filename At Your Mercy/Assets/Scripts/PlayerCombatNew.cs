@@ -245,10 +245,10 @@ public class PlayerCombatNew : MonoBehaviour
         doesItEvade = Random.Range(1, evadeChance);
         if (doesItEvade != 1)
         {
-            if (currentHit <= traitCalc.invulnerabilityCount)
+            if (currentHit < traitCalc.invulnerabilityCount)
             {
-                traitCalc.invulnerabilityCount -= 1;
                 currentHit += 1;
+                
             }
             else
             {
