@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - RavenMissle
   - PlatformGroun
+  - fragileGirl
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - Raven
   - Platform
-  - 
+  - fragile girl
   - 
   - 
   - 

@@ -441,7 +441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.67457, y: 39.078346, z: -10}
+  m_LocalPosition: {x: 19.57457, y: 38.778343, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2346,11 +2346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 19.4
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.9
+      value: 37.6
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6789,6 +6789,10 @@ PrefabInstance:
       propertyPath: TraitCalc
       value: 
       objectReference: {fileID: 1847504413}
+    - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
+      propertyPath: getEnemy2
+      value: 
+      objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
       value: 100
@@ -13689,7 +13693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.67457, y: 39.078346, z: -10}
+  m_LocalPosition: {x: 19.57457, y: 38.778343, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -15385,17 +15389,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1522455909427219168, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
+      propertyPath: m_TagString
+      value: fragileGirl
+      objectReference: {fileID: 0}
     - target: {fileID: 4184098023179531928, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349859, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_Size.x
-      value: 16.781559
+      value: 21.221573
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349859, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_Offset.x
-      value: 0.25139475
+      value: 2.4714012
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349859, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_IsTrigger
@@ -15423,7 +15431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349861, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.465132
+      value: 23.46513
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349861, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15467,7 +15475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633364974798349862, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: fragileGirl
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7714fe727fd64f941bf5b2f00eef038c, type: 3}

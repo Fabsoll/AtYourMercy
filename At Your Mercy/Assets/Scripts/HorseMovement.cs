@@ -16,6 +16,7 @@ public class HorseMovement : MonoBehaviour
     private bool isHeadDown = false;
     private bool isAbleToMove = true;
     public GameObject icon;
+    Animator fragileGirl;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class HorseMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerAnim.keepAnimatorControllerStateOnDisable = false;
+        fragileGirl = GameObject.FindGameObjectWithTag("fragileGirl").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,8 @@ public class HorseMovement : MonoBehaviour
             movementSpeed = 10f;
             playerRB.mass = 200;
             Physics2D.IgnoreLayerCollision(8, 9, false);
+            
+
         }
         else if(!isHeadDown){
             Physics2D.IgnoreLayerCollision(8, 9, true);
@@ -53,7 +57,14 @@ public class HorseMovement : MonoBehaviour
         }
 
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("fragileGirl"))
+        {
+            collision.gameObject.GetComponent<Animator>().SetTrigger("Striked");
+            Debug.Log("fragile girl");
+        }
+    }
     private void FixedUpdate() {
         if(isAbleToMove)
             controller.Move(moveX * Time.fixedDeltaTime, false, false);
