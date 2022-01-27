@@ -144,7 +144,7 @@ public class Boss : MonoBehaviour
 
     public int NumberEverySecond(){
         int min = 1;
-        int max = 5;
+        int max = 3;
 
         int result = Random.Range(min, max);
         //Debug.Log(result);

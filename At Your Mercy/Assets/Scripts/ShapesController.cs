@@ -26,7 +26,7 @@ public class ShapesController : MonoBehaviour
         shapeIndex = 0;
         // //valkyrieShape = GameObject.FindGameObjectWithTag("Player");
         //playableShapes = GameObject.FindGameObjectsWithTag("Player");
-        // currentShape = SpawnPlayer(shapeIndex);
+        currentShape = playableShapes[2];
         //shapeIndex = 1;
 
         EnableOne(2);
