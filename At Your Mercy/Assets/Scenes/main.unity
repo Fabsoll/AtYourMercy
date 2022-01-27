@@ -641,8 +641,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: pushForceUp
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: pushForceDown
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541768272779595935, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: maxNumberOFDashes
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}

@@ -13,7 +13,8 @@ public class RavenMovement : MonoBehaviour
     public float movementSpeed = 20f;
     private float moveX;
     private Animator playerAnim;
-    public float pushForce;
+    public float pushForceUp;
+    public float pushForceDown;
 
 
     private bool isDashing = false;
@@ -119,12 +120,12 @@ public class RavenMovement : MonoBehaviour
     private void VerticalDashUp(){
         //playerAnim.SetBool("isDashingUp", true);
         //numberOfDashes++;
-        transform.Translate(Vector3.up * pushForce * Time.deltaTime);
+        transform.Translate(Vector3.up * pushForceUp * Time.deltaTime);
     }
 
     private void VerticalDashDown(){
         attackPos.gameObject.SetActive(true);
-        transform.Translate(Vector2.down * pushForce * Time.deltaTime);
+        transform.Translate(Vector2.down * pushForceDown * Time.deltaTime);
     }
 
     //public 
