@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class dontDestroyOnLoad : MonoBehaviour
 {
@@ -9,4 +10,12 @@ public class dontDestroyOnLoad : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "title screen")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

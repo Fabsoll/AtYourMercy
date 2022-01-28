@@ -61,7 +61,7 @@ public class HorseMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("fragileGirl"))
+        if (collision.gameObject.CompareTag("fragileGirl") && isHeadDown == true)
         {
             collision.gameObject.GetComponent<Animator>().SetTrigger("Striked");
             Debug.Log("fragile girl");
