@@ -17,7 +17,6 @@ public class HealthController : MonoBehaviour
     {
         healthBar = GetComponent<Image>();
         playerCombatNew = FindObjectOfType<PlayerCombatNew>();
-        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {

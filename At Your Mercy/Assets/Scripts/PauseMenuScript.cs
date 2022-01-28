@@ -12,7 +12,6 @@ public class PauseMenuScript : MonoBehaviour
     private void Awake()
     {
 
-        DontDestroyOnLoad(this.gameObject);
         gameObject.SetActive(false);
         Overlay.SetActive(false);
     }

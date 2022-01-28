@@ -39,7 +39,6 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
-		DontDestroyOnLoad(this.gameObject);
 	}
 
 	private void FixedUpdate()

@@ -32,11 +32,6 @@ public class ShapesController : MonoBehaviour
         EnableOne(2);
         horse = playableShapes[0].GetComponent<HorseMovement>();
     }
-    private void Awake()
-    {
-
-        DontDestroyOnLoad(this.gameObject);
-    }
     // Update is called once per frame
     void Update()
     {

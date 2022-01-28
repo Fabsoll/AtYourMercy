@@ -30,10 +30,6 @@ public class TraitCalculator : MonoBehaviour
         caringDamage = 0;
     }
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
     // Update is called once per frame
     void Update()
     {
