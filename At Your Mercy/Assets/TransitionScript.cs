@@ -40,12 +40,13 @@ public class TransitionScript : MonoBehaviour
     bool wotangone;
     public AudioSource transitionmusic;
     public AudioSource wotansound;
-    GameObject valkyrie;
+    GameObject valkyrieSound;
+    
     // Start is called before the first frame update
     void Start()
     {
-        valkyrie = GameObject.FindGameObjectWithTag("Player");
-        valkyrie.SetActive(false);
+        valkyrieSound = GameObject.Find("brunnhilde audio");
+        valkyrieSound.SetActive(false);
         wotandialogue.SetActive(true);
         brunnhildedialogue.SetActive(false);
         brunnhildeidle.SetActive(false);
