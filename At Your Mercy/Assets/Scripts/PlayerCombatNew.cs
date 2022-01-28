@@ -330,6 +330,9 @@ public class PlayerCombatNew : MonoBehaviour
         fadetoblack.SetActive(true);
         fade = true;
         shapeUI.SetActive(false);
+
+        currentHealth += traitCalc.valhallaHP;
+        maxHealth = currentHealth;
         if (BrunnhildeDied)
         {
             heavyBreath.Stop();

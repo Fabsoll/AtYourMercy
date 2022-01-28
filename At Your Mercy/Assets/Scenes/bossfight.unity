@@ -733,7 +733,6 @@ MonoBehaviour:
   health: 0
   maxHealth: 2000
   isFlipped: 1
-  player: {fileID: 0}
   isCasting: 0
   bossAnimatorController: {fileID: 331330633}
   attackPatternBehaviour: {fileID: 484670559}
@@ -987,7 +986,7 @@ GameObject:
   - component: {fileID: 504154649}
   - component: {fileID: 504154648}
   m_Layer: 0
-  m_Name: 
+  m_Name: startScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

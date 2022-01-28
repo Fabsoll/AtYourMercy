@@ -10,6 +10,7 @@ TagManager:
   - RavenMissle
   - PlatformGroun
   - fragileGirl
+  - traitcalculator
   layers:
   - Default
   - TransparentFX

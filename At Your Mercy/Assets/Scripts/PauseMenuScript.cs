@@ -9,7 +9,13 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Overlay;
     public GameObject healthbar;
+    private void Awake()
+    {
 
+        DontDestroyOnLoad(this.gameObject);
+        gameObject.SetActive(false);
+        Overlay.SetActive(false);
+    }
     public void ResumeGame()
     {
         Time.timeScale = 1;
