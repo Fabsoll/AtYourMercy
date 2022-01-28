@@ -17,7 +17,10 @@ public class PlayerCombatNew : MonoBehaviour
     public AudioSource death;
     public AudioSource enemyDmg1;
     public AudioSource enemyDmg2;
-    public AudioSource getHit;
+    AudioSource getHit;
+    public AudioSource hitSound1;
+    public AudioSource hitSound2;
+    public AudioSource hitSound3;
     #endregion
 
     public Transform attackPoint;
@@ -292,7 +295,21 @@ public class PlayerCombatNew : MonoBehaviour
                         }
                     }
                 }
+                int hit = Random.Range(1, 4);
+                switch (hit)
+                {
+                    case 1:
+                        getHit = hitSound1;
+                        break;
+                    case 2:
+                        getHit = hitSound2;
+                        break;
+                    case 3:
+                        getHit = hitSound3;
+                        break;
+                }
                 getHit.Play();
+                Debug.Log(hit);
                 //Debug.Log("isInv");
                 StartCoroutine(Invulnerability());
                 StartCoroutine(ApplyDamageColor());

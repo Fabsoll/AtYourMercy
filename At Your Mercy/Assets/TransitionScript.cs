@@ -7,6 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class TransitionScript : MonoBehaviour
 {
+
+    #region
+    public AudioSource didYouThink;
+    public AudioSource iWasntHiding;
+    public AudioSource doYouEven;
+    public AudioSource imTryingTo;
+    public AudioSource aTyrantAnd;
+    public AudioSource perhaps;
+    public AudioSource youMightHave;
+    public AudioSource nowYoureBarely;
+    public AudioSource letsJustGet;
+    public AudioSource beCrushedBeneath;
+    #endregion
     public GameObject wotandialogue;
     public GameObject brunnhildedialogue;
     public GameObject fadetoscene;
@@ -128,10 +141,13 @@ public class TransitionScript : MonoBehaviour
         switch (textcounter)
         {
             case -1:
+                didYouThink.Play();
+                transitionmusic.volume = 0.2f;
                 wotantext.text = "Did you think you could hide from me forever?";
                 textcounter += 1;
                 break;
             case 0:
+                iWasntHiding.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
                 wotanidle.SetActive(true);
@@ -139,6 +155,7 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 1:
+                doYouEven.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
                 brunnhildedialogue.SetActive(false);
@@ -148,6 +165,7 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 2:
+                imTryingTo.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
                 brunnhildetext.text = "I'm trying to end a tyrant.";
@@ -155,6 +173,7 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 3:
+                aTyrantAnd.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
                 brunnhildedialogue.SetActive(false);
@@ -163,12 +182,14 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 4:
+                perhaps.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
                 brunnhildetext.text = "perhaps.";
                 textcounter += 1;
                 break;
             case 5:
+                youMightHave.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
                 brunnhildedialogue.SetActive(false);
@@ -176,16 +197,19 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 6:
+                nowYoureBarely.Play();
                 wotantext.text = "Now you're barely more than a worm.";
                 textcounter += 1;
                 break;
             case 7:
+                letsJustGet.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
                 brunnhildetext.text = "Let's just get this over with already.";
                 textcounter += 1;
                 break;
             case 8:
+                beCrushedBeneath.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
                 brunnhildedialogue.SetActive(false);

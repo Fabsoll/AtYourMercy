@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource walk;
     public float walkVolume;
     private bool onAir = false;
-
+    public AudioSource jumpSound;
     // Start is called before the first frame update
 
     void Start()
@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("valkyrie jump")){
             onAir = true;
             jump = true;
+            jumpSound.Play();
             playerAnim.SetBool("isJumping", true);
         }
 
