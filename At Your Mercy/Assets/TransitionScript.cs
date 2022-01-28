@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class TransitionScript : MonoBehaviour
@@ -42,10 +40,12 @@ public class TransitionScript : MonoBehaviour
     bool wotangone;
     public AudioSource transitionmusic;
     public AudioSource wotansound;
+    GameObject valkyrie;
     // Start is called before the first frame update
     void Start()
     {
-
+        valkyrie = GameObject.FindGameObjectWithTag("Player");
+        valkyrie.SetActive(false);
         wotandialogue.SetActive(true);
         brunnhildedialogue.SetActive(false);
         brunnhildeidle.SetActive(false);
@@ -142,7 +142,7 @@ public class TransitionScript : MonoBehaviour
         {
             case -1:
                 didYouThink.Play();
-                transitionmusic.volume = 0.2f;
+                transitionmusic.volume = 0.1f;
                 wotantext.text = "Did you think you could hide from me forever?";
                 textcounter += 1;
                 break;

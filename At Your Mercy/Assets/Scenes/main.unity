@@ -2285,7 +2285,7 @@ PrefabInstance:
       objectReference: {fileID: 1007724872}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: maxHealth
-      value: 101
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: thisEnemy
@@ -20069,7 +20069,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3bc5ec0c2fcaa7a418591c683c317cad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a640bcb82c6b1424ab671539c9ff2cf0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

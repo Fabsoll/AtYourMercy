@@ -353,7 +353,6 @@ public class PlayerCombatNew : MonoBehaviour
         if (BrunnhildeDied)
         {
             heavyBreath.Stop();
-            death.Play();
             Debug.Log("Player died");
         }
     }
