@@ -40,4 +40,10 @@ public class StartGame : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("tutorial");
+        SceneManager.UnloadSceneAsync("title screen");
+    }
 }
