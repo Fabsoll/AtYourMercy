@@ -39,6 +39,7 @@ public class PlayerCombatNew : MonoBehaviour
     public bool isInvulnerable;
     public bool isAbleToAttack;
     public float attackCD;
+    public float heavyAttackCD;
     public float invulnerableTime;
     public GameObject fadetoblack;
     float fadeAmount;
@@ -97,11 +98,11 @@ public class PlayerCombatNew : MonoBehaviour
 
         baseAttack = baseAttackStart + traitCalc.caringDamage + traitCalc.independentDamage;
         if (Input.GetButtonDown("attack") && isAbleToAttack){
-            StartCoroutine(attackCooling());
+            StartCoroutine(attackCooling(attackCD));
             Attack();
         }
         if (Input.GetMouseButtonDown(1) && isAbleToAttack){
-            StartCoroutine(attackCooling());
+            StartCoroutine(attackCooling(heavyAttackCD));
             HeavyAttack();
         }
 
@@ -160,7 +161,7 @@ public class PlayerCombatNew : MonoBehaviour
             if(enemy.gameObject.CompareTag("Enemy")){
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
                 float pushDistance = Vector3.Distance(this.transform.position, enemy.transform.position) * heavyPush;
-                Debug.Log("push distance: " + pushDistance);
+                //Debug.Log("push distance: " + pushDistance);
                 enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector3(pushDistance, 0f, 0f));
             }
             else if(enemy.gameObject.CompareTag("Boss")){
@@ -469,7 +470,7 @@ public class PlayerCombatNew : MonoBehaviour
         isInvulnerable = false;
     }
 
-    IEnumerator attackCooling(){
+    IEnumerator attackCooling(float attackCD){
         isAbleToAttack = false;
         yield return new WaitForSeconds(attackCD);
         isAbleToAttack = true;
