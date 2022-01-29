@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
     public AudioSource titlemusic;
     bool startbutton;
+    Button start;
     // Start is called before the first frame update
-   public void StartGameButton()
+
+    private void Start()
+    {
+
+        start = GameObject.Find("Canvas/startbutton").GetComponent<Button>();
+    }
+    public void StartGameButton()
     {
         startbutton = true;
         
@@ -19,6 +27,7 @@ public class StartGame : MonoBehaviour
     {
         if (startbutton == true)
         {
+            start.interactable = false;
             if (titlemusic.volume >= 0.0f)
             {
                 titlemusic.volume -= 0.2f * Time.deltaTime;
