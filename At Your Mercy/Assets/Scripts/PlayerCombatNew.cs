@@ -22,7 +22,7 @@ public class PlayerCombatNew : MonoBehaviour
     public AudioSource hitSound2;
     public AudioSource hitSound3;
     #endregion
-
+    bool fadeGameOver;
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemylayers;
@@ -59,9 +59,15 @@ public class PlayerCombatNew : MonoBehaviour
     public assigningTraits thisEnemy;
     int currentHit;
     bool BrunnhildeDied;
+    bool valhalla;
+    Scene currentScene;
+    string sceneName;
+    bool gameOverBool;
+    bool transitionScene;
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHit = 0;
         isInvulnerable = false;
         isAbleToAttack = true;
@@ -78,6 +84,12 @@ public class PlayerCombatNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        if (sceneName == "bossfight")
+        {
+            valhalla = true;
+        }
 
         baseAttack = baseAttackStart + traitCalc.caringDamage + traitCalc.independentDamage;
         if (Input.GetButtonDown("attack") && isAbleToAttack){
@@ -101,10 +113,25 @@ public class PlayerCombatNew : MonoBehaviour
             {
                 fade = false;
                 Time.timeScale = 1;
-                SceneManager.LoadSceneAsync("transition scene");
-                SceneManager.UnloadSceneAsync("main");
+                if (transitionScene)
+                {
+                    SceneManager.LoadSceneAsync("transition scene");
+                    SceneManager.UnloadSceneAsync("main");
+                    transitionScene = false;
+                }
+                else if (gameOverBool)
+                {
+                    SceneManager.LoadSceneAsync("game over");
+                    SceneManager.UnloadSceneAsync("bossfight");
+                }
+
+
+
                 
             }
+
+        
+       
         }
         if (traitCalc.Deathcount >= traitCalc.killingThreshold)
         {
@@ -328,6 +355,7 @@ public class PlayerCombatNew : MonoBehaviour
             heavyBreath.volume = 1;
         }
         if(currentHealth <= 0){
+            currentHealth = 0;
             BrunnhildeDied = true;
             Die();
         }
@@ -341,21 +369,36 @@ public class PlayerCombatNew : MonoBehaviour
 
     private void Die(){
 
-        //<<<<<<< Updated upstream
-        //=======
-        //>>>>>>> Stashed changes
         fadetoblack.SetActive(true);
         fade = true;
         shapeUI.SetActive(false);
-
-        currentHealth += traitCalc.valhallaHP;
-        maxHealth = currentHealth;
-        if (BrunnhildeDied)
+        //<<<<<<< Updated upstream
+        //=======
+        //>>>>>>> Stashed changes
+        if (valhalla != true)
         {
-            heavyBreath.Stop();
-            Debug.Log("Player died");
+
+            transitionScene = true;
+            currentHealth += traitCalc.valhallaHP;
+            if (traitCalc.valhallaHP == 0)
+            {
+                currentHealth = 10;
+            }
+            maxHealth = currentHealth;
+            if (BrunnhildeDied)
+            {
+                heavyBreath.Stop();
+                Debug.Log("Player died");
+            }
+        }
+        else
+        {
+
+            fade = true;
+            gameOverBool = true;
         }
     }
+    
 
     IEnumerator waitBF()
     {

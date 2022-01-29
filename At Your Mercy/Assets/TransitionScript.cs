@@ -41,7 +41,7 @@ public class TransitionScript : MonoBehaviour
     public AudioSource transitionmusic;
     public AudioSource wotansound;
     GameObject valkyrieSound;
-    
+    Image fadetoblack;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +52,8 @@ public class TransitionScript : MonoBehaviour
         brunnhildeidle.SetActive(false);
         wotanidle.SetActive(false);
         Time.timeScale = 1;
-
+        fadetoblack = GameObject.Find("dontDestroyThese/fadetoblack").GetComponent<Image>();
+        fadetoblack.color = new Color(fadetoblack.color.r, fadetoblack.color.g, fadetoblack.color.b, 0);
         objectColor = fadetoscene.GetComponent<Image>().color;
         objectColor2 = wotansign.GetComponent<Image>().color;
         objectColor3 = valhallafadeout.GetComponent<Image>().color;
