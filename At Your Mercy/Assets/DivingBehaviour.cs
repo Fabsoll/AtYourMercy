@@ -49,7 +49,7 @@ public class DivingBehaviour : StateMachineBehaviour
             //target = new Vector2(playerPos.position.x, playerPos.position.y);
             //newPos = Vector2.MoveTowards(bossRB.position, target, speed * Time.fixedDeltaTime);
             //bossRB.MovePosition(newPos);
-            bossRB.AddForce(Vector2.down * speed * 10000);
+            bossRB.AddForce(Vector2.down * speed * 5000);
         }
     }
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
