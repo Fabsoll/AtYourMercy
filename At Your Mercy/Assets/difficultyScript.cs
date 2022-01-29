@@ -11,13 +11,14 @@ public class difficultyScript : MonoBehaviour
     int difficultyHealth;
     public int difficultyDamage;
 
-
-    //public bool easy;
-    //public bool medium;
-    //public bool hard;
+    TraitCalculator traitCalc;
+    public bool easy;
+    public bool medium;
+    public bool hard;
     // Start is called before the first frame update
     void Start()
     {
+        traitCalc = GameObject.Find("dontDestroyThese/traitcalc").GetComponent<TraitCalculator>();
         this.gameObject.SetActive(true);
         valkyrieSound = GameObject.Find("dontDestroyThese/Valkyrie/brunnhilde audio");
         valkyrieSound.SetActive(false);
@@ -34,8 +35,9 @@ public class difficultyScript : MonoBehaviour
     public void Easy()
     {
         //how the game should be easier
-        //easy = true;
+        easy = true;
         difficultyHealth = 25;
+        traitCalc.killingThreshold = 15;
         closeScreen();
         
         
@@ -44,7 +46,8 @@ public class difficultyScript : MonoBehaviour
     {
         ////how the game should be normally
         //easy = true;
-        //medium = true;
+        medium = true;
+        traitCalc.killingThreshold = 10;
         difficultyHealth = 50;
         closeScreen();
     }
@@ -53,7 +56,8 @@ public class difficultyScript : MonoBehaviour
         ////how the game should be harder
         //easy = true;
         //medium = true;
-        //hard = true;
+        hard = true;
+        traitCalc.killingThreshold = 5;
         difficultyHealth = 100;
         closeScreen();
     }

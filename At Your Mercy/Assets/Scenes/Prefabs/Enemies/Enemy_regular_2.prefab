@@ -425,7 +425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3accf3aa1bacf4d46b82b18ba7dca18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 5
+  damageToPlayer: 10
+  strongEnemy: 0
+  wolfEnemy: 0
 --- !u!1 &1943744621076407139
 GameObject:
   m_ObjectHideFlags: 0

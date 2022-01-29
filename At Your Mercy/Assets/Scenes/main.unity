@@ -2406,7 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 1007724872}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: thisEnemy
@@ -2428,6 +2428,10 @@ PrefabInstance:
       propertyPath: heavyBreath
       value: 
       objectReference: {fileID: 1871115160}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: currentHealth
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttackStart
       value: 10
@@ -9911,21 +9915,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
   m_PrefabInstance: {fileID: 1773635445}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &839399793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839399792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3accf3aa1bacf4d46b82b18ba7dca18d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToPlayer: 0
-  strongEnemy: 1
-  wolfEnemy: 0
 --- !u!1 &840106605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4411649459843426484, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
@@ -12322,6 +12311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyDamage: 0
+  easy: 0
+  medium: 0
+  hard: 0
 --- !u!1 &1097924692
 GameObject:
   m_ObjectHideFlags: 0

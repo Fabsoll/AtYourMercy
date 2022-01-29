@@ -6,8 +6,6 @@ public class DamageDeal : MonoBehaviour
 {
     private PlayerCombatNew player;
     public int damageToPlayer;
-    public bool strongEnemy;
-    public bool wolfEnemy;
     float destroyTime;
     //int difficultyDamage;
     bool isDestroyable = false;

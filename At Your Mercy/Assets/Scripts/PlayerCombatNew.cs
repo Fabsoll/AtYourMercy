@@ -64,10 +64,11 @@ public class PlayerCombatNew : MonoBehaviour
     string sceneName;
     bool gameOverBool;
     bool transitionScene;
+    difficultyScript difficulty;
     // Start is called before the first frame update
     void Start()
     {
-        
+        difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
         currentHit = 0;
         isInvulnerable = false;
         isAbleToAttack = true;
@@ -244,6 +245,15 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+
+        if (difficulty.easy == true)
+        {
+            damage /= 2;
+        }
+        if (difficulty.hard == true)
+        {
+            damage *= 2;
+        }
         if (evadeNumber >= 6)
         {
             evadeNumber = 6;
@@ -283,6 +293,8 @@ public class PlayerCombatNew : MonoBehaviour
             }
             else
             {
+
+                
                 currentHealth -= (damage - defense);
                 if (traitCalc.vengefulTrait == true)
                 {
