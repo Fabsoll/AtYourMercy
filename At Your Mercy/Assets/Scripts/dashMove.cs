@@ -16,12 +16,12 @@ public class dashMove : MonoBehaviour
     private Animator playerAnim;
     Color c;
 
-    CharacterController2D playerController;
+    public CharacterController2D playerController;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = FindObjectOfType<CharacterController2D>();
+        //playerController = FindObjectOfType<CharacterController2D>();
         c = GetComponent<Renderer>().material.color;
         playerAnim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -31,13 +31,11 @@ public class dashMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("is player faced right: " + playerController.m_FacingRight);
         if(!inCooldown){
             if(direction == 0){
                 if(Input.GetButtonDown("dash")){
                     direction = 1;
-                }
-                else if(Input.GetKey(KeyCode.D) && (Input.GetKeyDown(KeyCode.F))){
-                    direction = 2;
                 }
             }
 
@@ -54,7 +52,7 @@ public class dashMove : MonoBehaviour
                        if(playerController.m_FacingRight){
                             rb.AddForce(Vector2.right * dashSpeed);
                        }
-                       else{
+                       else if(!playerController.m_FacingRight){
                            rb.AddForce(Vector2.left * dashSpeed);
                        }
                        
