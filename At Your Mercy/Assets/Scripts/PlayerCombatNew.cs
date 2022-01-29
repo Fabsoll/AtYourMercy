@@ -65,9 +65,12 @@ public class PlayerCombatNew : MonoBehaviour
     bool gameOverBool;
     bool transitionScene;
     difficultyScript difficulty;
+    private CharacterController2D playerController;
+    public float heavyPush;
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GetComponent<CharacterController2D>();
         difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
         currentHit = 0;
         isInvulnerable = false;
@@ -97,6 +100,11 @@ public class PlayerCombatNew : MonoBehaviour
             StartCoroutine(attackCooling());
             Attack();
         }
+        if (Input.GetMouseButtonDown(1) && isAbleToAttack){
+            StartCoroutine(attackCooling());
+            HeavyAttack();
+        }
+
 
         if (fade == true)
         {
@@ -143,9 +151,41 @@ public class PlayerCombatNew : MonoBehaviour
         //     Physics2D.IgnoreLayerCollision(6, 8, true);
         // }
     }
+
+    void HeavyAttack(){
+            animator.SetTrigger("heavy");
+            StartCoroutine(SpeedReduce(1f));
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
+            foreach(Collider2D enemy in hitEnemies){
+            if(enemy.gameObject.CompareTag("Enemy")){
+                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                float pushDistance = Vector3.Distance(this.transform.position, enemy.transform.position) * heavyPush;
+                Debug.Log("push distance: " + pushDistance);
+                enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector3(pushDistance, 0f, 0f));
+            }
+            else if(enemy.gameObject.CompareTag("Boss")){
+                //Debug.Log("damage?");
+                enemy.GetComponent<Boss>().TakeDamage(attackDamage);
+            }
+            else if(enemy.gameObject.CompareTag("RavenMissle")){
+                //Debug.Log("damage?");
+                Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
+            }
+
+        }
+            
+    }
+
+    private IEnumerator SpeedReduce(float time){
+        playerController.speedMuliplier = 0.2f;
+        yield return new WaitForSeconds(time);
+        playerController.speedMuliplier = 1f;
+    }
+    
     
     void Attack(){
         // PLay attack anim
+        StartCoroutine(SpeedReduce(0.5f));
         animator.SetTrigger("attack");
         switch (missCount)
         {
