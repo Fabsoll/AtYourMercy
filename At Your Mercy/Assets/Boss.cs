@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Boss : MonoBehaviour
 {
     public float health;
@@ -172,7 +172,10 @@ public class Boss : MonoBehaviour
         GetComponentInChildren<SpriteRenderer>().material.color = Color.white;
     }
 
-    private void Die(){
+    private void Die()
+    {
+        SceneManager.LoadScene("you win");
+        SceneManager.UnloadSceneAsync("bossfight");
         gameObject.SetActive(false);
     }
 }
