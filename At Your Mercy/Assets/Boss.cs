@@ -20,6 +20,8 @@ public class Boss : MonoBehaviour
 
     public int currentStage;
 
+    public GameObject shockwave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,6 +112,12 @@ public class Boss : MonoBehaviour
         }
 
             
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Ground") && currentStage == 2){
+            Instantiate(shockwave, new Vector3(transform.position.x, -7.4f, 0f), shockwave.transform.rotation);
+        }
     }
 
     IEnumerator StartDelaying(float time)
