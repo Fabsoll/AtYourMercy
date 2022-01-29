@@ -1147,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -1593,7 +1593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -1723,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -3220,7 +3220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957344, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957346, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_CollisionDetection
@@ -3643,7 +3643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -4293,7 +4293,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -4337,7 +4337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -4705,7 +4705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -5590,7 +5590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -5768,7 +5768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037478, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037482, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: attack
@@ -6974,7 +6974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943744620140062656, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1943744620140062658, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_CollisionDetection
@@ -7329,7 +7329,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -7373,7 +7373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -7531,7 +7531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -8376,7 +8376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -8575,7 +8575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -9911,6 +9911,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
   m_PrefabInstance: {fileID: 1773635445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &839399793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839399792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3accf3aa1bacf4d46b82b18ba7dca18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToPlayer: 0
+  strongEnemy: 1
+  wolfEnemy: 0
 --- !u!1 &840106605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4411649459843426484, guid: 37b5fa9b66568294db9b6a24e11c6aa1, type: 3}
@@ -10809,7 +10824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943744620140062656, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1943744620140062658, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_CollisionDetection
@@ -11311,7 +11326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957344, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957346, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_CollisionDetection
@@ -11395,7 +11410,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957357, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: thisEnemy
@@ -11978,7 +11993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -12306,6 +12321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f0d334616ca8e4582f87f3db234651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyDamage: 0
 --- !u!1 &1097924692
 GameObject:
   m_ObjectHideFlags: 0
@@ -13282,7 +13298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -13392,7 +13408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957344, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 7323398358869957346, guid: 7d404a4d76866ce4bb7298754e120a6c, type: 3}
       propertyPath: m_CollisionDetection
@@ -13844,7 +13860,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -13888,7 +13904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -14473,7 +14489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -14639,6 +14655,10 @@ PrefabInstance:
     - target: {fileID: 1943744620140062656, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943744620140062656, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
+      propertyPath: m_TagString
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1943744620140062658, guid: 0dec1bf787bc5a042b07f45e93479e8b, type: 3}
       propertyPath: m_CollisionDetection
@@ -16227,7 +16247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -16487,7 +16507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -16993,7 +17013,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -17037,7 +17057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -18799,7 +18819,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -18843,7 +18863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -19025,7 +19045,7 @@ PrefabInstance:
       objectReference: {fileID: 1772836675}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507397, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: thisEnemy
@@ -19069,7 +19089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507400, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 1271894540308507402, guid: 67f772fa0a73ace47b64555676d9bab6, type: 3}
       propertyPath: m_CollisionDetection
@@ -19869,7 +19889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -20815,7 +20835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -20948,7 +20968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -21388,6 +21408,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 92874634721037478, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
+      propertyPath: m_TagString
+      value: EnemyParent
+      objectReference: {fileID: 0}
     - target: {fileID: 92874634721037482, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: attack
       value: 
@@ -21498,7 +21522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -21999,7 +22023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -22608,7 +22632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037478, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037482, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: attack
@@ -22793,7 +22817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201184, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyParent
       objectReference: {fileID: 0}
     - target: {fileID: 8549642212968201185, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: attack
@@ -23083,11 +23107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122551, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.398424
+      value: 8.557892
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122551, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.629758
+      value: 9.47
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122551, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_LocalPosition.y

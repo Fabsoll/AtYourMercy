@@ -6,13 +6,18 @@ public class DamageDeal : MonoBehaviour
 {
     private PlayerCombatNew player;
     public int damageToPlayer;
-
+    public bool strongEnemy;
+    public bool wolfEnemy;
     float destroyTime;
+    //int difficultyDamage;
     bool isDestroyable = false;
+    difficultyScript damage;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        //difficultyDamage = 5;
         player = FindObjectOfType<PlayerCombatNew>();
     //    destroyTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
     }
@@ -20,6 +25,31 @@ public class DamageDeal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (damage.easy)
+        //{
+
+        //    if (damage.medium)
+        //    {
+        //        difficultyDamage *= 2;
+
+        //        if (damage.hard)
+        //        {
+        //            difficultyDamage *= 2;
+        //        }
+        //    }
+        //}
+        //if (strongEnemy)
+        //{
+        //    difficultyDamage *= 2;
+
+        //}
+        //if (wolfEnemy)
+        //{
+        //    difficultyDamage /= 2;
+        //}
+        //damageToPlayer = difficultyDamage;
+
+
         //StartCoroutine(DestroyIfPassed());
         //if(isDestroyable){
         //    Destroy(gameObject);

@@ -11,6 +11,8 @@ TagManager:
   - PlatformGroun
   - fragileGirl
   - traitcalculator
+  - EnemyParent
+  - EnemyDamageDeal
   layers:
   - Default
   - TransparentFX

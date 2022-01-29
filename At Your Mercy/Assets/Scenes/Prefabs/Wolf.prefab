@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 8549642211163258626}
   m_Layer: 7
   m_Name: hitbox
-  m_TagString: Untagged
+  m_TagString: EnemyDamageDeal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,6 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToPlayer: 5
+  strongEnemy: 0
+  wolfEnemy: 1
 --- !u!1 &8549642211813479859
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public bool isWolf;
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
     public Color damageColor;
     public SpriteRenderer enemySprite;
@@ -23,9 +23,6 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        currentHealth = maxHealth;
-        hpBar.SetHealth(currentHealth, maxHealth);
         UIData = FindObjectOfType<UI>();
         
     }
