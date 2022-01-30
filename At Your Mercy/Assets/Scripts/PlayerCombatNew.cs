@@ -160,9 +160,9 @@ public class PlayerCombatNew : MonoBehaviour
             foreach(Collider2D enemy in hitEnemies){
             if(enemy.gameObject.CompareTag("Enemy")){
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                float pushDistance = Vector3.Distance(this.transform.position, enemy.transform.position) * heavyPush;
+                Vector3 pushDistance = (this.transform.position - enemy.transform.position) * heavyPush;
                 //Debug.Log("push distance: " + pushDistance);
-                enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector3(pushDistance, 0f, 0f));
+                enemy.GetComponentInParent<Rigidbody2D>().AddForce(-pushDistance);
             }
             else if(enemy.gameObject.CompareTag("Boss")){
                 //Debug.Log("damage?");
