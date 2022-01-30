@@ -63,7 +63,7 @@ public class RavenMovement : MonoBehaviour
         
         moveX = Input.GetAxis("Horizontal") * movementSpeed;
         if(Input.GetButtonDown("raven fly up")){
-            if(numberOfDashes < maxNumberOFDashes){
+            if(numberOfDashes < maxNumberOFDashes && isDashing == false){
                 numberOfDashes++;
                 isDashing = true;
                 playerAnim.SetBool("isDashingUp", true);
