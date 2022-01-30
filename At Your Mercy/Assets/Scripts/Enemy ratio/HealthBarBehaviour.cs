@@ -9,18 +9,23 @@ public class HealthBarBehaviour : MonoBehaviour
     public Color Low;
     public Color High;
     public Vector3 Offset;
-
+    PlayerCombatNew fade;
     public void SetHealth(float health, float maxHealth){
         slider.gameObject.SetActive(health < maxHealth);
         slider.value = health;
         slider.maxValue = maxHealth;
 
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);
+        fade = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
     }
 
     // Update is called once per frame
     void Update()
     {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
+        if (fade.fade == true)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

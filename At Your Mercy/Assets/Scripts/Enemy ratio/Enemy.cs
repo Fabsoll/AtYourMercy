@@ -32,7 +32,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-
     }
 
     public void TakeDamage(int damage)
