@@ -2512,7 +2512,7 @@ PrefabInstance:
       objectReference: {fileID: 1291654817}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: thisEnemy
@@ -2524,7 +2524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: currentHealth
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 92874634721037483, guid: 75dd0a02fe0e3fb48bc8b8eb24a60db1, type: 3}
       propertyPath: valhallaChoice
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   valhallaChoice: {fileID: 2076007394}
   thisTrait: {fileID: 11216732}
   TraitCalc: {fileID: 856332214}
-  lastEnemy: {fileID: 0}
+  lastEnemy: {fileID: 1532312947}
 --- !u!224 &1291654818
 RectTransform:
   m_ObjectHideFlags: 0

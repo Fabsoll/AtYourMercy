@@ -116,7 +116,7 @@ public class assigningTraits : MonoBehaviour
 
             case 7:
                 //invulnerable for 1 hit (kind of bold)
-                trait = "bold";
+                trait = "resilient";
                 break;
 
             case 6:
@@ -177,7 +177,7 @@ public class assigningTraits : MonoBehaviour
 
             case 9:
                 //invulnerable for 3 hits (exceptionally bold) 
-                trait = "bold";
+                trait = "resilient";
                 break;
 
             case 8:
@@ -265,7 +265,7 @@ public class assigningTraits : MonoBehaviour
                 case "swift":
                     BrunnMove.movementSpeed += 25;
                     break;
-                case "bold":
+                case "resilient":
                     //invulnerable for 3 hits
                     TraitCalc.invulnerabilityCount += 6;
                     break;
@@ -321,7 +321,7 @@ public class assigningTraits : MonoBehaviour
                 case "swift":
                     BrunnMove.movementSpeed += 10;
                     break;
-                case "bold":
+                case "resilient":
                     //invulnerable for 1 hit
                     TraitCalc.invulnerabilityCount += 3;
                     break;

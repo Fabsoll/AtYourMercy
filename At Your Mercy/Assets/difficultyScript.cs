@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class difficultyScript : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class difficultyScript : MonoBehaviour
     public bool easy;
     public bool medium;
     public bool hard;
+    string sceneName;
     // Start is called before the first frame update
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        
         traitCalc = GameObject.Find("dontDestroyThese/traitcalc").GetComponent<TraitCalculator>();
         this.gameObject.SetActive(true);
         valkyrieSound = GameObject.Find("dontDestroyThese/Valkyrie/brunnhilde audio");
@@ -29,13 +34,19 @@ public class difficultyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (sceneName == "tutorial")
+        {
+            Easy();
+
+        }
     }
 
     public void Easy()
     {
         //how the game should be easier
         easy = true;
+        medium = false;
+        hard = false;
         difficultyHealth = 25;
         traitCalc.killingThreshold = 15;
         closeScreen();
@@ -47,6 +58,8 @@ public class difficultyScript : MonoBehaviour
         ////how the game should be normally
         //easy = true;
         medium = true;
+        easy = false;
+        hard = false;
         traitCalc.killingThreshold = 10;
         difficultyHealth = 50;
         closeScreen();
@@ -57,6 +70,8 @@ public class difficultyScript : MonoBehaviour
         //easy = true;
         //medium = true;
         hard = true;
+        medium = false;
+        easy = false;
         traitCalc.killingThreshold = 5;
         difficultyHealth = 100;
         closeScreen();

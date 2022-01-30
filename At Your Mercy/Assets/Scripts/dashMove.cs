@@ -18,9 +18,15 @@ public class dashMove : MonoBehaviour
 
     public CharacterController2D playerController;
 
+
+    GameObject dashParticles;
+
     // Start is called before the first frame update
     void Start()
     {
+        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
+
+        dashParticles.GetComponent<ParticleSystem>().Stop();
         //playerController = FindObjectOfType<CharacterController2D>();
         c = GetComponent<Renderer>().material.color;
         playerAnim = GetComponent<Animator>();
@@ -84,7 +90,6 @@ public class dashMove : MonoBehaviour
 
     private IEnumerator invulnerable(){
         Physics2D.IgnoreLayerCollision(7, 8, true);
-        
         //c.a = 0.5f;
         //GetComponent<Renderer>().material.color = c;
         yield return new WaitForSeconds(0.3f);

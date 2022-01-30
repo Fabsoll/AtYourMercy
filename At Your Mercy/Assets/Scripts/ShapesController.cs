@@ -19,10 +19,18 @@ public class ShapesController : MonoBehaviour
     public bool isInitialSpawned = false;
 
     private HorseMovement horse;
+    PlayerCombatNew valkyrie;
 
+    GameObject dirtParticles;
+    GameObject dashParticles;
+    GameObject idleParticles;
     // Start is called before the first frame update
     void Start()
     {
+        valkyrie = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
+        dirtParticles = GameObject.Find("dontDestroyThese/Valkyrie/dirt particles");
+        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
+        idleParticles = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
         shapeIndex = 0;
         // //valkyrieShape = GameObject.FindGameObjectWithTag("Player");
         //playableShapes = GameObject.FindGameObjectsWithTag("Player");
@@ -117,7 +125,11 @@ public class ShapesController : MonoBehaviour
                 currentShape = g;
             }
             else{
-               g.SetActive(false); 
+               g.SetActive(false);
+                //dirtParticles.SetActive(false);
+                //idleParticles.SetActive(false);
+                //dashParticles.GetComponent<ParticleSystem>().Stop();
+                //valkyrie.playerSprite.GetComponent<SpriteRenderer>().color = Color.white;
             }
             
         }

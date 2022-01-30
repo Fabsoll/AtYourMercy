@@ -68,9 +68,17 @@ public class PlayerCombatNew : MonoBehaviour
     difficultyScript difficulty;
     private CharacterController2D playerController;
     public float heavyPush;
+
+    GameObject dirtParticles;
+    GameObject dashParticles;
+    GameObject idleParticles;
+
     // Start is called before the first frame update
     void Start()
     {
+        dirtParticles = GameObject.Find("dontDestroyThese/Valkyrie/dirt particles");
+        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
+        idleParticles = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
         playerController = GetComponent<CharacterController2D>();
         difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
         currentHit = 0;
@@ -154,22 +162,41 @@ public class PlayerCombatNew : MonoBehaviour
     }
 
     void HeavyAttack(){
+        attackDamage = baseAttack * 2;
             animator.SetTrigger("heavy");
             StartCoroutine(SpeedReduce(1f));
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
+        switch (missCount)
+        {
+            case 1:
+                missOne.Play();
+                missCount++;
+                break;
+            case 2:
+                missTwo.Play();
+                missCount--;
+                break;
+
+
+
+        }
+        Crit();
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
             foreach(Collider2D enemy in hitEnemies){
             if(enemy.gameObject.CompareTag("Enemy")){
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
                 float pushDistance = Vector3.Distance(this.transform.position, enemy.transform.position) * heavyPush;
                 //Debug.Log("push distance: " + pushDistance);
                 enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector3(pushDistance, 0f, 0f));
+                hitSound();
             }
             else if(enemy.gameObject.CompareTag("Boss")){
                 //Debug.Log("damage?");
                 enemy.GetComponent<Boss>().TakeDamage(attackDamage);
+                hitSound();
             }
             else if(enemy.gameObject.CompareTag("RavenMissle")){
                 //Debug.Log("damage?");
+                hitSound();
                 Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
             }
 
@@ -177,6 +204,23 @@ public class PlayerCombatNew : MonoBehaviour
             
     }
 
+
+    void hitSound()
+    {
+        switch (hitCount)
+        {
+            case 1:
+                hitOne.Play();
+                enemyDmg1.Play();
+                hitCount++;
+                break;
+            case 2:
+                hitTwo.Play();
+                enemyDmg2.Play();
+                hitCount--;
+                break;
+        }
+    }
     private IEnumerator SpeedReduce(float time){
         playerController.speedMuliplier = 0.2f;
         yield return new WaitForSeconds(time);
@@ -202,6 +246,76 @@ public class PlayerCombatNew : MonoBehaviour
 
 
         }
+
+        Crit();
+        //if (critNumber >= 6)
+        //{
+        //    critNumber = 6;
+        //}
+        ////calculate critrate
+        //switch (critNumber)
+        //{
+        //    case 0:
+        //        critRate = 10000000;
+        //        break;
+        //    case 1:
+        //        critRate = 20;
+        //        break;
+        //    case 2:
+        //        critRate = 10;
+        //        break;
+        //    case 3:
+        //        critRate = 7;
+        //        break;
+        //    case 4:
+        //        critRate = 5;
+        //        break;
+        //    case 5:
+        //        critRate = 4;
+        //        break;
+        //    case 6:
+        //        critRate = 2;
+        //        break;
+        
+        //}
+        ////calculate if it crits
+        //doesItCrit = Random.Range(1, critRate);
+        //if (doesItCrit == 1)
+        //{
+        //    attackDamage = 2 * baseAttack;
+        //    Debug.Log("crit lol");
+        //}
+        //else
+        //{
+        //    attackDamage = baseAttack;
+        //}
+        // Detect enemies
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
+        foreach(Collider2D enemy in hitEnemies){
+            if(enemy.gameObject.CompareTag("Enemy")){
+                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                hitSound();
+            }
+            else if(enemy.gameObject.CompareTag("Boss")){
+                //Debug.Log("damage?");
+                enemy.GetComponent<Boss>().TakeDamage(attackDamage);
+                hitSound();
+            }
+            else if(enemy.gameObject.CompareTag("RavenMissle")){
+                //Debug.Log("damage?");
+                hitSound();
+                Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
+            }
+
+        }
+        // deal damage
+    }
+
+
+
+
+    void Crit()
+    {
         if (critNumber >= 6)
         {
             critNumber = 6;
@@ -230,7 +344,7 @@ public class PlayerCombatNew : MonoBehaviour
             case 6:
                 critRate = 2;
                 break;
-        
+
         }
         //calculate if it crits
         doesItCrit = Random.Range(1, critRate);
@@ -243,38 +357,7 @@ public class PlayerCombatNew : MonoBehaviour
         {
             attackDamage = baseAttack;
         }
-        // Detect enemies
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
-        foreach(Collider2D enemy in hitEnemies){
-            if(enemy.gameObject.CompareTag("Enemy")){
-                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                switch (hitCount)
-                {
-                    case 1:
-                        hitOne.Play();
-                        enemyDmg1.Play();
-                        hitCount++;
-                        break;
-                    case 2:
-                        hitTwo.Play();
-                        enemyDmg2.Play();
-                        hitCount--;
-                        break;
-                }
-            }
-            else if(enemy.gameObject.CompareTag("Boss")){
-                //Debug.Log("damage?");
-                enemy.GetComponent<Boss>().TakeDamage(attackDamage);
-            }
-            else if(enemy.gameObject.CompareTag("RavenMissle")){
-                //Debug.Log("damage?");
-                Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
-            }
-
-        }
-        // deal damage
     }
-
     private void OnDrawGizmosSelected() {
         if(attackPoint == null){
             
@@ -474,5 +557,10 @@ public class PlayerCombatNew : MonoBehaviour
         isAbleToAttack = false;
         yield return new WaitForSeconds(attackCD);
         isAbleToAttack = true;
+    }
+
+    private void OnEnable()
+    {
+        dashParticles.GetComponent<ParticleSystem>().Stop();
     }
 }
