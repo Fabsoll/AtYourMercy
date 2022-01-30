@@ -78,7 +78,6 @@ public class PlayerCombatNew : MonoBehaviour
     void Start()
     {
         dirtParticles = GameObject.Find("dontDestroyThese/Valkyrie/dirt particles");
-        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
         idleParticles = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
         playerController = GetComponent<CharacterController2D>();
         difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
@@ -421,7 +420,7 @@ public class PlayerCombatNew : MonoBehaviour
 
                 
                 currentHealth -= (damage - defense);
-                if (traitCalc.vengefulTrait == true)
+                if (traitCalc.vengefulTrait == true && vengefulTraitNumberConverted !=0)
                 {
                     if (traitCalc.vengefulTraitNumber >= 5)
                     {
@@ -562,6 +561,8 @@ public class PlayerCombatNew : MonoBehaviour
 
     private void OnEnable()
     {
+
+        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
         dashParticles.GetComponent<ParticleSystem>().Stop();
     }
 }

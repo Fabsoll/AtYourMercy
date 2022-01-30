@@ -93,6 +93,9 @@ public class assigningTraits : MonoBehaviour
         thisTrait.text = "This person was kind of ";
         switch (TraitNumber)
         {
+            case 12:
+                trait = "energetic";
+                break;
 
             case 11:
                 trait = "careful";
@@ -162,7 +165,9 @@ public class assigningTraits : MonoBehaviour
 
         switch (rareTraitNumber)
         {
-
+            case 14:
+                trait = "energetic";
+                break;
             case 13:
                 trait = "thoughtful";
                     break;
@@ -237,11 +242,11 @@ public class assigningTraits : MonoBehaviour
     {
         if (isEnemyStrong == true)
         {
-            TraitCalc.valhallaBaseHP += 15;
+            TraitCalc.valhallaBaseHP += 25;
         }
         else
         {
-            TraitCalc.valhallaBaseHP += 5;
+            TraitCalc.valhallaBaseHP += 10;
         }
 
         TraitCalc.valhallaCount ++;
@@ -260,6 +265,11 @@ public class assigningTraits : MonoBehaviour
         {
             switch (trait)
             {
+                case "energetic":
+                    BrunnTrait.attackCD /= 3;
+                    BrunnTrait.heavyAttackCD /= 3;
+                    BrunnMove.movementSpeed += 10;
+                    break;
                 case "thoughtful":
                     BrunnTrait.baseAttackStart += 15;
 
@@ -313,7 +323,7 @@ public class assigningTraits : MonoBehaviour
                 case "lazy":
 
                     BrunnMove.movementSpeed -= 10;
-                    TraitCalc.lazyNumber += 10;
+                    TraitCalc.lazyNumber += 20;
                     TraitCalc.lazyTrait = true;
                     break;
 
@@ -324,6 +334,11 @@ public class assigningTraits : MonoBehaviour
         {
             switch (trait)
             {
+                case "energetic":
+                    BrunnTrait.attackCD /= 2;
+                    BrunnTrait.heavyAttackCD /= 2;
+                    BrunnMove.movementSpeed += 5;
+                    break;
                 case "thoughtful":
                     BrunnTrait.baseAttackStart += 10;
                     BrunnTrait.attackCD *= 3;
@@ -368,7 +383,7 @@ public class assigningTraits : MonoBehaviour
                     BrunnTrait.evadeNumber += 2;
                     break;
                 case "lazy":
-                    TraitCalc.lazyNumber += 5;
+                    TraitCalc.lazyNumber += 10;
                     TraitCalc.lazyTrait = true;
                     BrunnMove.movementSpeed -= 10;
                     break;
