@@ -7,6 +7,8 @@ public class dontDestroyOnLoad : MonoBehaviour
 {
     public static dontDestroyOnLoad instance;
     public static GameObject importantStuff;
+    string sceneName;
+    Scene currentScene;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -17,6 +19,15 @@ public class dontDestroyOnLoad : MonoBehaviour
         else{
             instance = this;
             DontDestroyOnLoad(importantStuff);
+        }
+    }
+    private void Update()
+    {
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        if (sceneName == "title screen")
+        {
+            Destroy(this.gameObject);
         }
     }
     //private void Update()

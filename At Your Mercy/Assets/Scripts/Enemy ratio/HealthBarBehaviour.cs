@@ -16,16 +16,16 @@ public class HealthBarBehaviour : MonoBehaviour
         slider.maxValue = maxHealth;
 
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);
-        fade = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
+        //fade = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
     }
 
     // Update is called once per frame
     void Update()
     {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
-        if (fade.fade == true)
-        {
-            this.gameObject.SetActive(false);
-        }
+        //if (fade.fade == true)
+        //{
+        //    this.gameObject.SetActive(false);
+        //}
     }
 }
