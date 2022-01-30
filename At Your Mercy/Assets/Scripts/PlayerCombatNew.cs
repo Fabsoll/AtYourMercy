@@ -25,6 +25,7 @@ public class PlayerCombatNew : MonoBehaviour
     bool fadeGameOver;
     public Transform attackPoint;
     public float attackRange;
+    public float attackRangeHeavy;
     public LayerMask enemylayers;
     public int baseAttackStart;
     int attackDamage;
@@ -180,7 +181,7 @@ public class PlayerCombatNew : MonoBehaviour
 
         }
         Crit();
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemylayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRangeHeavy, enemylayers);
             foreach(Collider2D enemy in hitEnemies){
             if(enemy.gameObject.CompareTag("Enemy")){
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
