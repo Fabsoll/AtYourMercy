@@ -83,7 +83,7 @@ public class assigningTraits : MonoBehaviour
     }
     void strongTraitNumberGenerator()
     {
-        int val = Random.Range(1, 12);
+        int val = Random.Range(1, 13);
 
         rareTraitNumber = val;
     }
@@ -98,7 +98,7 @@ public class assigningTraits : MonoBehaviour
                 trait = "careful";
                 break;
             case 10:
-                //-5% crit rate + 1strength (kind of thoughtful)
+                //+2 strength, longer cd
                 trait = "thoughtful";
                 break;
 
@@ -116,7 +116,7 @@ public class assigningTraits : MonoBehaviour
 
             case 7:
                 //invulnerable for 1 hit (kind of bold)
-                trait = "bold";
+                trait = "resilient";
                 break;
 
             case 6:
@@ -162,6 +162,10 @@ public class assigningTraits : MonoBehaviour
 
         switch (rareTraitNumber)
         {
+
+            case 13:
+                trait = "thoughtful";
+                    break;
             case 12:
                 trait = "careful";
                 break;
@@ -177,7 +181,7 @@ public class assigningTraits : MonoBehaviour
 
             case 9:
                 //invulnerable for 3 hits (exceptionally bold) 
-                trait = "bold";
+                trait = "resilient";
                 break;
 
             case 8:
@@ -256,6 +260,14 @@ public class assigningTraits : MonoBehaviour
         {
             switch (trait)
             {
+                case "thoughtful":
+                    BrunnTrait.baseAttackStart += 15;
+
+                    BrunnTrait.attackCD *= 3;
+                    BrunnTrait.heavyAttackCD *= 2;
+                    //longer cooldown
+                    break;
+
                 case "careful":
                     BrunnTrait.defense += 4;
                     break;
@@ -265,7 +277,7 @@ public class assigningTraits : MonoBehaviour
                 case "swift":
                     BrunnMove.movementSpeed += 25;
                     break;
-                case "bold":
+                case "resilient":
                     //invulnerable for 3 hits
                     TraitCalc.invulnerabilityCount += 6;
                     break;
@@ -312,6 +324,12 @@ public class assigningTraits : MonoBehaviour
         {
             switch (trait)
             {
+                case "thoughtful":
+                    BrunnTrait.baseAttackStart += 10;
+                    BrunnTrait.attackCD *= 3;
+                    BrunnTrait.heavyAttackCD *= 2;
+                    //longer cooldown
+                    break;
                 case "careful":
                     BrunnTrait.defense += 2;
                     break;
@@ -321,7 +339,7 @@ public class assigningTraits : MonoBehaviour
                 case "swift":
                     BrunnMove.movementSpeed += 10;
                     break;
-                case "bold":
+                case "resilient":
                     //invulnerable for 1 hit
                     TraitCalc.invulnerabilityCount += 3;
                     break;
