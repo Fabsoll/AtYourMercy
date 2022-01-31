@@ -45,6 +45,7 @@ public class idleParticles : StateMachineBehaviour
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        idleParticle = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
         idleParticle.SetActive(false);
     }
 }

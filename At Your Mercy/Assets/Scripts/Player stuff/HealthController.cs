@@ -21,12 +21,13 @@ public class HealthController : MonoBehaviour
 
     private void Start() {
         currentHealth = playerCombatNew.maxHealth;
-        maxHealth = playerCombatNew.maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        maxHealth = playerCombatNew.maxHealth;
         currentHealth = playerCombatNew.currentHealth;
         healthBar.fillAmount = currentHealth / maxHealth;
     }
