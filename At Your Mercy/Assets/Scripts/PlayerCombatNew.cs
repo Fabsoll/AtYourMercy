@@ -69,6 +69,7 @@ public class PlayerCombatNew : MonoBehaviour
     difficultyScript difficulty;
     private CharacterController2D playerController;
     public float heavyPush;
+    public GameObject valhallaChoiceScreen;
 
     public GameObject dirtParticles;
     public GameObject dashParticles;
@@ -159,6 +160,8 @@ public class PlayerCombatNew : MonoBehaviour
         }
         if (traitCalc.Deathcount >= traitCalc.killingThreshold)
         {
+            valhallaChoiceScreen = GameObject.Find("valhallaScreen");
+            valhallaChoiceScreen.SetActive(false);
             Die();
         }
 
