@@ -22,6 +22,7 @@ public class AttackPatternBehaviour : MonoBehaviour
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         bossPos = GameObject.FindGameObjectWithTag("Boss").transform;
+        SpawnFriends();
     }
 
     // Update is called once per frame
@@ -90,5 +91,10 @@ public class AttackPatternBehaviour : MonoBehaviour
         ravenInstance.transform.Rotate(new Vector3(0, 0, angle));
         Debug.Log("SPAWN RAVENS");
         
+    }
+
+    private void SpawnFriends(){
+        int numberOfFriends = GameObject.Find("traitcalc").GetComponent<TraitCalculator>().valhallaCount;
+        Debug.Log("friends to spawn: " + numberOfFriends);
     }
 }

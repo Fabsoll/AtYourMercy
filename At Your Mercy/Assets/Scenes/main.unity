@@ -622,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 658571566, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1566821880, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
       propertyPath: attackDamage
       value: 5
@@ -2586,6 +2590,10 @@ PrefabInstance:
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: invulnerableTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: enemylayers.m_Bits
+      value: 4160
       objectReference: {fileID: 0}
     - target: {fileID: 1711346034, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Enabled

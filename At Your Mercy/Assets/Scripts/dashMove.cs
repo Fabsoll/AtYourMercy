@@ -52,6 +52,7 @@ public class dashMove : MonoBehaviour
                 }
                else{
                    Physics2D.IgnoreLayerCollision(8, 7, true);
+                   Physics2D.IgnoreLayerCollision(8, 13, true);
                    dashTime -= Time.deltaTime;
                    if(direction == 1){
                        if(playerController.m_FacingRight){
@@ -89,10 +90,12 @@ public class dashMove : MonoBehaviour
 
     private IEnumerator invulnerable(){
         Physics2D.IgnoreLayerCollision(8, 7, true);
+        Physics2D.IgnoreLayerCollision(8, 13, true);
         //c.a = 0.5f;
         //GetComponent<Renderer>().material.color = c;
         yield return new WaitForSeconds(0.5f);
         Physics2D.IgnoreLayerCollision(8, 7, false);
+        Physics2D.IgnoreLayerCollision(8, 13, false);
         //c.a = 1f;
         //GetComponent<Renderer>().material.color = c;
     }
