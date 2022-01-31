@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3198412775962955703}
   - component: {fileID: -8865627526470064732}
   - component: {fileID: -5096394620785139951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EXOPUROSIONN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b46109b9e20564c8e87790b3226ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!82 &-5096394620785139951
 AudioSource:
   m_ObjectHideFlags: 0

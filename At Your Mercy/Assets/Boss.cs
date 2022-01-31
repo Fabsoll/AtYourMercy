@@ -122,6 +122,7 @@ public class Boss : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Ground") && currentStage == 2){
+            bossAnimatorController.SetTrigger("frontKneel");
             Instantiate(shockwave, new Vector3(transform.position.x, -7.4f, 0f), shockwave.transform.rotation);
         }
     }

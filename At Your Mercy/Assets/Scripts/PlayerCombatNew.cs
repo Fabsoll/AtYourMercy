@@ -302,9 +302,10 @@ public class PlayerCombatNew : MonoBehaviour
                 hitSound();
             }
             else if(enemy.gameObject.CompareTag("RavenMissle")){
-                //Debug.Log("damage?");
-                hitSound();
+                Debug.Log("damage?");
                 Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
+                hitSound();
+                //Destroy(enemy.GetComponentInParent<Rigidbody2D>().gameObject);
             }
 
         }
