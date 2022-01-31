@@ -3699,7 +3699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3187722017055944018, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: valhallaScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3187722017055944018, guid: 1c3e796d8a2fa594aafe5f8cbcbe5900, type: 3}
       propertyPath: m_IsActive
@@ -19463,6 +19463,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
   m_PrefabInstance: {fileID: 218449224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1721187369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721187359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e0c4e0cef6a44091e4587d475f257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  traits: []
 --- !u!1 &1732163778
 GameObject:
   m_ObjectHideFlags: 0

@@ -75,6 +75,8 @@ public class PlayerCombatNew : MonoBehaviour
     public GameObject idleParticles;
 
     // Start is called before the first frame update
+
+
     void Start()
     {
        
@@ -573,5 +575,6 @@ public class PlayerCombatNew : MonoBehaviour
 
         //dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
         dashParticles.GetComponent<ParticleSystem>().Stop();
+        playerSprite.GetComponent<SpriteRenderer>().material.color = Color.white;
     }
 }

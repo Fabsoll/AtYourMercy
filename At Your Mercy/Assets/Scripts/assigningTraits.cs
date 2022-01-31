@@ -28,9 +28,9 @@ public class assigningTraits : MonoBehaviour
     void Start()
     {
         enemyInfo = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
-        getEnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
-        BrunnMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        BrunnTrait = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombatNew>();
+        getEnemy = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
+        BrunnMove = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerMovement>();
+        BrunnTrait = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
         valhallaChoice.SetActive(false);
         
     }

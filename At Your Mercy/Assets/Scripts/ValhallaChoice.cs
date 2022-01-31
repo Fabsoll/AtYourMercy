@@ -22,9 +22,9 @@ public class ValhallaChoice : MonoBehaviour
     public AudioSource walk;
     List<string> nameList = new List<string>();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        this.gameObject.SetActive(true);
        
     }
 
