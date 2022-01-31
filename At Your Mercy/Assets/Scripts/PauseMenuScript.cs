@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
-    bool paused;
     public GameObject PauseMenu;
     public GameObject Overlay;
     public GameObject healthbar;
@@ -21,7 +20,6 @@ public class PauseMenuScript : MonoBehaviour
         PauseMenu.SetActive(false);
         Overlay.SetActive(false);
         healthbar.SetActive(true);
-        paused = false;
         AudioListener.volume = 1.0f;
     }
 

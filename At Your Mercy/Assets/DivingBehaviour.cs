@@ -10,7 +10,6 @@ public class DivingBehaviour : StateMachineBehaviour
     private Transform playerPos;
     //private Transform bossPos;
     private Rigidbody2D bossRB;
-    bool isDiving = false;
     bool isSearching = false;
 
     Vector2 target;
@@ -32,7 +31,6 @@ public class DivingBehaviour : StateMachineBehaviour
         //newPos = Vector2.MoveTowards(bossRB.position, target, speed * Time.fixedDeltaTime);
         //bossRB.MovePosition(newPos);
         isSearching = true;
-        isDiving = false;
         timeDelay = 4f;
         time = 0;
     }

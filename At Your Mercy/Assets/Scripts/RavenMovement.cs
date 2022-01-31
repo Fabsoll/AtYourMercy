@@ -18,7 +18,6 @@ public class RavenMovement : MonoBehaviour
 
 
     private bool isDashing = false;
-    private bool isInitialDashing = false;
     private bool isDiving = false;
     public float dashDuration;
 
@@ -139,7 +138,7 @@ public class RavenMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Ground"){
+        if(other.gameObject.tag == "Ground" && isDiving == true){
             isDiving = false;
             attackPos.gameObject.SetActive(false);
             shapesController.EnableOne(2);

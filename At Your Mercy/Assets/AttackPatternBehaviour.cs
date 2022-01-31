@@ -10,8 +10,6 @@ public class AttackPatternBehaviour : MonoBehaviour
     public GameObject LightningAttack;
     public GameObject RavenAttack;
     public float delay;
-    private float lastCast;
-    bool isAbleToSpawn = true;
 
     public float gapBetweenLighting;
 
@@ -22,7 +20,6 @@ public class AttackPatternBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastCast = 0;
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         bossPos = GameObject.FindGameObjectWithTag("Boss").transform;
     }

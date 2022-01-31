@@ -16,11 +16,9 @@ public class WolfBehaviour : MonoBehaviour
 
     private Animator anim;
     private float distance;
-    private bool cooling;
     private float intTimer;
     private bool attackMode;
 
-    bool flip = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +56,6 @@ public class WolfBehaviour : MonoBehaviour
         anim.SetBool("Attack", true);
     }
     void StopAttack(){
-        cooling = false;
         attackMode = false;
         anim.SetBool("Attack", false);
     }
@@ -98,7 +95,6 @@ public class WolfBehaviour : MonoBehaviour
     }
     
     IEnumerator WaitPatrol(){
-        flip = true;
         yield return new WaitForSeconds(2f);
     }
 }

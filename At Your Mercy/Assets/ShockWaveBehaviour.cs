@@ -6,7 +6,6 @@ public class ShockWaveBehaviour : MonoBehaviour
 {
     private float time;
     public float cooldown = 1f;
-    private int test = 0;
 
     private Vector3 spawnPos1;
     private Vector3 spawnPos2;

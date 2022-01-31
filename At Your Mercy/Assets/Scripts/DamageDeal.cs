@@ -8,7 +8,6 @@ public class DamageDeal : MonoBehaviour
     public int damageToPlayer;
     float destroyTime;
     //int difficultyDamage;
-    bool isDestroyable = false;
     difficultyScript damage;
 
     // Start is called before the first frame update
@@ -68,7 +67,6 @@ public class DamageDeal : MonoBehaviour
 
     private IEnumerator DestroyIfPassed(){
         yield return new WaitForSeconds(destroyTime);
-        isDestroyable = true;
     }
 
     
