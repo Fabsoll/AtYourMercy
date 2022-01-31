@@ -77,13 +77,13 @@ public class assigningTraits : MonoBehaviour
 
     void normalTraitNumberGenerator()
     {
-        int val = Random.Range(1, 11);
+        int val = Random.Range(1, 12);
 
         TraitNumber = val;
     }
     void strongTraitNumberGenerator()
     {
-        int val = Random.Range(1, 13);
+        int val = Random.Range(1, 14);
 
         rareTraitNumber = val;
     }
