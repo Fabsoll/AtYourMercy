@@ -232,7 +232,7 @@ public class assigningTraits : MonoBehaviour
         }
         thisTrait.text = "This person was exceptionally " + trait;
         TraitCalc.newTrait = "exceptionally " + trait + "\n";
-        Debug.Log(rareTraitNumber);
+        //Debug.Log(rareTraitNumber);
     }
 
 
@@ -259,7 +259,7 @@ public class assigningTraits : MonoBehaviour
     {
 
         TraitCalc.oldTraits = TraitCalc.oldTraits + TraitCalc.newTrait;
-        Debug.Log("trait stored");
+        //Debug.Log("trait stored");
 
         if (isEnemyStrong == true)
         {

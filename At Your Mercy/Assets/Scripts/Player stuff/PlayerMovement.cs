@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
         if (playerRB.velocity.y > -1 && playerRB.velocity.y < 1 && !onAir)
         {
             walk.volume = walkVolume;
-            Debug.Log("sound");
+//            Debug.Log("sound");
         }
         else{
             walk.volume = 0;
-            Debug.Log("no sound");
+//            Debug.Log("no sound");
         }
         
 

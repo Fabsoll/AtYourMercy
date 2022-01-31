@@ -33,7 +33,7 @@ public class TraitCalculator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(valhallaHP);
+//        Debug.Log(valhallaHP);
 
         if (caringTrait)
         {

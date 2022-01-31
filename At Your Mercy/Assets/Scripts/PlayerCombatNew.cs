@@ -472,7 +472,7 @@ public class PlayerCombatNew : MonoBehaviour
                         break;
                 }
                 getHit.Play();
-                Debug.Log(hit);
+//                Debug.Log(hit);
                 //Debug.Log("isInv");
                 StartCoroutine(Invulnerability());
                 StartCoroutine(ApplyDamageColor());
@@ -524,7 +524,7 @@ public class PlayerCombatNew : MonoBehaviour
             if (BrunnhildeDied)
             {
                 heavyBreath.Stop();
-                Debug.Log("Player died");
+//                Debug.Log("Player died");
             }
         }
         else

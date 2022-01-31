@@ -65,7 +65,7 @@ public class UI : MonoBehaviour
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-        Debug.Log("OnSceneLoaded: " + scene.name);
+//        Debug.Log("OnSceneLoaded: " + scene.name);
         if(SceneManager.GetActiveScene().name == "bossfight"){
             PauseMenu.SetActive(false);
             Overlay.SetActive(false);

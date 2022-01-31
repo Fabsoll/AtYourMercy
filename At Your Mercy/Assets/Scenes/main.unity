@@ -2597,7 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 1871115160}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: currentHealth
-      value: 116
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: heavyAttackCD

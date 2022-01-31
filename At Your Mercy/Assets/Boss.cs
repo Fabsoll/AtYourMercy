@@ -21,10 +21,13 @@ public class Boss : MonoBehaviour
     public int currentStage;
 
     public GameObject shockwave;
+    private AudioSource audio;
+    public AudioClip[] clips;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentStage = 1;
         health = maxHealth;
@@ -56,7 +59,7 @@ public class Boss : MonoBehaviour
             else if(currentStage == 2){
                 bossAnimatorController.SetTrigger("diving");
             }
-            StartCoroutine(StartDelaying(8f));
+            StartCoroutine(StartDelaying(4f));
             numberOfLighning = 0;
         }
         //if(numberOfLighning == 2){
@@ -104,7 +107,10 @@ public class Boss : MonoBehaviour
             }
             if (decision == 2)
             {
+                audio.clip = clips[0];
+                audio.Play();
                 bossAnimatorController.SetTrigger("flyingSpin");
+
                 StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
                 attackPatternBehaviour.castRavens = true;
             }
@@ -150,12 +156,17 @@ public class Boss : MonoBehaviour
         }
     }
 
+    public void PlayAttackSound(){
+        audio.clip = clips[1];
+        audio.Play();
+    }
+
     public int NumberEverySecond(){
         int min = 1;
         int max = 3;
 
         int result = Random.Range(min, max);
-        //Debug.Log(result);
+        Debug.Log("Casting Decision: " + result);
         return result;
     }
 
