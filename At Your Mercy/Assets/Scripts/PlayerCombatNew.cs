@@ -188,9 +188,13 @@ public class PlayerCombatNew : MonoBehaviour
             foreach(Collider2D enemy in hitEnemies){
             if(enemy.gameObject.CompareTag("Enemy")){
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                Vector3 pushDistance = (this.transform.position - enemy.transform.position) * heavyPush;
-                //Debug.Log("push distance: " + pushDistance)
-                enemy.GetComponentInParent<Rigidbody2D>().AddForce(-pushDistance);
+                if (enemy.GetComponentInParent<Enemy>().isDead != true)
+                {
+                    Vector3 pushDistance = (this.transform.position - enemy.transform.position) * heavyPush;
+                    //Debug.Log("push distance: " + pushDistance)
+                    enemy.GetComponentInParent<Rigidbody2D>().AddForce(-pushDistance);
+                }
+               
                 hitSound();
             }
             else if(enemy.gameObject.CompareTag("Boss")){

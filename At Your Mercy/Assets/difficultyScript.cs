@@ -20,13 +20,16 @@ public class difficultyScript : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
+        
         
         traitCalc = GameObject.Find("dontDestroyThese/traitcalc").GetComponent<TraitCalculator>();
         this.gameObject.SetActive(true);
         valkyrieSound = GameObject.Find("dontDestroyThese/Valkyrie/brunnhilde audio");
-        valkyrieSound.SetActive(false);
+        if (sceneName == "tutorial")
+        {
+            valkyrieSound.SetActive(false);
+        }
+       
         enemies = GameObject.FindGameObjectsWithTag("EnemyParent");
         //enemyDamage = GameObject.FindGameObjectsWithTag("EnemyDamageDeal");
     }
@@ -34,6 +37,8 @@ public class difficultyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
         if (sceneName == "tutorial")
         {
             Easy();
@@ -95,27 +100,32 @@ public class difficultyScript : MonoBehaviour
     //        //}
     //        //dmg.damageToPlayer = difficultyDamage;
     //    }
-        foreach (GameObject e in enemies)
+
+        if (sceneName != "tutorial")
         {
-
-            Enemy enemy;
-            enemy = e.GetComponent<Enemy>();
-
-            enemy.maxHealth = difficultyHealth;
-            if (enemy.strongenemy == true)
+            foreach (GameObject e in enemies)
             {
-                enemy.maxHealth *= 2;
-                
-            }
-            enemy.currentHealth = enemy.maxHealth;
-            enemy.hpBar.SetHealth(enemy.currentHealth, enemy.maxHealth);
 
+                Enemy enemy;
+                enemy = e.GetComponent<Enemy>();
+
+                enemy.maxHealth = difficultyHealth;
+                if (enemy.strongenemy == true)
+                {
+                    enemy.maxHealth *= 2;
+
+                }
+                enemy.currentHealth = enemy.maxHealth;
+                enemy.hpBar.SetHealth(enemy.currentHealth, enemy.maxHealth);
+                valkyrieSound.SetActive(true);
+                this.gameObject.SetActive(false);
+            }
         }
+       
 
         Time.timeScale = 1;
         //Debug.Log(test);
-        valkyrieSound.SetActive(true);
-        this.gameObject.SetActive(false);
+        
     }
 
 }
