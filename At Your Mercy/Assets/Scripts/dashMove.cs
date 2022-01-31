@@ -15,11 +15,10 @@ public class dashMove : MonoBehaviour
 
     private Animator playerAnim;
     Color c;
-
+    public GameObject dashParticles;
     public CharacterController2D playerController;
 
 
-    GameObject dashParticles;
 
     // Start is called before the first frame update
     void Start()

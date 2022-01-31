@@ -21,16 +21,13 @@ public class ShapesController : MonoBehaviour
     private HorseMovement horse;
     PlayerCombatNew valkyrie;
 
-    GameObject dirtParticles;
-    GameObject dashParticles;
-    GameObject idleParticles;
+    public GameObject dirtParticles;
+    public GameObject dashParticles;
+    public GameObject idleParticles;
     // Start is called before the first frame update
     void Start()
     {
         valkyrie = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
-        dirtParticles = GameObject.Find("dontDestroyThese/Valkyrie/dirt particles");
-        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
-        idleParticles = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
         shapeIndex = 0;
         // //valkyrieShape = GameObject.FindGameObjectWithTag("Player");
         //playableShapes = GameObject.FindGameObjectsWithTag("Player");

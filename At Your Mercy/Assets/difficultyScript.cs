@@ -18,7 +18,7 @@ public class difficultyScript : MonoBehaviour
     public bool hard;
     string sceneName;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
@@ -50,7 +50,6 @@ public class difficultyScript : MonoBehaviour
         difficultyHealth = 25;
         traitCalc.killingThreshold = 15;
         closeScreen();
-        
         
     }
     public void Medium()
@@ -112,6 +111,8 @@ public class difficultyScript : MonoBehaviour
             enemy.hpBar.SetHealth(enemy.currentHealth, enemy.maxHealth);
 
         }
+
+        Time.timeScale = 1;
         //Debug.Log(test);
         valkyrieSound.SetActive(true);
         this.gameObject.SetActive(false);

@@ -70,15 +70,14 @@ public class PlayerCombatNew : MonoBehaviour
     private CharacterController2D playerController;
     public float heavyPush;
 
-    GameObject dirtParticles;
-    GameObject dashParticles;
-    GameObject idleParticles;
+    public GameObject dirtParticles;
+    public GameObject dashParticles;
+    public GameObject idleParticles;
 
     // Start is called before the first frame update
     void Start()
     {
-        dirtParticles = GameObject.Find("dontDestroyThese/Valkyrie/dirt particles");
-        idleParticles = GameObject.Find("dontDestroyThese/Valkyrie/idle particles");
+       
         playerController = GetComponent<CharacterController2D>();
         difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
         currentHit = 0;
@@ -103,7 +102,12 @@ public class PlayerCombatNew : MonoBehaviour
         {
             valhalla = true;
         }
-
+        if (sceneName == "tutorial")
+        {
+            dashParticles.SetActive(false);
+            idleParticles.SetActive(false);
+            dirtParticles.SetActive(false);
+        }
         baseAttack = baseAttackStart + traitCalc.caringDamage + traitCalc.independentDamage;
         if (Input.GetButtonDown("attack") && isAbleToAttack){
             StartCoroutine(attackCooling(attackCD));
@@ -563,7 +567,7 @@ public class PlayerCombatNew : MonoBehaviour
     private void OnEnable()
     {
 
-        dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
+        //dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
         dashParticles.GetComponent<ParticleSystem>().Stop();
     }
 }

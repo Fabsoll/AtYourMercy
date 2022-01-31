@@ -2682,9 +2682,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: dashParticles
+      value: 
+      objectReference: {fileID: 1657294239}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: dirtParticles
+      value: 
+      objectReference: {fileID: 369412278}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: heavyAttackCD
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
+      propertyPath: idleParticles
+      value: 
+      objectReference: {fileID: 636335149}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttackStart
       value: 10
@@ -26028,6 +26040,18 @@ PrefabInstance:
       propertyPath: duration
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 48768700319255176, guid: b6bc5613be3c1734993f9ef6480945d9, type: 3}
+      propertyPath: dashParticles
+      value: 
+      objectReference: {fileID: 1657294239}
+    - target: {fileID: 48768700319255176, guid: b6bc5613be3c1734993f9ef6480945d9, type: 3}
+      propertyPath: dirtParticles
+      value: 
+      objectReference: {fileID: 369412278}
+    - target: {fileID: 48768700319255176, guid: b6bc5613be3c1734993f9ef6480945d9, type: 3}
+      propertyPath: idleParticles
+      value: 
+      objectReference: {fileID: 636335149}
     - target: {fileID: 48768700319255176, guid: b6bc5613be3c1734993f9ef6480945d9, type: 3}
       propertyPath: playableShapes.Array.data[0]
       value: 

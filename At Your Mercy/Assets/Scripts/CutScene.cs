@@ -15,6 +15,7 @@ public class CutScene : MonoBehaviour
         valkyrie.transform.position = new Vector3(0, -0, 0);
         valkyrieSound = GameObject.Find("dontDestroyThese/Valkyrie/brunnhilde audio");
         valkyrieSound.SetActive(true);
+        valkyrie.GetComponent<PlayerCombatNew>().maxHealth = traitCalc.valhallaHP;
         //valkyrie.GetComponent<PlayerCombatNew>().currentHealth = traitCalc.valhallaHP;
     }
     // Update is called once per frame
