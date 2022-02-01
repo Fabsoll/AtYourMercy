@@ -21,7 +21,7 @@ public class Ally : MonoBehaviour
     public void TakeDamage(int damage){
         currentHealth -= damage;
         if(currentHealth <= 0){
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }

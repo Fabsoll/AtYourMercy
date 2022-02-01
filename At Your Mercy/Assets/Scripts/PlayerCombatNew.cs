@@ -61,7 +61,7 @@ public class PlayerCombatNew : MonoBehaviour
     public assigningTraits thisEnemy;
     int currentHit;
     bool BrunnhildeDied;
-    bool valhalla;
+    public bool valhalla;
     Scene currentScene;
     string sceneName;
     bool gameOverBool;

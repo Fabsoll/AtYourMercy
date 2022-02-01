@@ -33,8 +33,9 @@ public class Enemy_behaviour : MonoBehaviour
     private float intTimer;
     #endregion
 
+    PlayerCombatNew level;
     private void Awake() {
-
+        level = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
         intTimer = timer;
         anim = GetComponent<Animator>();
         SelectTarget();
@@ -56,6 +57,10 @@ public class Enemy_behaviour : MonoBehaviour
             EnemyLogic();
         }
 
+        if (level.valhalla != true)
+        {
+            Physics2D.IgnoreLayerCollision(6,6);
+        }
     }
 
     void EnemyLogic(){

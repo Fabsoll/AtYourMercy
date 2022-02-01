@@ -497,7 +497,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 51.41
+  field of view: 38.7
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
@@ -523,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.1, y: 5.4553003, z: -10}
+  m_LocalPosition: {x: -20.1, y: 5.1428204, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1339,6 +1339,7 @@ MonoBehaviour:
   shapeUI: {fileID: 1700867680}
   traitCalc: {fileID: 1847504413}
   thisEnemy: {fileID: 1772836675}
+  valhalla: 0
   heavyPush: 100
   valhallaChoiceScreen: {fileID: 0}
   dirtParticles: {fileID: 369412278}
@@ -2644,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 1007724872}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: maxHealth
-      value: 122
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: thisEnemy
@@ -2692,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 636335149}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttackStart
-      value: 10
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: attackRangeHeavy
@@ -2704,7 +2705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: enemylayers.m_Bits
-      value: 4160
+      value: 12352
       objectReference: {fileID: 0}
     - target: {fileID: 1711346034, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Enabled
@@ -4093,6 +4094,7 @@ MonoBehaviour:
   shapeUI: {fileID: 1700867680}
   traitCalc: {fileID: 1847504413}
   thisEnemy: {fileID: 1772836675}
+  valhalla: 0
   heavyPush: 100
   valhallaChoiceScreen: {fileID: 0}
   dirtParticles: {fileID: 369412278}
@@ -16363,7 +16365,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1721187368}
   m_Lens:
-    FieldOfView: 51.41
+    FieldOfView: 38.7
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -16385,7 +16387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.1, y: 5.4553003, z: -10}
+  m_LocalPosition: {x: -20.1, y: 5.1428204, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -21970,9 +21972,9 @@ MonoBehaviour:
   valhallaTextCount: 0
   lazyTrait: 0
   valhallaHP: 0
-  valhallaBaseHP: 0
+  valhallaBaseHP: 406
   Deathcount: 0
-  valhallaCount: 0
+  valhallaCount: 3
   traitCount: 0
   newTrait: 
   oldTraits: 

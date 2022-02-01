@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageDeal : MonoBehaviour
 {
     private PlayerCombatNew player;
-    private Ally ally;
+    //private Ally ally;
     public int damageToPlayer;
     float destroyTime;
     //int difficultyDamage;
@@ -14,7 +14,7 @@ public class DamageDeal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ally = FindObjectOfType<Ally>();
+        //ally = FindObjectOfType<Ally>();
         //difficultyDamage = 5;
         player = FindObjectOfType<PlayerCombatNew>();
     //    destroyTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
@@ -60,9 +60,9 @@ public class DamageDeal : MonoBehaviour
             player.TakeDamage(damageToPlayer);
         }
         
-        if(other.gameObject.CompareTag("ally")){
-            ally.TakeDamage(2);
-        }
+        //if(other.gameObject.CompareTag("ally")){
+        //    ally.TakeDamage(2);
+        //}
         //if(other.gameObject.CompareTag("Raven")){
             //other.gameObject.TakeDamage(damageToPlayer);
         //}
@@ -70,9 +70,9 @@ public class DamageDeal : MonoBehaviour
     }
     
 
-    private IEnumerator DestroyIfPassed(){
-        yield return new WaitForSeconds(destroyTime);
-    }
+    //private IEnumerator DestroyIfPassed(){
+    //    yield return new WaitForSeconds(destroyTime);
+    //}
 
     
 

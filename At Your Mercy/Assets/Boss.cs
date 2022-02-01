@@ -110,11 +110,13 @@ public class Boss : MonoBehaviour
                 audio.clip = clips[0];
                 audio.Play();
                 bossAnimatorController.SetTrigger("flyingSpin");
+                  
 
-                StartCoroutine(StartDelaying(bossAnimatorController.GetCurrentAnimatorStateInfo(0).length));
-                attackPatternBehaviour.castRavens = true;
-            }
-            break;
+
+
+                    attackPatternBehaviour.castRavens = true;
+                }
+                break;
         }
 
             

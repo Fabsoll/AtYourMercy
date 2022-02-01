@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackPatternBehaviour : MonoBehaviour
 {
     private Transform playerPos;
-    private Transform bossPos;
+    public Transform bossPos;
     public Transform[] SpawnPoints;
 
     public GameObject LightningAttack;
@@ -80,12 +80,14 @@ public class AttackPatternBehaviour : MonoBehaviour
     // }
 
     private void SpawnRavens(){
+
         castRavens = false;
         float angle;
         angle = -45f;
         GameObject ravenInstance = Instantiate(RavenAttack, bossPos.position, Quaternion.identity);
         ravenInstance.transform.Rotate(new Vector3(0, 0, angle));
         angle = 0f;
+        isRecharged = true;
         ravenInstance = Instantiate(RavenAttack, bossPos.position, Quaternion.identity);
         ravenInstance.transform.Rotate(new Vector3(0, 0, angle));
         angle = 45f;
