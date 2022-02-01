@@ -149,6 +149,7 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 0:
+                didYouThink.Stop();
                 iWasntHiding.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
@@ -157,6 +158,7 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 1:
+                iWasntHiding.Stop();
                 doYouEven.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
@@ -167,6 +169,7 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 2:
+                doYouEven.Stop();
                 imTryingTo.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
@@ -175,6 +178,7 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 3:
+                imTryingTo.Stop();
                 aTyrantAnd.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
@@ -184,6 +188,7 @@ public class TransitionScript : MonoBehaviour
                 break;
 
             case 4:
+                aTyrantAnd.Stop();
                 perhaps.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
@@ -191,6 +196,7 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 5:
+                perhaps.Stop();
                 youMightHave.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);
@@ -199,11 +205,13 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 6:
+                youMightHave.Stop();
                 nowYoureBarely.Play();
                 wotantext.text = "Now you're barely more than a worm.";
                 textcounter += 1;
                 break;
             case 7:
+                nowYoureBarely.Stop();
                 letsJustGet.Play();
                 wotangone = true;
                 brunnhildedialogue.SetActive(true);
@@ -211,6 +219,7 @@ public class TransitionScript : MonoBehaviour
                 textcounter += 1;
                 break;
             case 8:
+                letsJustGet.Stop();
                 beCrushedBeneath.Play();
                 wotangone = false;
                 wotandialogue.SetActive(true);

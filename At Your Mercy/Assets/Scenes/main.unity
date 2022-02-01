@@ -1164,6 +1164,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -1820,6 +1824,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -1949,6 +1957,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -4520,6 +4532,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -5799,6 +5815,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -9623,6 +9643,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -10552,6 +10576,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -10766,6 +10794,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -14603,6 +14635,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -15972,6 +16008,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -17695,6 +17735,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -19848,6 +19892,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -20189,6 +20237,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -23879,6 +23931,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -24553,6 +24609,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: getEnemy2
       value: 
       objectReference: {fileID: 1772836675}
@@ -24689,6 +24749,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -25338,6 +25402,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
       objectReference: {fileID: 0}
@@ -25899,6 +25967,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1
@@ -26887,6 +26959,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 1779192086}
     - target: {fileID: 8397991028035244483, guid: 53f527dc22e176b4eacd83c9d2cb34c9, type: 3}
       propertyPath: isWolf
       value: 1

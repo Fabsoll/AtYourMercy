@@ -90,7 +90,11 @@ public class Enemy_behaviour : MonoBehaviour
     void Attack(){
         timer = intTimer;
         attackMode = true;
-        attack.Play();
+        if (!isWolf)
+        {
+
+            attack.Play();
+        }
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
     }

@@ -68,12 +68,12 @@ public class Enemy : MonoBehaviour
     }
     private void OnDisable()
     {
-        //if (isWolf)
-        //{
-        //    audioS.volume = 1;
-        //    audioS.Play();
-        //    Debug.Log("woowowo");
-        //}
+        if (isWolf)
+        {
+            audioS.volume = 1;
+            audioS.Play();
+            Debug.Log("woowowo");
+        }
         isDead = false;
     }
     void Die(){
