@@ -18,18 +18,18 @@ public class Enemy : MonoBehaviour
     public HealthBarBehaviour hpBar;
     public GameObject thisEnemy;
 
-    //AudioSource audioS;
+    public AudioSource audioS;
 
     //valhalla choice system ui stuff vvvvvvv
 
     // Start is called before the first frame update
     void Start()
     {
-        //if(isWolf){
-        //    audioS = GetComponent<AudioSource>();
-        //    Debug.Log("found it");
-        //}
-        
+        if (isWolf)
+        {
+            Debug.Log("found it");
+        }
+
         currentHealth = maxHealth;
         UIData = FindObjectOfType<UI>();
         
@@ -68,10 +68,15 @@ public class Enemy : MonoBehaviour
     }
     private void OnDisable()
     {
+        //if (isWolf)
+        //{
+        //    audioS.volume = 1;
+        //    audioS.Play();
+        //    Debug.Log("woowowo");
+        //}
         isDead = false;
     }
     void Die(){
-        //audioS.Play();
         Debug.Log("death");
         //Debug.Log("enemy dies");
         UIData.deathCounter++;
@@ -86,4 +91,6 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         enemySprite.GetComponent<SpriteRenderer>().material.color = Color.white;
     }
+
+
 }

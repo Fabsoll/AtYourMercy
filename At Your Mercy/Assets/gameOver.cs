@@ -23,6 +23,7 @@ public class gameOver : MonoBehaviour
     bool screenTwoStart;
     bool screenThreeStart;
     bool loadTitleScreen;
+    public AudioSource gameoverMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +61,8 @@ public class gameOver : MonoBehaviour
         yield return new WaitForSecondsRealtime(3);
 
         SceneManager.LoadScene("title screen");
+        gameoverMusic.Stop();
+        SceneManager.UnloadSceneAsync("game over");
     }
     void PlayScreenOne()
     {

@@ -22,6 +22,7 @@ public class PlayerCombatNew : MonoBehaviour
     public AudioSource hitSound2;
     public AudioSource hitSound3;
     #endregion
+    bool playGrunt;
     bool fadeGameOver;
     public Transform attackPoint;
     public float attackRange;
@@ -204,7 +205,10 @@ public class PlayerCombatNew : MonoBehaviour
                     //Debug.Log("push distance: " + pushDistance)
                     enemy.GetComponentInParent<Rigidbody2D>().AddForce(-pushDistance);
                 }
-               
+               if (enemy.GetComponentInParent<Enemy>().isWolf != true)
+                {
+                    playGrunt = true;
+                }
                 hitSound();
             }
             else if(enemy.gameObject.CompareTag("Boss")){
@@ -229,12 +233,20 @@ public class PlayerCombatNew : MonoBehaviour
         {
             case 1:
                 hitOne.Play();
-                enemyDmg1.Play();
+                if (playGrunt)
+                {
+
+                    enemyDmg1.Play();
+                }
                 hitCount++;
                 break;
             case 2:
                 hitTwo.Play();
-                enemyDmg2.Play();
+                if (playGrunt)
+                {
+
+                    enemyDmg2.Play();
+                }
                 hitCount--;
                 break;
         }
