@@ -587,6 +587,7 @@ public class PlayerCombatNew : MonoBehaviour
         playerController.speedMuliplier = 1f;
         isAbleToAttack = true;
         isInvulnerable = false;
+        Physics2D.IgnoreLayerCollision(6, 8);
         Debug.Log("AYO");
 
     }

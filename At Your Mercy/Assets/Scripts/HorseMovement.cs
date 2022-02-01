@@ -83,4 +83,5 @@ public class HorseMovement : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isAbleToMove = true;
     }
+  
 }
