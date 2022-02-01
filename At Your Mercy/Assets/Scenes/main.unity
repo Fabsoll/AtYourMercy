@@ -2645,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 1007724872}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: thisEnemy
@@ -2693,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 636335149}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: baseAttackStart
-      value: 250
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: attackRangeHeavy
@@ -9133,7 +9133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122550, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1353532486776122550, guid: 61f0e55190b900e48afbf0376500a31a, type: 3}
       propertyPath: m_TagString
@@ -22305,9 +22305,9 @@ MonoBehaviour:
   valhallaTextCount: 0
   lazyTrait: 0
   valhallaHP: 0
-  valhallaBaseHP: 406
+  valhallaBaseHP: 0
   Deathcount: 0
-  valhallaCount: 3
+  valhallaCount: 0
   traitCount: 0
   newTrait: 
   oldTraits: 

@@ -285,7 +285,7 @@ public class assigningTraits : MonoBehaviour
                     BrunnTrait.baseAttackStart += 10;
                     break;
                 case "swift":
-                    BrunnMove.movementSpeed += 25;
+                    BrunnMove.movementSpeed += 15;
                     break;
                 case "resilient":
                     //invulnerable for 3 hits
@@ -310,7 +310,7 @@ public class assigningTraits : MonoBehaviour
                 case "intelligent":
                     //crit +15% speed -2
                     BrunnTrait.critNumber += 4;
-                    BrunnMove.movementSpeed -= 10;
+                    BrunnMove.movementSpeed -= 5;
                     break;
                 case "weird":
                     //+3random -3random
@@ -352,7 +352,7 @@ public class assigningTraits : MonoBehaviour
                     BrunnTrait.baseAttackStart += 5;
                     break;
                 case "swift":
-                    BrunnMove.movementSpeed += 10;
+                    BrunnMove.movementSpeed += 7;
                     break;
                 case "resilient":
                     //invulnerable for 1 hit
@@ -371,7 +371,7 @@ public class assigningTraits : MonoBehaviour
                 case "intelligent":
                     //+5% crit rate -2 speed
                     BrunnTrait.critNumber += 2;
-                    BrunnMove.movementSpeed -= 10;
+                    BrunnMove.movementSpeed -= 5;
                     break;
                 case "weird":
                     //+1 random -1 random
@@ -389,7 +389,15 @@ public class assigningTraits : MonoBehaviour
                     break;
             }
         }
-
+        if (BrunnMove.movementSpeed <= 0)
+        {
+            BrunnMove.movementSpeed = 5;
+        }
+        if (BrunnTrait.baseAttack <= 0)
+        {
+            BrunnTrait.baseAttack = 1;
+        }
+;
         TraitCalc.traitCount += 1;
         valhallaChoice.SetActive(false);
         Time.timeScale = 1;
