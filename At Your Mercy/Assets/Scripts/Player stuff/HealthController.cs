@@ -16,7 +16,7 @@ public class HealthController : MonoBehaviour
     void Awake()
     {
         healthBar = GetComponent<Image>();
-        playerCombatNew = FindObjectOfType<PlayerCombatNew>();
+        playerCombatNew = GameObject.Find("dontDestroyThese/Valkyrie").GetComponent<PlayerCombatNew>();
     }
 
     private void Start() {

@@ -464,8 +464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToPlayer: 5
-  strongEnemy: 0
-  wolfEnemy: 1
 --- !u!1 &8549642211813479859
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3db074a5322634ea468107aaaab7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAlly: 0
 --- !u!1 &8549642211840867904
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +847,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1310120275
   m_SortingLayer: 3
-  m_SortingOrder: 37
+  m_SortingOrder: 22
   m_Sprite: {fileID: 8478161663276371783, guid: cc29442695c6a624a89f8053f5faf3d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
