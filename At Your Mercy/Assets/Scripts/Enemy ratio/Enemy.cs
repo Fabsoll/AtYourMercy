@@ -70,7 +70,6 @@ public class Enemy : MonoBehaviour
     {
         if (isWolf)
         {
-            audioS.volume = 1;
             audioS.Play();
             Debug.Log("woowowo");
         }

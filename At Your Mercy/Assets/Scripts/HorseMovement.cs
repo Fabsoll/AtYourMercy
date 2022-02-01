@@ -13,8 +13,8 @@ public class HorseMovement : MonoBehaviour
     public float movementSpeed;
     private float moveX;
     private Animator playerAnim;
-    
-    
+
+    public AudioSource horseSound;
     private bool isHeadDown = false;
     private bool isAbleToMove = true;
     public GameObject icon;
@@ -37,7 +37,8 @@ public class HorseMovement : MonoBehaviour
         playerAnim.SetFloat("speed", Mathf.Abs(moveX));
 
         if(Input.GetButtonDown("horse head")){
-            if(!isHeadDown){
+            horseSound.Play();
+            if (!isHeadDown){
                 StartCoroutine(movingDelay());
             }
             isHeadDown = !isHeadDown;
@@ -83,5 +84,5 @@ public class HorseMovement : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isAbleToMove = true;
     }
-  
+    
 }

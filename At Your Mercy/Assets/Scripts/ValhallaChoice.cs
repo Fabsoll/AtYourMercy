@@ -78,6 +78,7 @@ public class ValhallaChoice : MonoBehaviour
     {
         underlay.SetActive(false);
         shapeControllerUI.SetActive(true);
+        AudioListener.volume = 1;
     }
     public void RandomNameGenerator()
     {
