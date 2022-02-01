@@ -12,6 +12,7 @@ public class AttackPatternBehaviour : MonoBehaviour
     public GameObject RavenAttack;
     public GameObject AllyPrefab;
     public float delay;
+    public float yOffset;
 
     public float gapBetweenLighting;
 
@@ -43,16 +44,16 @@ public class AttackPatternBehaviour : MonoBehaviour
         //isRecharged = false;
         castLightning = false;
         int i = -1;
-        Vector3 spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y, 0f);
+        Vector3 spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y + yOffset, 0f);
         GameObject lightningInstance = Instantiate(LightningAttack, spawnPos, Quaternion.identity);
         yield return new WaitForSeconds(delay);
         isRecharged = true;
         i++;
-        spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y, 0f);
+        spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y + yOffset, 0f);
         lightningInstance = Instantiate(LightningAttack, spawnPos, Quaternion.identity);
         yield return new WaitForSeconds(delay);
         i++;
-        spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y, 0f);
+        spawnPos = new Vector3(playerPos.position.x + (i * gapBetweenLighting), LightningAttack.transform.position.y + yOffset, 0f);
         lightningInstance = Instantiate(LightningAttack, spawnPos, Quaternion.identity);
         Debug.Log("SPAWN LIGHTNING");
         yield return new WaitForSeconds(delay);

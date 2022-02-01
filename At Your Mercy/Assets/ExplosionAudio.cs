@@ -10,12 +10,13 @@ public class ExplosionAudio : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        audio.Play();
+        //Invoke("PlaySound", 1f);
     }
 
     // Update is called once per frame
-    void Update()
+    public void PlaySound()
     {
-        
+        audio.PlayOneShot(audio.clip, 0.5f);
     }
+    
 }

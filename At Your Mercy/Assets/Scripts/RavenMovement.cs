@@ -29,10 +29,13 @@ public class RavenMovement : MonoBehaviour
     public float attackRange;
     public LayerMask enemylayers;
     public int attackDamage = 40;
+
+    public AudioSource audio;
     
     // Start is called before the first frame update
     void Awake()
     {
+        audio = GetComponent<AudioSource>();
         playerRB = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         shapesController = FindObjectOfType<ShapesController>();
@@ -49,6 +52,8 @@ public class RavenMovement : MonoBehaviour
     }
 
     private void OnEnable() {
+        audio.Play();
+
         isDashing = true;
         attackPos.gameObject.SetActive(false);
         playerAnim.SetBool("isDashingUp", true);

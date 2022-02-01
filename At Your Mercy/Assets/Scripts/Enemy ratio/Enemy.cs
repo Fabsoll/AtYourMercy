@@ -18,11 +18,18 @@ public class Enemy : MonoBehaviour
     public HealthBarBehaviour hpBar;
     public GameObject thisEnemy;
 
+    //AudioSource audioS;
+
     //valhalla choice system ui stuff vvvvvvv
 
     // Start is called before the first frame update
     void Start()
     {
+        //if(isWolf){
+        //    audioS = GetComponent<AudioSource>();
+        //    Debug.Log("found it");
+        //}
+        
         currentHealth = maxHealth;
         UIData = FindObjectOfType<UI>();
         
@@ -64,6 +71,8 @@ public class Enemy : MonoBehaviour
         isDead = false;
     }
     void Die(){
+        //audioS.Play();
+        Debug.Log("death");
         //Debug.Log("enemy dies");
         UIData.deathCounter++;
         isDead = true;
