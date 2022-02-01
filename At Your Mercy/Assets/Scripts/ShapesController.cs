@@ -131,4 +131,8 @@ public class ShapesController : MonoBehaviour
         }
     }
 
+    public GameObject GetCurrentShape(){
+        return currentShape;
+    }
+
 }

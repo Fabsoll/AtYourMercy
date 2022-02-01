@@ -70,6 +70,7 @@ public class PlayerCombatNew : MonoBehaviour
     private CharacterController2D playerController;
     public float heavyPush;
     public GameObject valhallaChoiceScreen;
+    private ShapesController playerShapes;
 
     public GameObject dirtParticles;
     public GameObject dashParticles;
@@ -80,7 +81,7 @@ public class PlayerCombatNew : MonoBehaviour
 
     void Start()
     {
-       
+        playerShapes = GameObject.Find("PlayerController").GetComponent<ShapesController>();
         playerController = GetComponent<CharacterController2D>();
         difficulty = GameObject.Find("difficulty settings").GetComponent<difficultyScript>();
         currentHit = 0;
@@ -112,11 +113,15 @@ public class PlayerCombatNew : MonoBehaviour
             dirtParticles.SetActive(false);
         }
         baseAttack = baseAttackStart + traitCalc.caringDamage + traitCalc.independentDamage;
-        if (Input.GetButtonDown("attack") && isAbleToAttack){
+        if (Input.GetButtonDown("attack") && isAbleToAttack && 
+            playerShapes.GetCurrentShape().gameObject.name != "Raven" &&
+            playerShapes.GetCurrentShape().gameObject.name != "Horse"){
             StartCoroutine(attackCooling(attackCD));
             Attack();
         }
-        if (Input.GetMouseButtonDown(1) && isAbleToAttack){
+        if (Input.GetMouseButtonDown(1) && isAbleToAttack && 
+            playerShapes.GetCurrentShape().gameObject.name != "Raven" &&
+            playerShapes.GetCurrentShape().gameObject.name != "Horse"){
             StartCoroutine(attackCooling(heavyAttackCD));
             HeavyAttack();
         }
