@@ -118,6 +118,7 @@ public class ShapesController : MonoBehaviour
             if(playableShapes[index] == g){
                 g.SetActive(true);
                 currentShape = g;
+                g.transform.position += new Vector3(0f, 1f, 0f);
             }
             else{
                g.SetActive(false);
