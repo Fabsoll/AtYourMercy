@@ -497,7 +497,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 47.53
+  field of view: 51.1
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
@@ -523,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 6.0567756, z: -10}
+  m_LocalPosition: {x: -18.8, y: 6.1473136, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2821,11 +2821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 199417082497817184, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 970600583573080442, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1550207932386914114, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: cooldown
@@ -2841,11 +2841,11 @@ PrefabInstance:
       objectReference: {fileID: 1721187363}
     - target: {fileID: 1666893113959060618, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1954147501519519061, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_RootOrder
@@ -2941,27 +2941,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705668013473770496, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4652105473141030036, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5199092230051516522, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5953513480450527147, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6086241627450018885, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8526979423228058276, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_Volume
-      value: 0.41
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9020349a659edad4da45ced70780391d, type: 3}
@@ -7658,7 +7658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445349650143978929, guid: 3440017768bb6bf49a6e74a38ec0ff12, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1477923940011914560, guid: 3440017768bb6bf49a6e74a38ec0ff12, type: 3}
       propertyPath: m_RootOrder
@@ -15017,7 +15017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1090544466
 Transform:
   m_ObjectHideFlags: 0
@@ -18037,7 +18037,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1721187368}
   m_Lens:
-    FieldOfView: 47.53
+    FieldOfView: 51.1
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -18059,7 +18059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 6.0567756, z: -10}
+  m_LocalPosition: {x: -18.8, y: 6.1473136, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
@@ -23148,7 +23148,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0a608868918adf641a530889afed8da6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.46
+  m_Volume: 0.37
   m_Pitch: 1
   Loop: 0
   Mute: 0

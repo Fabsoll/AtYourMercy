@@ -305,7 +305,7 @@ public class assigningTraits : MonoBehaviour
                     TraitCalc.caringTrait = true;
                     break;
                 case "reckless":
-                    //+15% crit rate, -2 defense
+                    //+20% crit rate, -2 defense
                     BrunnTrait.critNumber += 4;
                     BrunnTrait.defense -= 2;
                     break;

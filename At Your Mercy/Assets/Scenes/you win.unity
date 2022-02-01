@@ -370,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runes: {fileID: 862827465}
   words: {fileID: 84022775}
-  fadeSpeed: 0.5
+  fadeSpeed: 0.15
 --- !u!4 &1187553749
 Transform:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3c9e206af44206e45aacac9dc3956eed, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87e3bf292c378624798300843946992d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1

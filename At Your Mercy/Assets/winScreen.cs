@@ -14,12 +14,15 @@ public class winScreen : MonoBehaviour
     Color objectColor2;
     bool fadeDone;
     bool runesDone;
+    GameObject brunnhildeSound;
     // Start is called before the first frame update
     void Start()
     {
         objectColor = runes.color;
         objectColor2 = words.color;
         Time.timeScale = 1;
+        brunnhildeSound = GameObject.Find("dontDestroyThese/Valkyrie/brunnhilde audio");
+        brunnhildeSound.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,7 +60,7 @@ public class winScreen : MonoBehaviour
 
     IEnumerator waitForTitleScreen()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(5);
         SceneManager.LoadScene("title screen");
     }
 }

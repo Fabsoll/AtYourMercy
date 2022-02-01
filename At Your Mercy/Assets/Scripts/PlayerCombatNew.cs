@@ -523,6 +523,7 @@ public class PlayerCombatNew : MonoBehaviour
         }
         if(currentHealth <= 0){
             currentHealth = 0;
+            heavyBreath.Stop();
             BrunnhildeDied = true;
             Die();
         }
