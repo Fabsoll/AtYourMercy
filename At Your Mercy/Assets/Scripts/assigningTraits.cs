@@ -25,6 +25,8 @@ public class assigningTraits : MonoBehaviour
     bool isEnemyDead;
     public GameObject lastEnemy;
     bool isEnemyStrong;
+    List<int> previousTraitsStrong = new List<int>();
+    List<int> previousTraits = new List<int>();
     void Start()
     {
         enemyInfo = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
@@ -78,13 +80,21 @@ public class assigningTraits : MonoBehaviour
     void normalTraitNumberGenerator()
     {
         int val = Random.Range(1, 12);
-
+        while (previousTraits.Contains(val))
+        {
+            val = Random.Range(1, 12);
+        }
+        previousTraits.Add(val);
         TraitNumber = val;
     }
     void strongTraitNumberGenerator()
     {
         int val = Random.Range(1, 14);
-
+        while (previousTraitsStrong.Contains(val))
+        {
+            val = Random.Range(1, 14);
+        }
+        previousTraitsStrong.Add(val);
         rareTraitNumber = val;
     }
 

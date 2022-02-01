@@ -523,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38894198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.1, y: 5.3567758, z: -10}
+  m_LocalPosition: {x: -8, y: 38.656773, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2741,11 +2741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.1
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: 37.6
       objectReference: {fileID: 0}
     - target: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6990,6 +6990,10 @@ PrefabInstance:
     - target: {fileID: 445349650143978929, guid: 3440017768bb6bf49a6e74a38ec0ff12, type: 3}
       propertyPath: m_Name
       value: bloodeagle
+      objectReference: {fileID: 0}
+    - target: {fileID: 445349650143978929, guid: 3440017768bb6bf49a6e74a38ec0ff12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1477923940011914560, guid: 3440017768bb6bf49a6e74a38ec0ff12, type: 3}
       propertyPath: m_RootOrder
@@ -16558,7 +16562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350318476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.1, y: 5.3567758, z: -10}
+  m_LocalPosition: {x: -8, y: 38.656773, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773055879}
