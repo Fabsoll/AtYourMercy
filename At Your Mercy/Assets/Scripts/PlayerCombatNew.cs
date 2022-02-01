@@ -79,7 +79,7 @@ public class PlayerCombatNew : MonoBehaviour
     // Start is called before the first frame update
 
 
-    void Start()
+    void Awake()
     {
         playerShapes = GameObject.Find("PlayerController").GetComponent<ShapesController>();
         playerController = GetComponent<CharacterController2D>();
@@ -584,5 +584,10 @@ public class PlayerCombatNew : MonoBehaviour
         //dashParticles = GameObject.Find("dontDestroyThese/Valkyrie/dash particles");
         dashParticles.GetComponent<ParticleSystem>().Stop();
         playerSprite.GetComponent<SpriteRenderer>().material.color = Color.white;
+        playerController.speedMuliplier = 1f;
+        isAbleToAttack = true;
+        isInvulnerable = false;
+        Debug.Log("keeeeeeeeeeeeeeeel");
+
     }
 }
