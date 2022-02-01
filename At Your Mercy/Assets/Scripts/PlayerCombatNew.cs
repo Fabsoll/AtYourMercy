@@ -587,7 +587,7 @@ public class PlayerCombatNew : MonoBehaviour
         playerController.speedMuliplier = 1f;
         isAbleToAttack = true;
         isInvulnerable = false;
-        Debug.Log("keeeeeeeeeeeeeeeel");
+        Debug.Log("AYO");
 
     }
 }

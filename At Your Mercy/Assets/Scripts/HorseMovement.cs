@@ -48,11 +48,13 @@ public class HorseMovement : MonoBehaviour
             movementSpeed = movementSpeedHeadDown;
             playerRB.mass = 200;
             Physics2D.IgnoreLayerCollision(8, 9, false);
+            Physics2D.IgnoreLayerCollision(8, 6, false);
             
 
         }
         else if(!isHeadDown){
             Physics2D.IgnoreLayerCollision(8, 9, true);
+            Physics2D.IgnoreLayerCollision(8, 6, true);
             playerAnim.SetBool("isHeadDown", false);
             playerRB.mass = 1;
             movementSpeed = movementSpeedNormal;
