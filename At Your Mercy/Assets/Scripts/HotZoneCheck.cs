@@ -20,13 +20,14 @@ public class HotZoneCheck : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Player")){
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Boss")){
             inRange = true;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Player")){
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Boss")){
             inRange = false;
             gameObject.SetActive(false);
             enemyParent.triggerArea.SetActive(true);

@@ -14,7 +14,7 @@ public class Enemy_behaviour : MonoBehaviour
     public float timer;
     public Transform leftLimit;
     public Transform rightLimit;
-    [HideInInspector] public Transform target;
+    public Transform target;
     [HideInInspector] public bool inRange;
     public GameObject hotZone;
     public GameObject triggerArea;

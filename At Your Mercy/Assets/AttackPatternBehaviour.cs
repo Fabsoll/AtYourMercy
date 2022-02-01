@@ -6,9 +6,11 @@ public class AttackPatternBehaviour : MonoBehaviour
 {
     private Transform playerPos;
     private Transform bossPos;
+    public Transform[] SpawnPoints;
 
     public GameObject LightningAttack;
     public GameObject RavenAttack;
+    public GameObject AllyPrefab;
     public float delay;
 
     public float gapBetweenLighting;
@@ -95,6 +97,18 @@ public class AttackPatternBehaviour : MonoBehaviour
 
     private void SpawnFriends(){
         int numberOfFriends = GameObject.Find("traitcalc").GetComponent<TraitCalculator>().valhallaCount;
-        Debug.Log("friends to spawn: " + numberOfFriends);
+        for(int i = 0; i < numberOfFriends / 2; i++){
+            Instantiate(AllyPrefab, SpawnPoints[0].position, Quaternion.identity);
+        }   
+        if(numberOfFriends % 2 == 1){
+            for(int i = 0; i < (numberOfFriends / 2) + 1; i++){
+                Instantiate(AllyPrefab, SpawnPoints[1].position, Quaternion.identity);
+            }   
+        }
+        else{
+            for(int i = 0; i < numberOfFriends / 2; i++){
+                Instantiate(AllyPrefab, SpawnPoints[1].position, Quaternion.identity);
+            }
+        }
     }
 }

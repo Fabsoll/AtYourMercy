@@ -1288,6 +1288,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5541768272779595924, guid: 2f8e69934e07aed40ab7e3be8b4d27c9, type: 3}
   m_PrefabInstance: {fileID: 47224499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &108233499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108233491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca2a83c279a356418d1c004c9751b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1721187364}
+  heavyBreath: {fileID: 1871115160}
+  hitOne: {fileID: 1810974910}
+  hitTwo: {fileID: 1844597354}
+  missOne: {fileID: 1486377646}
+  missTwo: {fileID: 1580935776}
+  death: {fileID: 1916328682}
+  enemyDmg1: {fileID: 224573974}
+  enemyDmg2: {fileID: 930361235}
+  hitSound1: {fileID: 1601896450}
+  hitSound2: {fileID: 1633858968}
+  hitSound3: {fileID: 1007724872}
+  attackPoint: {fileID: 1745582637}
+  attackRange: 1
+  attackRangeHeavy: 1.5
+  enemylayers:
+    serializedVersion: 2
+    m_Bits: 4160
+  baseAttackStart: 10
+  baseAttack: 10
+  defense: 0
+  maxHealth: 122
+  currentHealth: 1
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  playerSprite: {fileID: 1721187365}
+  Overlay: {fileID: 519980509}
+  isInvulnerable: 0
+  isAbleToAttack: 0
+  attackCD: 0.5
+  heavyAttackCD: 1
+  invulnerableTime: 0.5
+  fadetoblack: {fileID: 914562618}
+  fade: 0
+  fadeSpeed: 2
+  critNumber: 0
+  evadeNumber: 0
+  shapeUI: {fileID: 1700867680}
+  traitCalc: {fileID: 1847504413}
+  thisEnemy: {fileID: 1772836675}
+  heavyPush: 100
+  valhallaChoiceScreen: {fileID: 0}
+  dirtParticles: {fileID: 369412278}
+  dashParticles: {fileID: 1657294239}
+  idleParticles: {fileID: 636335149}
 --- !u!1 &114742743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +4042,62 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4571517446221617712, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
   m_PrefabInstance: {fileID: 407838889}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &318033285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318033278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca2a83c279a356418d1c004c9751b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1721187364}
+  heavyBreath: {fileID: 1871115160}
+  hitOne: {fileID: 1810974910}
+  hitTwo: {fileID: 1844597354}
+  missOne: {fileID: 1486377646}
+  missTwo: {fileID: 1580935776}
+  death: {fileID: 1916328682}
+  enemyDmg1: {fileID: 224573974}
+  enemyDmg2: {fileID: 930361235}
+  hitSound1: {fileID: 1601896450}
+  hitSound2: {fileID: 1633858968}
+  hitSound3: {fileID: 1007724872}
+  attackPoint: {fileID: 1745582637}
+  attackRange: 1
+  attackRangeHeavy: 1.5
+  enemylayers:
+    serializedVersion: 2
+    m_Bits: 4160
+  baseAttackStart: 10
+  baseAttack: 10
+  defense: 0
+  maxHealth: 122
+  currentHealth: 1
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  playerSprite: {fileID: 1721187365}
+  Overlay: {fileID: 519980509}
+  isInvulnerable: 0
+  isAbleToAttack: 0
+  attackCD: 0.5
+  heavyAttackCD: 1
+  invulnerableTime: 0.5
+  fadetoblack: {fileID: 914562618}
+  fade: 0
+  fadeSpeed: 2
+  critNumber: 0
+  evadeNumber: 0
+  shapeUI: {fileID: 1700867680}
+  traitCalc: {fileID: 1847504413}
+  thisEnemy: {fileID: 1772836675}
+  heavyPush: 100
+  valhallaChoiceScreen: {fileID: 0}
+  dirtParticles: {fileID: 369412278}
+  dashParticles: {fileID: 1657294239}
+  idleParticles: {fileID: 636335149}
 --- !u!4 &318033286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571517446221617717, guid: 3fac2b044ff39004b8704d2c00ec564d, type: 3}
@@ -20326,6 +20438,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a776d8d7f13b54b9b9c1a56599c82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1721187364 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2385196965203142511, guid: 9020349a659edad4da45ced70780391d, type: 3}
+  m_PrefabInstance: {fileID: 218449224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1721187365 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2385196965203142507, guid: 9020349a659edad4da45ced70780391d, type: 3}
+  m_PrefabInstance: {fileID: 218449224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1721187368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2385196965203142504, guid: 9020349a659edad4da45ced70780391d, type: 3}
@@ -20549,6 +20671,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1745582637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1345528506351970448, guid: 9020349a659edad4da45ced70780391d, type: 3}
+  m_PrefabInstance: {fileID: 218449224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1745648152
 GameObject:
   m_ObjectHideFlags: 0
