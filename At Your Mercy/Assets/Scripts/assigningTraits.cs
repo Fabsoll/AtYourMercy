@@ -242,11 +242,11 @@ public class assigningTraits : MonoBehaviour
     {
         if (isEnemyStrong == true)
         {
-            TraitCalc.valhallaBaseHP += 60;
+            TraitCalc.valhallaBaseHP += 25;
         }
         else
         {
-            TraitCalc.valhallaBaseHP += 25;
+            TraitCalc.valhallaBaseHP += 10;
         }
 
         TraitCalc.valhallaCount ++;

@@ -2645,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 1007724872}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: maxHealth
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1711346033, guid: 9020349a659edad4da45ced70780391d, type: 3}
       propertyPath: thisEnemy
