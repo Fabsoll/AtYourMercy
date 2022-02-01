@@ -242,11 +242,11 @@ public class assigningTraits : MonoBehaviour
     {
         if (isEnemyStrong == true)
         {
-            TraitCalc.valhallaBaseHP += 25;
+            TraitCalc.valhallaBaseHP += 60;
         }
         else
         {
-            TraitCalc.valhallaBaseHP += 10;
+            TraitCalc.valhallaBaseHP += 25;
         }
 
         TraitCalc.valhallaCount ++;
@@ -268,10 +268,10 @@ public class assigningTraits : MonoBehaviour
                 case "energetic":
                     BrunnTrait.attackCD /= 3;
                     BrunnTrait.heavyAttackCD /= 3;
-                    BrunnMove.movementSpeed += 10;
+                    BrunnMove.movementSpeed += 7;
                     break;
                 case "thoughtful":
-                    BrunnTrait.baseAttackStart += 15;
+                    BrunnTrait.baseAttackStart += 10;
 
                     BrunnTrait.attackCD *= 3;
                     BrunnTrait.heavyAttackCD *= 2;
@@ -282,7 +282,7 @@ public class assigningTraits : MonoBehaviour
                     BrunnTrait.defense += 4;
                     break;
                 case "strong":
-                    BrunnTrait.baseAttackStart += 10;
+                    BrunnTrait.baseAttackStart += 7;
                     break;
                 case "swift":
                     BrunnMove.movementSpeed += 15;

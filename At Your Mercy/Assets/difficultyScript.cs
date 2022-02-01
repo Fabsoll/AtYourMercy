@@ -53,7 +53,7 @@ public class difficultyScript : MonoBehaviour
         medium = false;
         hard = false;
         difficultyHealth = 25;
-        traitCalc.killingThreshold = 15;
+        traitCalc.killingThreshold = 10;
         closeScreen();
         
     }
