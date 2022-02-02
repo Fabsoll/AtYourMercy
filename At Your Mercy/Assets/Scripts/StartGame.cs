@@ -9,17 +9,20 @@ public class StartGame : MonoBehaviour
     public AudioSource titlemusic;
     bool startbutton;
     Button start;
+    GameObject loadingMessage;
     // Start is called before the first frame update
 
     private void Start()
     {
-
+        loadingMessage = GameObject.Find("Canvas/loading message");
+        loadingMessage.SetActive(false);
         start = GameObject.Find("Canvas/startbutton").GetComponent<Button>();
     }
     public void StartGameButton()
     {
+
+        loadingMessage.SetActive(true);
         startbutton = true;
-        
         SceneManager.LoadSceneAsync("Main");
     }
 
@@ -45,5 +48,9 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene("tutorial");
         SceneManager.UnloadSceneAsync("title screen");
+    }
+    private void OnEnable()
+    {
+        loadingMessage.SetActive(false);
     }
 }
